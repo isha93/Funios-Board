@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD7591E7288D0C1300DD7F62 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD7591E5288D0C1300DD7F62 /* HomeViewController.swift */; };
+		BD7591E8288D0C1300DD7F62 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD7591E6288D0C1300DD7F62 /* HomeViewController.xib */; };
 		BDB55762288AC385006898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55761288AC385006898EC /* AppDelegate.swift */; };
 		BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55763288AC385006898EC /* SceneDelegate.swift */; };
 		BDB55766288AC385006898EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55765288AC385006898EC /* ViewController.swift */; };
@@ -36,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD7591E5288D0C1300DD7F62 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		BD7591E6288D0C1300DD7F62 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55761288AC385006898EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB55763288AC385006898EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -76,6 +80,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD7591E4288D0BF200DD7F62 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BD7591E5288D0C1300DD7F62 /* HomeViewController.swift */,
+				BD7591E6288D0C1300DD7F62 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		BDB55755288AC385006898EC = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +112,7 @@
 		BDB55760288AC385006898EC /* Funios-Board */ = {
 			isa = PBXGroup;
 			children = (
+				BD7591E4288D0BF200DD7F62 /* Home */,
 				BDB55761288AC385006898EC /* AppDelegate.swift */,
 				BDB55763288AC385006898EC /* SceneDelegate.swift */,
 				BDB55765288AC385006898EC /* ViewController.swift */,
@@ -234,6 +248,7 @@
 				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
 				BDB55769288AC385006898EC /* Main.storyboard in Resources */,
+				BD7591E8288D0C1300DD7F62 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +276,7 @@
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
+				BD7591E7288D0C1300DD7F62 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
