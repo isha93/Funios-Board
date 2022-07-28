@@ -16,19 +16,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Zwallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilf-55-2K0">
-                                <rect key="frame" x="162.5" y="140" width="89.5" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zwallet" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilf-55-2K0">
+                                <rect key="frame" x="162.5" y="114" width="89.5" height="31.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="26"/>
                                 <color key="textColor" name="AppColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4uD-GX-g3d">
+                                <rect key="frame" x="0.0" y="211" width="414" height="800"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="800" id="uJg-Rd-DOZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="BackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4uD-GX-g3d" secondAttribute="trailing" id="JRj-Kp-mPm"/>
+                            <constraint firstItem="4uD-GX-g3d" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="g2j-wE-Q8L"/>
+                            <constraint firstItem="4uD-GX-g3d" firstAttribute="top" secondItem="ilf-55-2K0" secondAttribute="bottom" constant="65.5" id="lpS-lp-Yo5"/>
                             <constraint firstItem="ilf-55-2K0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lvl-TD-2ic"/>
+                            <constraint firstItem="4uD-GX-g3d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xdd-da-kv3"/>
+                            <constraint firstItem="ilf-55-2K0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="zPf-jd-ekq"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="ViewForLogin" destination="4uD-GX-g3d" id="wW9-LL-p8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -36,6 +51,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="AppColor">
             <color red="0.40784313725490196" green="0.47450980392156861" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
