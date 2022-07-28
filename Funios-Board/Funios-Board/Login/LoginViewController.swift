@@ -11,6 +11,7 @@ class LoginViewController: UIViewController {
     @IBOutlet var cardView: UIView!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
