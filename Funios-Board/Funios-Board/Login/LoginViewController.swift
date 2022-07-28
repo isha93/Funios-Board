@@ -8,22 +8,28 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet var cardView: UIView!
+    @IBOutlet var emailTextField: UITextField!
+    @IBOutlet var passwordTextField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        setupLayout()
     }
+}
 
+//MARK: - Setup Layout
+extension LoginViewController{
+    func setupLayout(){
+        //CardView
+        cardView.layer.cornerRadius = 35
+        
+        //EmailTextView
+        emailTextField.placeholder = "Enter your e-mail"
+        
+        passwordTextField.placeholder = "Enter your password"
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
     }
-    */
-
 }
