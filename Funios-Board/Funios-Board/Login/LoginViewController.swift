@@ -16,19 +16,6 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         setupLayout()
     }
-    @IBAction func signUpButton(_ sender: Any) {
-        print("ini SignUp")
-    }
-    @IBAction func loginButton(_ sender: Any) {
-        if(emailTextField.hasText && passwordTextField.hasText){
-            print("User Login: \n email:\(emailTextField.text) \n password: \(passwordTextField.text)")
-        }else{
-            print("Membutuhkan Password & Email")
-        }
-    }
-    @IBAction func forgotPasswordButton(_ sender: Any) {
-        print("ini lupa password")
-    }
 }
 
 //MARK: - Setup Layout
@@ -57,5 +44,22 @@ extension LoginViewController{
         textField.leftView = leftImageView
         textField.leftView?.tintColor = UIColor.systemGray3
         textField.leftViewMode = .always
+    }
+}
+
+//MARK: - IBaction Event
+extension LoginViewController{
+    @IBAction func signUpButton(_ sender: Any) {
+        print("ini SignUp")
+    }
+    @IBAction func loginButton(_ sender: Any) {
+        if(emailTextField.hasText && passwordTextField.hasText){
+            print("User Login: \n email:\(emailTextField.text) \n password: \(passwordTextField.text)")
+        }else{
+            print("Membutuhkan Password & Email")
+        }
+    }
+    @IBAction func forgotPasswordButton(_ sender: Any) {
+        print("ini lupa password")
     }
 }
