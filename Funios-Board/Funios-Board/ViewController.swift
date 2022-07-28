@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     }
 
     func editViewForLogin() {
-        ViewForLogin.layer.cornerRadius = 50
+        ViewForLogin.layer.cornerRadius = 40
     }
 
 }
