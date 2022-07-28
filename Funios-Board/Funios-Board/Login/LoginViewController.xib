@@ -13,6 +13,7 @@
                 <outlet property="cardView" destination="KZ6-b9-JPi" id="kRP-Hz-wAK"/>
                 <outlet property="emailTextField" destination="nvb-mo-I1U" id="MEt-4F-BZr"/>
                 <outlet property="passwordTextField" destination="B0Y-ZI-Dtd" id="zZY-o9-6gs"/>
+                <outlet property="signUpButton" destination="OER-Pa-aWW" id="AAb-M4-76p"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
