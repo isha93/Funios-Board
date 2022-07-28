@@ -11,11 +11,12 @@ class LoginViewController: UIViewController {
     @IBOutlet var cardView: UIView!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
+    }
+    @IBAction func signUpButton(_ sender: Any) {
     }
 }
 
@@ -46,6 +47,4 @@ extension LoginViewController{
         textField.leftView?.tintColor = UIColor.systemGray3
         textField.leftViewMode = .always
     }
-    
-
 }
