@@ -30,8 +30,9 @@ extension LoginViewController{
         addTextFieldAttributes(hint: "Enter your e-mail",
                                icon: UIImage(systemName: "envelope") ?? UIImage(systemName: "questionmark.app")!,
                                to: emailTextField)
-        
+        //Password
         passwordTextField.textContentType = .password
+        passwordTextField.isSecureTextEntry = true
         addTextFieldAttributes(hint: "Enter your password",
                                icon: UIImage(systemName: "lock") ?? UIImage(systemName: "questionmark.app")!,
                                to: passwordTextField)
