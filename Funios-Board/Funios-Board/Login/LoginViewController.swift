@@ -17,6 +17,17 @@ class LoginViewController: UIViewController {
         setupLayout()
     }
     @IBAction func signUpButton(_ sender: Any) {
+        print("ini SignUp")
+    }
+    @IBAction func loginButton(_ sender: Any) {
+        if(emailTextField.hasText && passwordTextField.hasText){
+            print("User Login: \n email:\(emailTextField.text) \n password: \(passwordTextField.text)")
+        }else{
+            print("Membutuhkan Password & Email")
+        }
+    }
+    @IBAction func forgotPasswordButton(_ sender: Any) {
+        print("ini lupa password")
     }
 }
 
