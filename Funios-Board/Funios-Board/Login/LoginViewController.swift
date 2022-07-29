@@ -26,25 +26,10 @@ extension LoginViewController{
         
         //EmailTextView
         emailTextField.textContentType = .emailAddress
-        addTextFieldAttributes(hint: "Enter your e-mail",
-                               icon: UIImage(systemName: "envelope") ?? UIImage(systemName: "questionmark.app")!,
-                               to: emailTextField)
         //Password
         passwordTextField.textContentType = .password
-        passwordTextField.isSecureTextEntry = true
-        addTextFieldAttributes(hint: "Enter your password",
-                               icon: UIImage(systemName: "lock") ?? UIImage(systemName: "questionmark.app")!,
-                               to: passwordTextField)
     }
     
-    func addTextFieldAttributes(hint placeHolder: String, icon: UIImage, to textField: UITextField){
-        textField.placeholder = placeHolder
-        let leftImageView = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: icon.size.width, height: icon.size.height))
-        leftImageView.image = icon
-        textField.leftView = leftImageView
-        textField.leftView?.tintColor = UIColor.systemGray3
-        textField.leftViewMode = .always
-    }
 }
 
 //MARK: - IBaction Event
