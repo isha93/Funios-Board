@@ -8,10 +8,11 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    @IBOutlet var tfEmail : UITextField!
+    @IBOutlet var tfPassword: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+            setUpTextField()
         // Do any additional setup after loading the view.
     }
 
@@ -26,4 +27,17 @@ class LoginViewController: UIViewController {
     }
     */
 
+}
+extension LoginViewController{
+    func setUpTextField(){
+        setUpImageTextField(icon: UIImage(systemName: "envelope")!, tf: tfEmail)
+        setUpImageTextField(icon: UIImage(systemName: "lock")!, tf: tfPassword)
+    }
+    func setUpImageTextField(icon: UIImage,tf:UITextField){
+        let ic = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: icon.size.width, height: icon.size.height))
+        ic.image = icon
+        tf.leftView = ic
+        tf.leftView?.tintColor = UIColor.systemGray3
+        tf.leftViewMode = .always
+    }
 }
