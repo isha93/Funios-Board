@@ -16,6 +16,8 @@
 		BDB55779288AC387006898EC /* Funios_BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55778288AC387006898EC /* Funios_BoardTests.swift */; };
 		BDB55783288AC387006898EC /* Funios_BoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55782288AC387006898EC /* Funios_BoardUITests.swift */; };
 		BDB55785288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55784288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift */; };
+		D85C2A742893D5AA00A707E8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D85C2A722893D5AA00A707E8 /* LoginViewController.swift */; };
+		D85C2A752893D5AA00A707E8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D85C2A732893D5AA00A707E8 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +40,7 @@
 /* Begin PBXFileReference section */
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55761288AC385006898EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BDB55763288AC385006898EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		BDB55763288AC385006898EC /* SceneDelegate.swift */ = {isa = PBXFileReference; indentWidth = 2; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BDB55765288AC385006898EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDB55768288AC385006898EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDB5576A288AC387006898EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +51,8 @@
 		BDB5577E288AC387006898EC /* Funios-BoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Funios-BoardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55782288AC387006898EC /* Funios_BoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funios_BoardUITests.swift; sourceTree = "<group>"; };
 		BDB55784288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funios_BoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		D85C2A722893D5AA00A707E8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D85C2A732893D5AA00A707E8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		BDB55760288AC385006898EC /* Funios-Board */ = {
 			isa = PBXGroup;
 			children = (
+				D85C2A712893D58500A707E8 /* Login */,
 				BDB55761288AC385006898EC /* AppDelegate.swift */,
 				BDB55763288AC385006898EC /* SceneDelegate.swift */,
 				BDB55765288AC385006898EC /* ViewController.swift */,
@@ -125,6 +130,15 @@
 				BDB55784288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift */,
 			);
 			path = "Funios-BoardUITests";
+			sourceTree = "<group>";
+		};
+		D85C2A712893D58500A707E8 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				D85C2A722893D5AA00A707E8 /* LoginViewController.swift */,
+				D85C2A732893D5AA00A707E8 /* LoginViewController.xib */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85C2A752893D5AA00A707E8 /* LoginViewController.xib in Resources */,
 				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
 				BDB55769288AC385006898EC /* Main.storyboard in Resources */,
@@ -258,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D85C2A742893D5AA00A707E8 /* LoginViewController.swift in Sources */,
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
@@ -441,9 +457,9 @@
 				INFOPLIST_FILE = "Funios-Board/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -468,9 +484,9 @@
 				INFOPLIST_FILE = "Funios-Board/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
