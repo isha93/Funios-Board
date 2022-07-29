@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		470143EE288D6BF1002F6260 /* LoginScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 470143ED288D6BF1002F6260 /* LoginScreen.xib */; };
-		470143F0288D6C10002F6260 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 470143EF288D6C10002F6260 /* LoginViewController.swift */; };
+		47C5734F2893834E00B8B948 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47C5734D2893834E00B8B948 /* LoginViewController.swift */; };
+		47C573502893834E00B8B948 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47C5734E2893834E00B8B948 /* LoginViewController.xib */; };
 		BDB55762288AC385006898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55761288AC385006898EC /* AppDelegate.swift */; };
 		BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55763288AC385006898EC /* SceneDelegate.swift */; };
 		BDB55766288AC385006898EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55765288AC385006898EC /* ViewController.swift */; };
@@ -37,8 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		470143ED288D6BF1002F6260 /* LoginScreen.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginScreen.xib; sourceTree = "<group>"; };
-		470143EF288D6C10002F6260 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		47C5734D2893834E00B8B948 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		47C5734E2893834E00B8B948 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55761288AC385006898EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB55763288AC385006898EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,8 +81,8 @@
 		470143E6288D6AD6002F6260 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				470143ED288D6BF1002F6260 /* LoginScreen.xib */,
-				470143EF288D6C10002F6260 /* LoginViewController.swift */,
+				47C5734D2893834E00B8B948 /* LoginViewController.swift */,
+				47C5734E2893834E00B8B948 /* LoginViewController.xib */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -243,8 +243,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
-				470143EE288D6BF1002F6260 /* LoginScreen.xib in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
+				47C573502893834E00B8B948 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				470143F0288D6C10002F6260 /* LoginViewController.swift in Sources */,
+				47C5734F2893834E00B8B948 /* LoginViewController.swift in Sources */,
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
