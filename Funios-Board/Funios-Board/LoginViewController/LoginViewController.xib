@@ -112,21 +112,58 @@
                             <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-Bn-l9g">
+                            <rect key="frame" x="225.5" y="386" width="168.5" height="35"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Forgot password?">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="Helvetica"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GD-Lt-R6O">
+                            <rect key="frame" x="20" y="466" width="374" height="60"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="EWm-7T-qRv"/>
+                            </constraints>
+                            <color key="tintColor" systemColor="systemGray4Color"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled">
+                                <attributedString key="attributedTitle">
+                                    <fragment content="Login">
+                                        <attributes>
+                                            <color key="NSColor" red="0.42777383207070707" green="0.42777383207070707" blue="0.42777383207070707" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="22" name="Helvetica-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                            </buttonConfiguration>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="bgI-b8-t4P" secondAttribute="trailing" constant="20" id="207-nu-YyX"/>
+                        <constraint firstItem="4GD-Lt-R6O" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="20" id="6da-Pb-WzX"/>
                         <constraint firstAttribute="trailing" secondItem="BwO-xu-goL" secondAttribute="trailing" constant="30" id="6nU-o6-bm5"/>
+                        <constraint firstItem="gOm-Bn-l9g" firstAttribute="top" secondItem="bgI-b8-t4P" secondAttribute="bottom" constant="27" id="G3h-w7-brC"/>
                         <constraint firstItem="tK6-53-DU1" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="20" id="Ici-sf-HYO"/>
                         <constraint firstItem="BwO-xu-goL" firstAttribute="top" secondItem="bCm-cK-S96" secondAttribute="bottom" constant="30" id="JZC-bC-jRb"/>
+                        <constraint firstAttribute="trailing" secondItem="gOm-Bn-l9g" secondAttribute="trailing" constant="20" id="LmR-wv-lan"/>
                         <constraint firstItem="bgI-b8-t4P" firstAttribute="top" secondItem="tK6-53-DU1" secondAttribute="bottom" constant="40" id="Pd8-ss-n6n"/>
                         <constraint firstAttribute="trailing" secondItem="tK6-53-DU1" secondAttribute="trailing" constant="20" id="QYv-0t-qby"/>
                         <constraint firstItem="BwO-xu-goL" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="30" id="WID-GO-ORG"/>
                         <constraint firstItem="bCm-cK-S96" firstAttribute="top" secondItem="p2B-7b-3Ce" secondAttribute="top" constant="30" id="X8C-B9-yyd"/>
                         <constraint firstAttribute="height" constant="800" id="bjA-Q9-bZ1"/>
+                        <constraint firstAttribute="trailing" secondItem="4GD-Lt-R6O" secondAttribute="trailing" constant="20" id="g7G-C6-QoE"/>
                         <constraint firstItem="bCm-cK-S96" firstAttribute="centerX" secondItem="p2B-7b-3Ce" secondAttribute="centerX" id="j6V-iK-eCu"/>
                         <constraint firstItem="tK6-53-DU1" firstAttribute="top" secondItem="BwO-xu-goL" secondAttribute="bottom" constant="40" id="kC8-re-96B"/>
                         <constraint firstItem="bgI-b8-t4P" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="20" id="pEr-Jj-6Of"/>
+                        <constraint firstItem="4GD-Lt-R6O" firstAttribute="top" secondItem="gOm-Bn-l9g" secondAttribute="bottom" constant="45" id="tNJ-NJ-ay1"/>
                     </constraints>
                 </view>
             </subviews>
@@ -153,6 +190,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
