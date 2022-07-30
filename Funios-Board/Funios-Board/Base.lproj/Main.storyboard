@@ -40,20 +40,32 @@
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your e-mail" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BgX-GE-gc9">
-                                        <rect key="frame" x="20" y="168" width="374" height="34"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                    <textField opaque="NO" contentMode="left" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="BgX-GE-gc9">
+                                        <rect key="frame" x="20" y="168" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="T9i-zv-9vI"/>
+                                        </constraints>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Enter your e-mail">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.68357402146464641" green="0.68357402146464641" blue="0.68357402146464641" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <font key="NSFont" size="20" name="Helvetica"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1R2-Z6-hkV">
-                                        <rect key="frame" x="20" y="242" width="374" height="34"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter your password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1R2-Z6-hkV">
+                                        <rect key="frame" x="20" y="258" width="374" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="0bm-FZ-4Fo"/>
+                                        </constraints>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ksy-Rc-c1S">
-                                        <rect key="frame" x="233.5" y="296" width="160.5" height="34"/>
+                                        <rect key="frame" x="233.5" y="328" width="160.5" height="34"/>
                                         <buttonConfiguration key="configuration" style="plain">
                                             <attributedString key="attributedTitle">
                                                 <fragment content="Forgot password?">
@@ -66,7 +78,7 @@
                                         </buttonConfiguration>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIx-1m-poV">
-                                        <rect key="frame" x="20" y="480" width="374" height="60"/>
+                                        <rect key="frame" x="20" y="462" width="374" height="60"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="g8r-7o-hL6"/>
                                         </constraints>
@@ -88,13 +100,13 @@
                                         </buttonConfiguration>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49y-lP-qfT">
-                                        <rect key="frame" x="104" y="575" width="206" height="24"/>
+                                        <rect key="frame" x="104" y="557" width="206" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ofa-fW-EbL">
-                                        <rect key="frame" x="157" y="599" width="100" height="37"/>
+                                        <rect key="frame" x="157" y="581" width="100" height="37"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" subtitle="">
                                             <attributedString key="attributedTitle">
@@ -112,7 +124,7 @@
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="Suf-BX-rXV" secondAttribute="trailing" constant="35" id="5uI-Sa-7sa"/>
                                     <constraint firstItem="1R2-Z6-hkV" firstAttribute="centerX" secondItem="4uD-GX-g3d" secondAttribute="centerX" id="5y0-zv-8zV"/>
-                                    <constraint firstItem="GIx-1m-poV" firstAttribute="top" secondItem="Ksy-Rc-c1S" secondAttribute="bottom" constant="150" id="DSw-tw-pRZ"/>
+                                    <constraint firstItem="GIx-1m-poV" firstAttribute="top" secondItem="Ksy-Rc-c1S" secondAttribute="bottom" constant="100" id="DSw-tw-pRZ"/>
                                     <constraint firstItem="Suf-BX-rXV" firstAttribute="top" secondItem="SsI-KT-Ayp" secondAttribute="bottom" constant="25" id="Fhn-XD-fUh"/>
                                     <constraint firstItem="1R2-Z6-hkV" firstAttribute="top" secondItem="BgX-GE-gc9" secondAttribute="bottom" constant="40" id="Glh-1d-iCN"/>
                                     <constraint firstItem="ofa-fW-EbL" firstAttribute="centerX" secondItem="4uD-GX-g3d" secondAttribute="centerX" id="Hzq-XF-gm9"/>
@@ -150,6 +162,7 @@
                     </view>
                     <connections>
                         <outlet property="ViewForLogin" destination="4uD-GX-g3d" id="wW9-LL-p8f"/>
+                        <outlet property="emailTextField" destination="BgX-GE-gc9" id="oc8-wc-rWY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
