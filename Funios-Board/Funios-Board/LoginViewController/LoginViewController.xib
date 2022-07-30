@@ -69,6 +69,40 @@
                                 <constraint firstAttribute="height" constant="70" id="ufm-fJ-c0N"/>
                             </constraints>
                         </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bgI-b8-t4P">
+                            <rect key="frame" x="20" y="289" width="374" height="70"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wIw-dI-DEf">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="68"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="H16-J0-e2X">
+                                            <rect key="frame" x="0.0" y="0.5" width="40" height="66.5"/>
+                                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="Fn2-ku-B0T"/>
+                                            </constraints>
+                                        </imageView>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHP-ga-MFy">
+                                            <rect key="frame" x="40" y="0.0" width="334" height="68"/>
+                                            <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES" textContentType="password"/>
+                                        </textField>
+                                    </subviews>
+                                </stackView>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTA-0Q-Zz5">
+                                    <rect key="frame" x="0.0" y="68" width="374" height="2"/>
+                                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="2" id="dkp-Yi-qxe"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="mgG-OP-OFX"/>
+                            </constraints>
+                        </stackView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login to your existing account to access all the features in Zwallet" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BwO-xu-goL">
                             <rect key="frame" x="30" y="89" width="354" height="50"/>
                             <constraints>
@@ -81,15 +115,18 @@
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
+                        <constraint firstAttribute="trailing" secondItem="bgI-b8-t4P" secondAttribute="trailing" constant="20" id="207-nu-YyX"/>
                         <constraint firstAttribute="trailing" secondItem="BwO-xu-goL" secondAttribute="trailing" constant="30" id="6nU-o6-bm5"/>
                         <constraint firstItem="tK6-53-DU1" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="20" id="Ici-sf-HYO"/>
                         <constraint firstItem="BwO-xu-goL" firstAttribute="top" secondItem="bCm-cK-S96" secondAttribute="bottom" constant="30" id="JZC-bC-jRb"/>
+                        <constraint firstItem="bgI-b8-t4P" firstAttribute="top" secondItem="tK6-53-DU1" secondAttribute="bottom" constant="40" id="Pd8-ss-n6n"/>
                         <constraint firstAttribute="trailing" secondItem="tK6-53-DU1" secondAttribute="trailing" constant="20" id="QYv-0t-qby"/>
                         <constraint firstItem="BwO-xu-goL" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="30" id="WID-GO-ORG"/>
                         <constraint firstItem="bCm-cK-S96" firstAttribute="top" secondItem="p2B-7b-3Ce" secondAttribute="top" constant="30" id="X8C-B9-yyd"/>
                         <constraint firstAttribute="height" constant="800" id="bjA-Q9-bZ1"/>
                         <constraint firstItem="bCm-cK-S96" firstAttribute="centerX" secondItem="p2B-7b-3Ce" secondAttribute="centerX" id="j6V-iK-eCu"/>
                         <constraint firstItem="tK6-53-DU1" firstAttribute="top" secondItem="BwO-xu-goL" secondAttribute="bottom" constant="40" id="kC8-re-96B"/>
+                        <constraint firstItem="bgI-b8-t4P" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="20" id="pEr-Jj-6Of"/>
                     </constraints>
                 </view>
             </subviews>
@@ -107,6 +144,7 @@
     </objects>
     <resources>
         <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="lock" catalog="system" width="128" height="128"/>
         <namedColor name="AppColor">
             <color red="0.40784313725490196" green="0.47450980392156861" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
