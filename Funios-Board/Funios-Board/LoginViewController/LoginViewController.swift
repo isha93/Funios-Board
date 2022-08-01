@@ -9,12 +9,25 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    var showPassword: Bool = false
+    @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var CardView: UIView!
     @IBOutlet weak var LoginButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         editCardView()
         editLoginButton()
+    }
+    
+    @IBAction func changePasswordVisibility(_ sender: Any) {
+        showPassword = !showPassword
+        
+        if(showPassword == true){
+            
+        }else{
+            
+        }
     }
     
     func editCardView(){

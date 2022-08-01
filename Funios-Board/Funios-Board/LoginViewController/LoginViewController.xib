@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="CardView" destination="p2B-7b-3Ce" id="M54-PH-Yqe"/>
                 <outlet property="LoginButton" destination="4GD-Lt-R6O" id="AI0-MF-cU1"/>
+                <outlet property="PasswordTextField" destination="sHP-ga-MFy" id="gx8-NA-6zo"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -84,11 +85,24 @@
                                             </constraints>
                                         </imageView>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter your password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sHP-ga-MFy">
-                                            <rect key="frame" x="40" y="0.0" width="334" height="68"/>
+                                            <rect key="frame" x="40" y="0.0" width="294" height="68"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" keyboardType="emailAddress" secureTextEntry="YES" textContentType="password"/>
                                         </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U79-YI-bLR">
+                                            <rect key="frame" x="334" y="0.0" width="40" height="68"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="40" id="rXq-d7-a4n"/>
+                                            </constraints>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system">
+                                                <color key="baseForegroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </buttonConfiguration>
+                                            <connections>
+                                                <action selector="changePasswordVisibility:" destination="-1" eventType="touchUpInside" id="hps-wF-1kT"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DTA-0Q-Zz5">
@@ -216,6 +230,7 @@
     </objects>
     <resources>
         <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <namedColor name="AppColor">
             <color red="0.40784313725490196" green="0.47450980392156861" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
