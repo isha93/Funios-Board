@@ -25,10 +25,13 @@ class LoginViewController: UIViewController {
         showPassword = !showPassword
         
         if(showPassword == true){
+            let image = UIImage(systemName: "eye")!
             PasswordTextField.isSecureTextEntry = false
-            
+            PasswordVisibilityButton.setImage(image, for: .normal)
         }else{
+            let image = UIImage(systemName: "eye.slash")!
             PasswordTextField.isSecureTextEntry = true
+            PasswordVisibilityButton.setImage(image, for: .normal)
         }
     }
     
