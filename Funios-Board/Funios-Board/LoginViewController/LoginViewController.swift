@@ -10,6 +10,7 @@ import UIKit
 class LoginViewController: UIViewController {
 
     var showPassword: Bool = false
+    @IBOutlet weak var PasswordVisibilityButton: UIButton!
     @IBOutlet weak var PasswordTextField: UITextField!
     @IBOutlet weak var CardView: UIView!
     @IBOutlet weak var LoginButton: UIButton!
@@ -24,9 +25,10 @@ class LoginViewController: UIViewController {
         showPassword = !showPassword
         
         if(showPassword == true){
+            PasswordTextField.isSecureTextEntry = false
             
         }else{
-            
+            PasswordTextField.isSecureTextEntry = true
         }
     }
     
