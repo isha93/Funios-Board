@@ -47,5 +47,29 @@ extension LoginViewController{
 
 //MARK: - UITextFieldDelegate Logic
 extension LoginViewController: UITextFieldDelegate{
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        switch (textField){
+        case emailTextField:
+            emailIconImageView.tintColor = .systemBlue
+            break
+        case passwordTextField:
+            passwordIconImageView.tintColor = .systemBlue
+            break
+        default:
+            break
+        }
+    }
     
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        switch (textField){
+        case emailTextField:
+            emailIconImageView.tintColor = .systemGray3
+            break
+        case passwordTextField:
+            passwordIconImageView.tintColor = .systemGray3
+            break
+        default:
+            break
+        }
+    }
 }
