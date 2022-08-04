@@ -47,14 +47,15 @@ extension LoginViewController{
     @IBAction func forgotPasswordButton(_ sender: Any) {
         print("ini lupa password")
     }
-    @IBAction func hideShowPasswordButton(_ sender: Any){
+    @IBAction func hideShowPasswordButtonPressed(_ sender: Any){
         if showPassword {
             passwordTextField.isSecureTextEntry = true
-            showPassword = false
+            hideShowPasswordButton.setImage(UIImage(named: "eye"), for: .normal)
         }else{
             passwordTextField.isSecureTextEntry = false
-            showPassword = true
+            hideShowPasswordButton.setImage(UIImage(named: "eye.slash"), for: .normal)
         }
+        showPassword = !showPassword
     }
 }
 
