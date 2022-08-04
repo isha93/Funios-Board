@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    @IBOutlet var cardView: UIView!
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
@@ -23,13 +23,7 @@ extension LoginViewController{
     func setupLayout(){
         //CardView
         cardView.layer.cornerRadius = 35
-        
-        //EmailTextView
-        emailTextField.textContentType = .emailAddress
-        //Password
-        passwordTextField.textContentType = .password
     }
-    
 }
 
 //MARK: - IBaction Event
