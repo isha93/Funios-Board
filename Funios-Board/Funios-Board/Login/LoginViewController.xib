@@ -11,7 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
                 <outlet property="cardView" destination="2If-sW-2XX" id="Oza-en-Qqg"/>
+                <outlet property="emailTextField" destination="YzA-M1-Q8m" id="V3n-GM-iWm"/>
                 <outlet property="passwordHideButton" destination="g9b-0x-LHr" id="CKf-ef-AIE"/>
+                <outlet property="passwordTextField" destination="ngG-H0-hLV" id="1Pz-Ph-pRl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
