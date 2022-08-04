@@ -53,9 +53,11 @@ extension LoginViewController: UITextFieldDelegate{
         switch (textField){
         case emailTextField:
             emailIconImageView.tintColor = .systemBlue
+            emailBottomLineView.backgroundColor = .systemBlue
             break
         case passwordTextField:
             passwordIconImageView.tintColor = .systemBlue
+            passwordBottomLineView.backgroundColor = .systemBlue
             break
         default:
             break
@@ -66,9 +68,11 @@ extension LoginViewController: UITextFieldDelegate{
         switch (textField){
         case emailTextField:
             emailIconImageView.tintColor = .systemGray3
+            emailBottomLineView.backgroundColor = .systemGray3
             break
         case passwordTextField:
             passwordIconImageView.tintColor = .systemGray3
+            passwordBottomLineView.backgroundColor = .systemGray3
             break
         default:
             break
