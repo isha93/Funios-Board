@@ -61,7 +61,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="left" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="kiV-c5-m7P">
-                            <rect key="frame" x="132.5" y="415" width="250.5" height="31"/>
+                            <rect key="frame" x="82" y="415" width="250.5" height="31"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Let's" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QW9-7N-QhA">
                                     <rect key="frame" x="0.0" y="2.5" width="175.5" height="26"/>
@@ -83,10 +83,8 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="trailing" secondItem="OER-Pa-aWW" secondAttribute="trailing" id="3Yt-6X-ioa"/>
                                 <constraint firstItem="OER-Pa-aWW" firstAttribute="leading" secondItem="QW9-7N-QhA" secondAttribute="trailing" id="9lp-xv-DiH"/>
                                 <constraint firstAttribute="bottom" secondItem="OER-Pa-aWW" secondAttribute="bottom" id="HdR-Zv-fkG"/>
-                                <constraint firstItem="QW9-7N-QhA" firstAttribute="leading" secondItem="kiV-c5-m7P" secondAttribute="leading" id="LNt-Vi-OaQ"/>
                                 <constraint firstAttribute="height" constant="31" id="MC6-R0-7i3"/>
                                 <constraint firstItem="OER-Pa-aWW" firstAttribute="top" secondItem="kiV-c5-m7P" secondAttribute="top" id="O6Y-aa-mMw"/>
                                 <constraint firstItem="QW9-7N-QhA" firstAttribute="top" secondItem="kiV-c5-m7P" secondAttribute="top" constant="2.5" id="PXU-jN-WRf"/>
@@ -194,6 +192,7 @@
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="kiV-c5-m7P" firstAttribute="centerX" secondItem="KZ6-b9-JPi" secondAttribute="centerX" id="1ch-Px-KL8"/>
                         <constraint firstItem="Vgl-Qi-rZJ" firstAttribute="top" secondItem="oOy-0F-TVm" secondAttribute="bottom" constant="25" id="51q-YM-N3X"/>
                         <constraint firstAttribute="trailing" secondItem="zbG-cc-uhX" secondAttribute="trailing" constant="31" id="Da3-jG-RHN"/>
                         <constraint firstItem="rid-xa-KKT" firstAttribute="leading" secondItem="KZ6-b9-JPi" secondAttribute="leading" constant="150" id="EOH-3s-oso"/>
@@ -201,7 +200,6 @@
                         <constraint firstAttribute="trailing" secondItem="rid-xa-KKT" secondAttribute="trailing" constant="150" id="Kba-LX-9aS"/>
                         <constraint firstAttribute="trailing" secondItem="Vgl-Qi-rZJ" secondAttribute="trailing" constant="31" id="S3Q-1o-PFA"/>
                         <constraint firstItem="zbG-cc-uhX" firstAttribute="top" secondItem="Vgl-Qi-rZJ" secondAttribute="bottom" constant="17" id="Ttw-Si-xig"/>
-                        <constraint firstAttribute="trailing" secondItem="kiV-c5-m7P" secondAttribute="trailing" constant="31" id="WOO-4g-Wc6"/>
                         <constraint firstAttribute="trailing" secondItem="oOy-0F-TVm" secondAttribute="trailing" constant="31" id="Xsz-OO-3zC"/>
                         <constraint firstItem="uz7-aQ-23n" firstAttribute="leading" secondItem="KZ6-b9-JPi" secondAttribute="leading" constant="40" id="aHr-lJ-ljU"/>
                         <constraint firstItem="rid-xa-KKT" firstAttribute="top" secondItem="KZ6-b9-JPi" secondAttribute="top" constant="32" id="d9d-Dn-DkS"/>
