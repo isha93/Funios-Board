@@ -144,10 +144,20 @@
                                             </constraints>
                                         </imageView>
                                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="B0Y-ZI-Dtd">
-                                            <rect key="frame" x="50" y="0.0" width="302" height="40"/>
+                                            <rect key="frame" x="50" y="0.0" width="252" height="40"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                         </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBA-Ea-Snw">
+                                            <rect key="frame" x="312" y="0.0" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="IeE-ka-ACx"/>
+                                                <constraint firstAttribute="width" constant="40" id="srw-xZ-DdH"/>
+                                            </constraints>
+                                            <color key="tintColor" systemColor="systemGray2Color"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="40" id="TiM-28-Cri"/>
@@ -155,6 +165,7 @@
                                         <constraint firstItem="B0Y-ZI-Dtd" firstAttribute="leading" secondItem="akk-T3-0HR" secondAttribute="trailing" constant="10" id="g5O-M6-Y6F"/>
                                         <constraint firstItem="akk-T3-0HR" firstAttribute="top" secondItem="odK-Qy-r2o" secondAttribute="top" id="kXt-62-SPf"/>
                                         <constraint firstItem="akk-T3-0HR" firstAttribute="leading" secondItem="odK-Qy-r2o" secondAttribute="leading" id="uzA-Hp-ATG"/>
+                                        <constraint firstItem="eBA-Ea-Snw" firstAttribute="leading" secondItem="B0Y-ZI-Dtd" secondAttribute="trailing" constant="10" id="ziD-hn-pe0"/>
                                     </constraints>
                                 </stackView>
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YtR-z4-NUy">
@@ -215,9 +226,18 @@
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </view>
+        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3d0-fI-0nP">
+            <rect key="frame" x="0.0" y="0.0" width="42" height="21"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+            <nil key="textColor"/>
+            <nil key="highlightedColor"/>
+            <point key="canvasLocation" x="-378" y="127"/>
+        </label>
     </objects>
     <resources>
         <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="eye" catalog="system" width="128" height="81"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
