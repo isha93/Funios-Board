@@ -13,9 +13,11 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet weak var hidePasswordButton: UIButton!
+    @IBOutlet weak var hideShowPasswordButton: UIButton!
     @IBOutlet weak var emailBottomLineView: UIView!
     @IBOutlet weak var passwordBottomLineView: UIView!
+    
+    private var showPassword: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +46,15 @@ extension LoginViewController{
     }
     @IBAction func forgotPasswordButton(_ sender: Any) {
         print("ini lupa password")
+    }
+    @IBAction func hideShowPasswordButton(_ sender: Any){
+        if showPassword {
+            passwordTextField.isSecureTextEntry = true
+            showPassword = false
+        }else{
+            passwordTextField.isSecureTextEntry = false
+            showPassword = true
+        }
     }
 }
 
