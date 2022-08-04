@@ -127,20 +127,66 @@
                                 <constraint firstAttribute="height" constant="70" id="4hZ-fB-fXH"/>
                             </constraints>
                         </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6g-S1-8VY">
+                            <rect key="frame" x="255" y="331.5" width="139" height="31"/>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Forget password?"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FlK-jN-BSo">
+                            <rect key="frame" x="20" y="397.5" width="374" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="rCS-XI-zAd"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                            <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Login"/>
+                            <buttonConfiguration key="configuration" style="gray" title="Login">
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
+                            </buttonConfiguration>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-6F-eEH">
+                            <rect key="frame" x="50" y="477.5" width="314" height="31"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Let's" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xVx-T1-KyU">
+                                    <rect key="frame" x="0.0" y="0.0" width="220" height="31"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SXI-55-Fdx">
+                                    <rect key="frame" x="220" y="0.0" width="94" height="31"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Sign Up"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="SXI-55-Fdx" firstAttribute="leading" relation="lessThanOrEqual" secondItem="xVx-T1-KyU" secondAttribute="trailing" constant="5" id="Ubt-tc-0pv"/>
+                            </constraints>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstItem="gp7-cX-WgU" firstAttribute="leading" secondItem="2If-sW-2XX" secondAttribute="leading" constant="100" id="1m4-Pv-fWS"/>
                         <constraint firstItem="vNc-r7-mEy" firstAttribute="leading" secondItem="2If-sW-2XX" secondAttribute="leading" constant="20" id="4r2-Tm-elN"/>
+                        <constraint firstItem="6QU-6F-eEH" firstAttribute="top" secondItem="FlK-jN-BSo" secondAttribute="bottom" constant="30" id="5yJ-96-XxR"/>
                         <constraint firstAttribute="trailing" secondItem="vNc-r7-mEy" secondAttribute="trailing" constant="20" id="6WS-Nf-Okc"/>
                         <constraint firstItem="vkx-fE-13c" firstAttribute="leading" secondItem="2If-sW-2XX" secondAttribute="leading" constant="30" id="CWw-Qx-bkf"/>
+                        <constraint firstItem="FlK-jN-BSo" firstAttribute="top" secondItem="h6g-S1-8VY" secondAttribute="bottom" constant="35" id="LVc-Kq-jy9"/>
                         <constraint firstAttribute="trailing" secondItem="dNC-xG-2wc" secondAttribute="trailing" constant="20" id="OpF-34-xyD"/>
+                        <constraint firstItem="6QU-6F-eEH" firstAttribute="leading" secondItem="2If-sW-2XX" secondAttribute="leading" constant="50" id="WKA-K5-H9w"/>
+                        <constraint firstItem="FlK-jN-BSo" firstAttribute="leading" secondItem="2If-sW-2XX" secondAttribute="leading" constant="20" symbolic="YES" id="cu5-ZP-mXa"/>
                         <constraint firstAttribute="trailing" secondItem="gp7-cX-WgU" secondAttribute="trailing" constant="100" id="dB8-oy-hte"/>
                         <constraint firstItem="dNC-xG-2wc" firstAttribute="top" secondItem="vNc-r7-mEy" secondAttribute="bottom" constant="30" id="ijF-N7-ixw"/>
                         <constraint firstItem="dNC-xG-2wc" firstAttribute="leading" secondItem="2If-sW-2XX" secondAttribute="leading" constant="20" id="mqS-6l-H8s"/>
                         <constraint firstItem="vNc-r7-mEy" firstAttribute="top" secondItem="vkx-fE-13c" secondAttribute="bottom" constant="20" id="osh-25-snj"/>
+                        <constraint firstAttribute="trailing" secondItem="6QU-6F-eEH" secondAttribute="trailing" constant="50" id="pke-44-53j"/>
+                        <constraint firstItem="h6g-S1-8VY" firstAttribute="top" secondItem="dNC-xG-2wc" secondAttribute="bottom" constant="10" id="qON-uf-cC8"/>
+                        <constraint firstAttribute="trailing" secondItem="FlK-jN-BSo" secondAttribute="trailing" constant="20" symbolic="YES" id="rAZ-jp-BXr"/>
                         <constraint firstItem="vkx-fE-13c" firstAttribute="top" secondItem="gp7-cX-WgU" secondAttribute="bottom" constant="10" id="uVV-DE-JHh"/>
                         <constraint firstAttribute="trailing" secondItem="vkx-fE-13c" secondAttribute="trailing" constant="30" id="vhZ-E8-NLb"/>
+                        <constraint firstAttribute="trailing" secondItem="h6g-S1-8VY" secondAttribute="trailing" constant="20" symbolic="YES" id="vkq-Tz-IKM"/>
                         <constraint firstItem="gp7-cX-WgU" firstAttribute="top" secondItem="2If-sW-2XX" secondAttribute="top" constant="40" id="w0c-iD-60S"/>
                     </constraints>
                 </view>
