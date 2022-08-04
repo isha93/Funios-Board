@@ -8,9 +8,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    @IBOutlet weak var emailIconImageView: UIImageView!
+    @IBOutlet weak var passwordIconImageView: UIImageView!
     @IBOutlet weak var cardView: UIView!
     @IBOutlet var emailTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
+    @IBOutlet weak var hidePasswordButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
