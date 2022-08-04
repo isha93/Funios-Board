@@ -23,6 +23,9 @@ extension LoginViewController{
     func setupLayout(){
         //CardView
         cardView.layer.cornerRadius = 35
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
 }
 
@@ -37,4 +40,9 @@ extension LoginViewController{
     @IBAction func forgotPasswordButton(_ sender: Any) {
         print("ini lupa password")
     }
+}
+
+//MARK: - UITextFieldDelegate Logic
+extension LoginViewController: UITextFieldDelegate{
+    
 }
