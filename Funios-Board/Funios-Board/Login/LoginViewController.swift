@@ -50,10 +50,10 @@ extension LoginViewController{
     @IBAction func hideShowPasswordButtonPressed(_ sender: Any){
         if showPassword {
             passwordTextField.isSecureTextEntry = true
-            hideShowPasswordButton.setImage(UIImage(named: "eye"), for: .normal)
+            hideShowPasswordButton.setImage(UIImage( systemName: "eye"), for: .normal)
         }else{
             passwordTextField.isSecureTextEntry = false
-            hideShowPasswordButton.setImage(UIImage(named: "eye.slash"), for: .normal)
+            hideShowPasswordButton.setImage(UIImage(systemName: "eye.slash"), for: .normal)
         }
         showPassword = !showPassword
     }

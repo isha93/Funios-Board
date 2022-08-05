@@ -159,7 +159,9 @@
                                             </constraints>
                                             <color key="tintColor" systemColor="systemGray2Color"/>
                                             <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system"/>
+                                            <buttonConfiguration key="configuration" style="plain" image="eye" catalog="system">
+                                                <color key="baseForegroundColor" systemColor="systemGray2Color"/>
+                                            </buttonConfiguration>
                                             <connections>
                                                 <action selector="hideShowPasswordButtonPressed:" destination="-1" eventType="touchUpInside" id="LcN-GJ-ml9"/>
                                             </connections>
