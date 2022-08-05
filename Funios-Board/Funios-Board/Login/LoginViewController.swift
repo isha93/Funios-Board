@@ -8,12 +8,19 @@
 import UIKit
 
 class LoginViewController: UIViewController {
+    var passwordState = false
     @IBOutlet var tfEmail : UITextField!
     @IBOutlet var tfPassword: UITextField!
+    @IBOutlet var cardView: UIView!
+    @IBOutlet var btnLogin: UIButton!
+    @IBOutlet var btnTooglePassword: UIButton!
     override func viewDidLoad() {
         super.viewDidLoad()
-            setUpTextField()
+            setUpView()
         // Do any additional setup after loading the view.
+    }
+    @IBAction func passwordToogleState(_ sender: Any){
+        
     }
 
 
@@ -29,15 +36,9 @@ class LoginViewController: UIViewController {
 
 }
 extension LoginViewController{
-    func setUpTextField(){
-        setUpImageTextField(icon: UIImage(systemName: "envelope")!, tf: tfEmail)
-        setUpImageTextField(icon: UIImage(systemName: "lock")!, tf: tfPassword)
+    func setUpView(){
+        cardView.layer.cornerRadius = 35
+        btnLogin.layer.cornerRadius = 30
     }
-    func setUpImageTextField(icon: UIImage,tf:UITextField){
-        let ic = UIImageView(frame: CGRect(x: 0.0, y: 0.0, width: icon.size.width, height: icon.size.height))
-        ic.image = icon
-        tf.leftView = ic
-        tf.leftView?.tintColor = UIColor.systemGray3
-        tf.leftViewMode = .always
-    }
+   
 }

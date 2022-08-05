@@ -10,6 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
+                <outlet property="btnLogin" destination="5iI-cU-bQN" id="n3v-DK-M7f"/>
+                <outlet property="btnTooglePassword" destination="54p-fe-qiI" id="vir-WQ-hkD"/>
+                <outlet property="cardView" destination="bUs-lM-xZp" id="B6T-wY-h4r"/>
+                <outlet property="tfEmail" destination="k8Y-Cz-8uB" id="nt9-5N-gNr"/>
+                <outlet property="tfPassword" destination="tPK-iT-8lC" id="Eru-E4-PFy"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -89,6 +94,9 @@
                                             <buttonConfiguration key="configuration" style="plain" image="eye.slash" catalog="system">
                                                 <color key="baseForegroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </buttonConfiguration>
+                                            <connections>
+                                                <action selector="passwordToogleState:" destination="-1" eventType="touchUpInside" id="ljP-QG-e1Y"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
