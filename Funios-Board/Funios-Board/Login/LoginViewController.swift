@@ -8,7 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-    var passwordState = false
+    var hidePassword = true
     @IBOutlet var tfEmail : UITextField!
     @IBOutlet var tfPassword: UITextField!
     @IBOutlet var cardView: UIView!
@@ -20,7 +20,18 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     @IBAction func passwordToogleState(_ sender: Any){
-        
+        hidePassword = !hidePassword
+        var image : UIImage
+        switch(hidePassword){
+        case false:
+            image = UIImage(systemName: "eye")!
+            tfPassword.isSecureTextEntry = false
+            break;
+        default:
+            image = UIImage(systemName: "eye.slash")!
+            tfPassword.isSecureTextEntry = true
+        }
+        btnTooglePassword.setImage(image, for: .normal)
     }
 
 
