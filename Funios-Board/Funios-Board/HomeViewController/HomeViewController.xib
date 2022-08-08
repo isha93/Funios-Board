@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,6 +12,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
+                <outlet property="CardView" destination="gAQ-5a-9SA" id="v3n-Fm-K3R"/>
+                <outlet property="NotificationButton" destination="d9N-KH-OZs" id="DbC-cc-0kv"/>
+                <outlet property="ProfileImageView" destination="HVB-Qf-ubV" id="iMB-NX-Z3t"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -19,18 +23,64 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-5a-9SA">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gAQ-5a-9SA">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="188"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="HVB-Qf-ubV">
+                            <rect key="frame" x="25" y="65" width="75" height="75"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="75" id="6rl-Xf-VUB"/>
+                                <constraint firstAttribute="width" constant="75" id="yN1-8d-N4h"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NZI-rx-HaP">
+                            <rect key="frame" x="115" y="65" width="70" height="24"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp120.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hYk-L2-VFM">
+                            <rect key="frame" x="115" y="110" width="142" height="32.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9N-KH-OZs">
+                            <rect key="frame" x="344.5" y="87" width="44.5" height="31"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain">
+                                <imageReference key="image" image="bell" catalog="system" symbolScale="large"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
                     <color key="backgroundColor" name="AppColor"/>
+                    <constraints>
+                        <constraint firstItem="HVB-Qf-ubV" firstAttribute="leading" secondItem="gAQ-5a-9SA" secondAttribute="leading" constant="25" id="3dV-Nb-Mil"/>
+                        <constraint firstAttribute="trailing" secondItem="d9N-KH-OZs" secondAttribute="trailing" constant="25" id="V2B-Vs-zh2"/>
+                        <constraint firstItem="NZI-rx-HaP" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="top" constant="65" id="Xop-e3-7Wv"/>
+                        <constraint firstItem="d9N-KH-OZs" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="top" constant="87" id="Ze6-Pv-MiP"/>
+                        <constraint firstItem="hYk-L2-VFM" firstAttribute="leading" secondItem="HVB-Qf-ubV" secondAttribute="trailing" constant="15" id="fgb-F4-Vmt"/>
+                        <constraint firstItem="NZI-rx-HaP" firstAttribute="leading" secondItem="HVB-Qf-ubV" secondAttribute="trailing" constant="15" id="jh2-rp-W8w"/>
+                        <constraint firstItem="hYk-L2-VFM" firstAttribute="top" secondItem="NZI-rx-HaP" secondAttribute="bottom" constant="21" id="qh4-vV-f4f"/>
+                        <constraint firstItem="HVB-Qf-ubV" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="top" constant="65" id="s59-US-hfU"/>
+                    </constraints>
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gAQ-5a-9SA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BC8-KF-UNw"/>
+                <constraint firstItem="gAQ-5a-9SA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LTJ-HK-u7X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="674" id="Pdm-cz-Bfo"/>
+                <constraint firstItem="gAQ-5a-9SA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jWe-JA-jnC"/>
+            </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
         </view>
     </objects>
     <resources>
+        <image name="Profile" width="215" height="225"/>
+        <image name="bell" catalog="system" width="128" height="124"/>
         <namedColor name="AppColor">
             <color red="0.40784313725490196" green="0.47450980392156861" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
