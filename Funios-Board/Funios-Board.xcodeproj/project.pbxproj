@@ -18,6 +18,7 @@
 		BDB55785288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55784288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift */; };
 		E61349F528A100E5003E45A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61349F328A100E5003E45A3 /* HomeViewController.swift */; };
 		E61349F628A100E5003E45A3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61349F428A100E5003E45A3 /* HomeViewController.xib */; };
+		E61349FB28A11A2E003E45A3 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61349FA28A11A2E003E45A3 /* TransactionModel.swift */; };
 		E6FEA479289523E50062B7C2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6FEA477289523E50062B7C2 /* LoginViewController.swift */; };
 		E6FEA47A289523E50062B7C2 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6FEA478289523E50062B7C2 /* LoginViewController.xib */; };
 /* End PBXBuildFile section */
@@ -55,6 +56,7 @@
 		BDB55784288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funios_BoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		E61349F328A100E5003E45A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E61349F428A100E5003E45A3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E61349FA28A11A2E003E45A3 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
 		E6FEA477289523E50062B7C2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		E6FEA478289523E50062B7C2 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 		BDB55760288AC385006898EC /* Funios-Board */ = {
 			isa = PBXGroup;
 			children = (
+				E61349F928A11A1C003E45A3 /* Models */,
 				E61349F228A100CA003E45A3 /* HomeViewController */,
 				E6FEA476289523CB0062B7C2 /* LoginViewController */,
 				BDB55761288AC385006898EC /* AppDelegate.swift */,
@@ -144,6 +147,14 @@
 				E61349F428A100E5003E45A3 /* HomeViewController.xib */,
 			);
 			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		E61349F928A11A1C003E45A3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				E61349FA28A11A2E003E45A3 /* TransactionModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E6FEA476289523CB0062B7C2 /* LoginViewController */ = {
@@ -288,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E61349FB28A11A2E003E45A3 /* TransactionModel.swift in Sources */,
 				E61349F528A100E5003E45A3 /* HomeViewController.swift in Sources */,
 				E6FEA479289523E50062B7C2 /* LoginViewController.swift in Sources */,
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,

@@ -68,60 +68,71 @@
                         <constraint firstItem="HVB-Qf-ubV" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="top" constant="65" id="s59-US-hfU"/>
                     </constraints>
                 </view>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAH-2e-vW0">
-                    <rect key="frame" x="25" y="218" width="165" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="165" id="NWI-x3-dWc"/>
-                        <constraint firstAttribute="height" constant="50" id="W5c-ST-rhO"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" image="arrow.up" catalog="system">
-                        <attributedString key="attributedTitle">
-                            <fragment content=" Transfer">
-                                <attributes>
-                                    <color key="NSColor" red="0.21568629149999999" green="0.21960783" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <font key="NSFont" size="21" name="Helvetica-Bold"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <color key="baseForegroundColor" name="AppColor"/>
-                        <color key="baseBackgroundColor" name="ButtonColor"/>
-                    </buttonConfiguration>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ7-l0-oNd">
-                    <rect key="frame" x="224" y="218" width="165" height="50"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="165" id="n5Y-3F-B3w"/>
-                        <constraint firstAttribute="height" constant="50" id="rYf-rF-eH9"/>
-                    </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system">
-                        <attributedString key="attributedTitle">
-                            <fragment content=" Top Up">
-                                <attributes>
-                                    <color key="NSColor" red="0.21568629149999999" green="0.21960783" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                    <font key="NSFont" size="21" name="Helvetica-Bold"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                </attributes>
-                            </fragment>
-                        </attributedString>
-                        <color key="baseForegroundColor" name="AppColor"/>
-                        <color key="baseBackgroundColor" name="ButtonColor"/>
-                    </buttonConfiguration>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ODh-sl-kJD">
+                    <rect key="frame" x="0.0" y="288" width="414" height="180"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1Fa-QC-PsS">
+                    <rect key="frame" x="27" y="213" width="360" height="50"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAH-2e-vW0">
+                            <rect key="frame" x="0.0" y="0.0" width="165" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="165" id="NWI-x3-dWc"/>
+                                <constraint firstAttribute="height" constant="50" id="W5c-ST-rhO"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" image="arrow.up" catalog="system">
+                                <attributedString key="attributedTitle">
+                                    <fragment content=" Transfer">
+                                        <attributes>
+                                            <color key="NSColor" red="0.21568629149999999" green="0.21960783" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="21" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="baseForegroundColor" name="AppColor"/>
+                                <color key="baseBackgroundColor" name="ButtonColor"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ7-l0-oNd">
+                            <rect key="frame" x="195" y="0.0" width="165" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="165" id="n5Y-3F-B3w"/>
+                                <constraint firstAttribute="height" constant="50" id="rYf-rF-eH9"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system">
+                                <attributedString key="attributedTitle">
+                                    <fragment content=" Top Up">
+                                        <attributes>
+                                            <color key="NSColor" red="0.21568629149999999" green="0.21960783" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="21" name="Helvetica-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="baseForegroundColor" name="AppColor"/>
+                                <color key="baseBackgroundColor" name="ButtonColor"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="UJ7-l0-oNd" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="30" id="79w-Hz-IQV"/>
                 <constraint firstItem="gAQ-5a-9SA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BC8-KF-UNw"/>
-                <constraint firstItem="SAH-2e-vW0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Bxx-jT-p6u"/>
                 <constraint firstItem="gAQ-5a-9SA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LTJ-HK-u7X"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ODh-sl-kJD" secondAttribute="bottom" constant="394" id="LtF-Y7-5de"/>
+                <constraint firstItem="1Fa-QC-PsS" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="25" id="OXo-t7-RLb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="674" id="Pdm-cz-Bfo"/>
-                <constraint firstItem="SAH-2e-vW0" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="30" id="YI7-S0-KzB"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UJ7-l0-oNd" secondAttribute="trailing" constant="25" id="jP8-m5-ZRz"/>
+                <constraint firstItem="1Fa-QC-PsS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Spa-Vh-x9x"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="ODh-sl-kJD" secondAttribute="trailing" id="WRQ-o4-DQ3"/>
+                <constraint firstItem="ODh-sl-kJD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hZw-2M-bFj"/>
                 <constraint firstItem="gAQ-5a-9SA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jWe-JA-jnC"/>
+                <constraint firstItem="ODh-sl-kJD" firstAttribute="top" secondItem="1Fa-QC-PsS" secondAttribute="bottom" constant="25" id="uqd-qs-472"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
         </view>
