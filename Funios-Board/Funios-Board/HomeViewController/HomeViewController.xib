@@ -13,8 +13,10 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
                 <outlet property="CardView" destination="gAQ-5a-9SA" id="v3n-Fm-K3R"/>
-                <outlet property="NotificationButton" destination="d9N-KH-OZs" id="DbC-cc-0kv"/>
+                <outlet property="NotificationButton" destination="SAH-2e-vW0" id="v8O-oy-0dV"/>
                 <outlet property="ProfileImageView" destination="HVB-Qf-ubV" id="iMB-NX-Z3t"/>
+                <outlet property="TopUpButton" destination="UJ7-l0-oNd" id="KR3-7H-BXN"/>
+                <outlet property="TransferButton" destination="SAH-2e-vW0" id="Ae2-4o-zfS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -66,13 +68,59 @@
                         <constraint firstItem="HVB-Qf-ubV" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="top" constant="65" id="s59-US-hfU"/>
                     </constraints>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SAH-2e-vW0">
+                    <rect key="frame" x="25" y="218" width="165" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="165" id="NWI-x3-dWc"/>
+                        <constraint firstAttribute="height" constant="50" id="W5c-ST-rhO"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="arrow.up" catalog="system">
+                        <attributedString key="attributedTitle">
+                            <fragment content=" Transfer">
+                                <attributes>
+                                    <color key="NSColor" red="0.21568629149999999" green="0.21960783" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <font key="NSFont" size="21" name="Helvetica-Bold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" name="AppColor"/>
+                        <color key="baseBackgroundColor" name="ButtonColor"/>
+                    </buttonConfiguration>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UJ7-l0-oNd">
+                    <rect key="frame" x="224" y="218" width="165" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="165" id="n5Y-3F-B3w"/>
+                        <constraint firstAttribute="height" constant="50" id="rYf-rF-eH9"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system">
+                        <attributedString key="attributedTitle">
+                            <fragment content=" Top Up">
+                                <attributes>
+                                    <color key="NSColor" red="0.21568629149999999" green="0.21960783" blue="0.21960783" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <font key="NSFont" size="21" name="Helvetica-Bold"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <color key="baseForegroundColor" name="AppColor"/>
+                        <color key="baseBackgroundColor" name="ButtonColor"/>
+                    </buttonConfiguration>
+                </button>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="UJ7-l0-oNd" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="30" id="79w-Hz-IQV"/>
                 <constraint firstItem="gAQ-5a-9SA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BC8-KF-UNw"/>
+                <constraint firstItem="SAH-2e-vW0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="25" id="Bxx-jT-p6u"/>
                 <constraint firstItem="gAQ-5a-9SA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LTJ-HK-u7X"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="674" id="Pdm-cz-Bfo"/>
+                <constraint firstItem="SAH-2e-vW0" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="30" id="YI7-S0-KzB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UJ7-l0-oNd" secondAttribute="trailing" constant="25" id="jP8-m5-ZRz"/>
                 <constraint firstItem="gAQ-5a-9SA" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jWe-JA-jnC"/>
             </constraints>
             <point key="canvasLocation" x="131.8840579710145" y="113.83928571428571"/>
@@ -80,9 +128,14 @@
     </objects>
     <resources>
         <image name="Profile" width="215" height="225"/>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AppColor">
             <color red="0.40784313725490196" green="0.47450980392156861" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonColor">
+            <color red="0.92156862745098034" green="0.92941176470588238" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
