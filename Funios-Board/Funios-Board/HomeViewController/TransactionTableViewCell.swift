@@ -10,7 +10,7 @@ import UIKit
 class TransactionTableViewCell: UITableViewCell {
 
     @IBOutlet weak var TransactionImage: UIImageView!
-    
+    @IBOutlet weak var TransactionName: UILabel!
     @IBOutlet weak var TransactionDescription: UILabel!
     @IBOutlet weak var TransactionAmount: UILabel!
     

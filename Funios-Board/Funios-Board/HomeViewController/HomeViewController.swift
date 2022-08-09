@@ -57,7 +57,14 @@ class HomeViewController: UIViewController, UITableViewDataSource {
             cell.TransactionName.text = transaction.title
             cell.TransactionImage.image = transaction.image
             cell.TransactionDescription.text = transaction.description
-            //            cell.TransactionAmount.text = transaction.amount
+            cell.TransactionAmount.text = transaction.amount
+            
+            if transaction.amount.contains("+") {
+                cell.TransactionAmount.textColor = UIColor.systemGreen
+            } else {
+                cell.TransactionAmount.textColor = UIColor.systemRed
+            }
+            
             return cell
         } else {
             return UITableViewCell()

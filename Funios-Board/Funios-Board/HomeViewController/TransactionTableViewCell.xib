@@ -59,6 +59,7 @@
                 <outlet property="TransactionAmount" destination="gJ5-rF-nHo" id="ZAD-w7-pu6"/>
                 <outlet property="TransactionDescription" destination="Fqh-ZQ-xiI" id="N7Q-yt-Gzc"/>
                 <outlet property="TransactionImage" destination="7sM-hb-mvy" id="Jxp-3y-VL8"/>
+                <outlet property="TransactionName" destination="PEq-ex-Tpd" id="TvY-Wo-ipn"/>
             </connections>
             <point key="canvasLocation" x="131.8840579710145" y="125.89285714285714"/>
         </tableViewCell>
