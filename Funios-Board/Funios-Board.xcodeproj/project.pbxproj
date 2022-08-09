@@ -16,6 +16,8 @@
 		BDB55779288AC387006898EC /* Funios_BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55778288AC387006898EC /* Funios_BoardTests.swift */; };
 		BDB55783288AC387006898EC /* Funios_BoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55782288AC387006898EC /* Funios_BoardUITests.swift */; };
 		BDB55785288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55784288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift */; };
+		E6032A2928A24A430013D317 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6032A2728A24A430013D317 /* TransactionTableViewCell.swift */; };
+		E6032A2A28A24A430013D317 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6032A2828A24A430013D317 /* TransactionTableViewCell.xib */; };
 		E61349F528A100E5003E45A3 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61349F328A100E5003E45A3 /* HomeViewController.swift */; };
 		E61349F628A100E5003E45A3 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E61349F428A100E5003E45A3 /* HomeViewController.xib */; };
 		E61349FB28A11A2E003E45A3 /* TransactionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61349FA28A11A2E003E45A3 /* TransactionModel.swift */; };
@@ -54,6 +56,8 @@
 		BDB5577E288AC387006898EC /* Funios-BoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Funios-BoardUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55782288AC387006898EC /* Funios_BoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funios_BoardUITests.swift; sourceTree = "<group>"; };
 		BDB55784288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funios_BoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		E6032A2728A24A430013D317 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
+		E6032A2828A24A430013D317 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		E61349F328A100E5003E45A3 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		E61349F428A100E5003E45A3 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		E61349FA28A11A2E003E45A3 /* TransactionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionModel.swift; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 			children = (
 				E61349F328A100E5003E45A3 /* HomeViewController.swift */,
 				E61349F428A100E5003E45A3 /* HomeViewController.xib */,
+				E6032A2728A24A430013D317 /* TransactionTableViewCell.swift */,
+				E6032A2828A24A430013D317 /* TransactionTableViewCell.xib */,
 			);
 			path = HomeViewController;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
 				E61349F628A100E5003E45A3 /* HomeViewController.xib in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
+				E6032A2A28A24A430013D317 /* TransactionTableViewCell.xib in Resources */,
 				BDB55769288AC385006898EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +307,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E61349FB28A11A2E003E45A3 /* TransactionModel.swift in Sources */,
+				E6032A2928A24A430013D317 /* TransactionTableViewCell.swift in Sources */,
 				E61349F528A100E5003E45A3 /* HomeViewController.swift in Sources */,
 				E6FEA479289523E50062B7C2 /* LoginViewController.swift in Sources */,
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
@@ -481,6 +489,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56522S7SKK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Funios-Board/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -507,6 +516,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56522S7SKK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Funios-Board/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

@@ -16,6 +16,7 @@
                 <outlet property="NotificationButton" destination="SAH-2e-vW0" id="v8O-oy-0dV"/>
                 <outlet property="ProfileImageView" destination="HVB-Qf-ubV" id="iMB-NX-Z3t"/>
                 <outlet property="TopUpButton" destination="UJ7-l0-oNd" id="KR3-7H-BXN"/>
+                <outlet property="TransactionTableView" destination="ODh-sl-kJD" id="YOA-cg-Vig"/>
                 <outlet property="TransferButton" destination="SAH-2e-vW0" id="Ae2-4o-zfS"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -68,10 +69,6 @@
                         <constraint firstItem="HVB-Qf-ubV" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="top" constant="65" id="s59-US-hfU"/>
                     </constraints>
                 </view>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ODh-sl-kJD">
-                    <rect key="frame" x="0.0" y="288" width="414" height="180"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1Fa-QC-PsS">
                     <rect key="frame" x="27" y="213" width="360" height="50"/>
                     <subviews>
@@ -119,13 +116,17 @@
                         </button>
                     </subviews>
                 </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ODh-sl-kJD">
+                    <rect key="frame" x="0.0" y="288" width="414" height="574"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" name="BackgroundColor"/>
             <constraints>
                 <constraint firstItem="gAQ-5a-9SA" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="BC8-KF-UNw"/>
                 <constraint firstItem="gAQ-5a-9SA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LTJ-HK-u7X"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ODh-sl-kJD" secondAttribute="bottom" constant="394" id="LtF-Y7-5de"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ODh-sl-kJD" secondAttribute="bottom" id="LtF-Y7-5de"/>
                 <constraint firstItem="1Fa-QC-PsS" firstAttribute="top" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="25" id="OXo-t7-RLb"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gAQ-5a-9SA" secondAttribute="bottom" constant="674" id="Pdm-cz-Bfo"/>
                 <constraint firstItem="1Fa-QC-PsS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Spa-Vh-x9x"/>
@@ -144,6 +145,9 @@
         <image name="plus" catalog="system" width="128" height="113"/>
         <namedColor name="AppColor">
             <color red="0.40784313725490196" green="0.47450980392156861" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="BackgroundColor">
+            <color red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="ButtonColor">
             <color red="0.92156862745098034" green="0.92941176470588238" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
