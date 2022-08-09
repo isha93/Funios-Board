@@ -7,8 +7,8 @@
 
 import UIKit
 
-class HomeViewController: UIViewController, UITableViewDataSource {
-    
+class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     //MARK: Card View Section
     @IBOutlet weak var ProfileImageView: UIImageView!
     @IBOutlet weak var CardView: UIView!
@@ -25,8 +25,10 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         editCardViewContent()
         buttonsCornerRadius()
-        TransactionTableView.dataSource = self
         
+        TransactionTableView.dataSource = self
+        TransactionTableView.delegate = self
+        TransactionTableView.separatorColor = UIColor.clear
         TransactionTableView.register(
             UINib(nibName: "TransactionTableViewCell", bundle: nil),
             forCellReuseIdentifier: "TransactionCell"
@@ -43,10 +45,12 @@ class HomeViewController: UIViewController, UITableViewDataSource {
         TopUpButton.layer.cornerRadius = 15
     }
     
+    //MARK: Set the amount of transaction
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dummyTransactionData.count
     }
     
+    //MARK: Set the cell view iteration
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(
             withIdentifier: "TransactionCell",
