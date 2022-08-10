@@ -45,9 +45,14 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         TopUpButton.layer.cornerRadius = 15
     }
     
-    //MARK: Set the amount of transaction
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    //MARK: Set the amount of section in table view
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dummyTransactionData.count
+    }
+    
+    //MARK: Set the amount of row in a section
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
     
     //MARK: Set the cell view iteration
@@ -57,7 +62,7 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             for: indexPath
         ) as? TransactionTableViewCell {
             
-            let transaction = dummyTransactionData[indexPath.row]
+            let transaction = dummyTransactionData[indexPath.section]
             cell.TransactionName.text = transaction.title
             cell.TransactionImage.image = transaction.image
             cell.TransactionDescription.text = transaction.description
@@ -68,6 +73,9 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
             } else {
                 cell.TransactionAmount.textColor = UIColor.systemRed
             }
+            
+            cell.layer.shadowColor = UIColor.systemGray.cgColor
+            cell.layer.shadowOpacity = 0.5
             
             return cell
         } else {
