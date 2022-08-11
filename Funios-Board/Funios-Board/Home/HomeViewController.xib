@@ -20,9 +20,18 @@
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LgF-hh-mSp">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="160"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-L2-ODA">
+                            <rect key="frame" x="16" y="64" width="382" height="66"/>
+                        </stackView>
+                    </subviews>
                     <color key="backgroundColor" systemColor="linkColor"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="bWh-L2-ODA" secondAttribute="bottom" constant="30" id="L9M-XV-Brc"/>
                         <constraint firstAttribute="height" constant="160" id="cwS-yS-kkA"/>
+                        <constraint firstItem="bWh-L2-ODA" firstAttribute="leading" secondItem="LgF-hh-mSp" secondAttribute="leading" constant="16" id="g7N-Th-Eln"/>
+                        <constraint firstItem="bWh-L2-ODA" firstAttribute="top" secondItem="LgF-hh-mSp" secondAttribute="top" constant="64" id="hc4-Dc-IeF"/>
+                        <constraint firstAttribute="trailing" secondItem="bWh-L2-ODA" secondAttribute="trailing" constant="16" id="mrd-YO-Ghc"/>
                     </constraints>
                 </view>
             </subviews>
