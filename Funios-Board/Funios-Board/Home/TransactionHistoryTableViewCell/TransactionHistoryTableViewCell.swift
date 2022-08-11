@@ -40,7 +40,14 @@ extension TransactionHistoryTableViewCell{
 //MARK: - Setup Layout
 extension TransactionHistoryTableViewCell{
     func setupLayout(){
-        cardView.layer.cornerRadius = 25
+        contentView.layer.cornerRadius = 25
+        contentView.clipsToBounds = true
+        contentView.layer.masksToBounds = false
+        contentView.layer.shadowRadius = 5
+        contentView.layer.shadowOpacity = 0.1
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 2)
+        contentView.layer.shadowColor = UIColor.black.cgColor
+        
         userProfileImageView.layer.cornerRadius = 10
     }
 }
