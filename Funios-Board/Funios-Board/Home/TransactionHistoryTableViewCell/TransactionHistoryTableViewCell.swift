@@ -8,10 +8,13 @@
 import UIKit
 
 class TransactionHistoryTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var cardView: UIView!
+    @IBOutlet weak var userProfileImageView: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        setupLayout()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -20,4 +23,12 @@ class TransactionHistoryTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+
+//MARK: - Setup Layout
+extension TransactionHistoryTableViewCell{
+    func setupLayout(){
+        cardView.layer.cornerRadius = 25
+        userProfileImageView.layer.cornerRadius = 10
+    }
 }
