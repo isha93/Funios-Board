@@ -75,6 +75,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="cardView" destination="2nz-RU-C5s" id="egI-gC-aTM"/>
+                <outlet property="transactionNominalLabel" destination="hEV-ug-xqi" id="YJx-58-t8z"/>
+                <outlet property="transactionTypeLabel" destination="SsG-B8-kYx" id="Zbu-DA-X78"/>
+                <outlet property="userNameLabel" destination="36R-AV-5Of" id="j4l-H5-Caf"/>
                 <outlet property="userProfileImageView" destination="Lly-g1-rCy" id="sHP-t9-V1J"/>
             </connections>
             <point key="canvasLocation" x="168.84057971014494" y="85.379464285714278"/>

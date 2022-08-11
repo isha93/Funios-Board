@@ -10,6 +10,9 @@ import UIKit
 class TransactionHistoryTableViewCell: UITableViewCell {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var userProfileImageView: UIImageView!
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var transactionTypeLabel: UILabel!
+    @IBOutlet weak var transactionNominalLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,5 +33,15 @@ extension TransactionHistoryTableViewCell{
     func setupLayout(){
         cardView.layer.cornerRadius = 25
         userProfileImageView.layer.cornerRadius = 10
+    }
+}
+
+//MARK: - Setup Data
+extension TransactionHistoryTableViewCell{
+    func SetupData(name: String, picture: String, type: String, nominal: String){
+        userNameLabel.text = name
+        userProfileImageView.image = UIImage(named: picture)
+        transactionTypeLabel.text = type
+        transactionNominalLabel.text = nominal
     }
 }
