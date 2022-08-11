@@ -11,6 +11,8 @@
 		015EC4492892C8810072D520 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015EC4472892C8810072D520 /* LoginViewController.xib */; };
 		01F8022A28A5359C00976A9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8022828A5359C00976A9C /* HomeViewController.swift */; };
 		01F8022B28A5359C00976A9C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F8022928A5359C00976A9C /* HomeViewController.xib */; };
+		01F8023028A547FB00976A9C /* TransactionHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8022E28A547FB00976A9C /* TransactionHistoryTableViewCell.swift */; };
+		01F8023128A547FB00976A9C /* TransactionHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F8022F28A547FB00976A9C /* TransactionHistoryTableViewCell.xib */; };
 		BDB55762288AC385006898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55761288AC385006898EC /* AppDelegate.swift */; };
 		BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55763288AC385006898EC /* SceneDelegate.swift */; };
 		BDB55766288AC385006898EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55765288AC385006898EC /* ViewController.swift */; };
@@ -44,6 +46,8 @@
 		015EC4472892C8810072D520 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		01F8022828A5359C00976A9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		01F8022928A5359C00976A9C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		01F8022E28A547FB00976A9C /* TransactionHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryTableViewCell.swift; sourceTree = "<group>"; };
+		01F8022F28A547FB00976A9C /* TransactionHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryTableViewCell.xib; sourceTree = "<group>"; };
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55761288AC385006898EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB55763288AC385006898EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -96,10 +100,20 @@
 		01F8022728A5358B00976A9C /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				01F8022D28A547E900976A9C /* TransactionHistoryTableViewCell */,
 				01F8022828A5359C00976A9C /* HomeViewController.swift */,
 				01F8022928A5359C00976A9C /* HomeViewController.xib */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		01F8022D28A547E900976A9C /* TransactionHistoryTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				01F8022E28A547FB00976A9C /* TransactionHistoryTableViewCell.swift */,
+				01F8022F28A547FB00976A9C /* TransactionHistoryTableViewCell.xib */,
+			);
+			path = TransactionHistoryTableViewCell;
 			sourceTree = "<group>";
 		};
 		BDB55755288AC385006898EC = {
@@ -262,6 +276,7 @@
 				015EC4492892C8810072D520 /* LoginViewController.xib in Resources */,
 				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
 				01F8022B28A5359C00976A9C /* HomeViewController.xib in Resources */,
+				01F8023128A547FB00976A9C /* TransactionHistoryTableViewCell.xib in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
 				BDB55769288AC385006898EC /* Main.storyboard in Resources */,
 			);
@@ -293,6 +308,7 @@
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
+				01F8023028A547FB00976A9C /* TransactionHistoryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
