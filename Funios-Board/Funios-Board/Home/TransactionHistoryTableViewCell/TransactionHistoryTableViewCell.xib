@@ -63,7 +63,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="transactionNominalLabel" destination="hEV-ug-xqi" id="YJx-58-t8z"/>
+                <outlet property="transactionAmountLabel" destination="hEV-ug-xqi" id="YJx-58-t8z"/>
                 <outlet property="transactionTypeLabel" destination="SsG-B8-kYx" id="Zbu-DA-X78"/>
                 <outlet property="userNameLabel" destination="36R-AV-5Of" id="j4l-H5-Caf"/>
                 <outlet property="userProfileImageView" destination="Lly-g1-rCy" id="sHP-t9-V1J"/>

@@ -8,11 +8,11 @@
 import UIKit
 
 class TransactionHistoryTableViewCell: UITableViewCell {
-    @IBOutlet weak var cardView: UIView!
+    
     @IBOutlet weak var userProfileImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var transactionTypeLabel: UILabel!
-    @IBOutlet weak var transactionNominalLabel: UILabel!
+    @IBOutlet weak var transactionAmountLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -58,6 +58,6 @@ extension TransactionHistoryTableViewCell{
         userNameLabel.text = name
         userProfileImageView.image = UIImage(named: picture)
         transactionTypeLabel.text = type
-        transactionNominalLabel.text = nominal
+        transactionAmountLabel.text = nominal
     }
 }
