@@ -48,7 +48,7 @@ extension HomeViewController{
 extension HomeViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 95
+        return 120
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
@@ -58,6 +58,8 @@ extension HomeViewController:UITableViewDataSource{
         if let cell = transactionTableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as? TransactionHistoryTableViewCell{
             return cell
         }
+        
+        
         
         return UITableViewCell()
     }
