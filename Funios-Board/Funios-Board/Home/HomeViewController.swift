@@ -46,6 +46,10 @@ extension HomeViewController{
 
 //MARK: - TableViewDataSource
 extension HomeViewController:UITableViewDataSource{
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 95
+    }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         2
     }
