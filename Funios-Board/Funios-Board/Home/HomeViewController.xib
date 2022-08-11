@@ -25,7 +25,7 @@
                         <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="bWh-L2-ODA">
                             <rect key="frame" x="16" y="64" width="382" height="66"/>
                             <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="CEj-He-1MO">
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="zoro" translatesAutoresizingMaskIntoConstraints="NO" id="CEj-He-1MO">
                                     <rect key="frame" x="0.0" y="0.0" width="66" height="66"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="66" id="TCS-Na-DxY"/>
@@ -33,10 +33,10 @@
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8vE-aG-Mvf">
-                                    <rect key="frame" x="74" y="0.0" width="265" height="66"/>
+                                    <rect key="frame" x="74" y="0.0" width="234" height="66"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-BS-NPl">
-                                            <rect key="frame" x="0.0" y="0.0" width="265" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="234" height="37"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="37" id="Ou9-cx-irH"/>
                                             </constraints>
@@ -45,7 +45,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp 120.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjk-J9-MBO">
-                                            <rect key="frame" x="0.0" y="37" width="265" height="29"/>
+                                            <rect key="frame" x="0.0" y="37" width="234" height="29"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="29" id="ecc-x7-xlw"/>
                                             </constraints>
@@ -56,10 +56,9 @@
                                     </subviews>
                                 </stackView>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvN-iW-b1w">
-                                    <rect key="frame" x="347" y="0.0" width="35" height="66"/>
+                                    <rect key="frame" x="316" y="0.0" width="66" height="66"/>
                                     <constraints>
-                                        <constraint firstAttribute="height" constant="35" id="25X-Rl-u3k"/>
-                                        <constraint firstAttribute="width" constant="35" id="eti-Ur-mN6"/>
+                                        <constraint firstAttribute="width" constant="66" id="eti-Ur-mN6"/>
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system">
@@ -91,6 +90,7 @@
     </objects>
     <resources>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="zoro" width="700" height="465"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
