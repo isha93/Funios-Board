@@ -16,8 +16,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var transactionTableView: UITableView!
     
     var transactionDummy: Array<Transaction> = [
-        Transaction(name: "Monkey D. Luffy", profilePicture: "luffy", type: "Transfer", amount: "50.000"),
+        Transaction(name: "Monkey D. Luffy", profilePicture: "luffy", type: "Transfer", amount: "500.000"),
         Transaction(name: "Tony Tony Chopper", profilePicture: "chopper", type: "Subsciption", amount: "100.000"),
+        Transaction(name: "Jinbei", profilePicture: "jinbei", type: "Transfer", amount: "280.000"),
+        Transaction(name: "Nami", profilePicture: "nami", type: "Transfer", amount: "484.000"),
+        Transaction(name: "Vinsmoke Sanji", profilePicture: "sanji", type: "Subsciption", amount: "190.000"),
+        Transaction(name: "Brook", profilePicture: "brook", type: "Transfer", amount: "130.000"),
+        Transaction(name: "Usopp", profilePicture: "usopp", type: "Subsciption", amount: "143.000"),
+        Transaction(name: "Nico Robin", profilePicture: "robin", type: "Subsciption", amount: "243.000"),
+        Transaction(name: "Franky", profilePicture: "franky", type: "Subsciption", amount: "303.000"),
     ]
     
 
