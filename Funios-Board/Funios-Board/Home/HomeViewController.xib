@@ -13,6 +13,7 @@
             <connections>
                 <outlet property="cardView" destination="LgF-hh-mSp" id="bbL-O9-Wu4"/>
                 <outlet property="topupButton" destination="XGo-wr-gV2" id="KEr-QH-FVC"/>
+                <outlet property="transactionTableView" destination="BH8-ca-PZ7" id="dF7-jW-wp9"/>
                 <outlet property="transferButton" destination="tlW-On-Cie" id="KKx-0q-p7O"/>
                 <outlet property="userProfileImageView" destination="CEj-He-1MO" id="ulN-my-waz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

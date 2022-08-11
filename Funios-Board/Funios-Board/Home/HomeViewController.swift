@@ -13,12 +13,16 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var userProfileImageView: UIImageView!
     @IBOutlet weak var transferButton: UIButton!
     @IBOutlet weak var topupButton: UIButton!
+    @IBOutlet weak var transactionTableView: UITableView!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupLayout()
+        self.transactionTableView.dataSource = self
+        self.transactionTableView.delegate = self
+        self.transactionTableView.register(UINib(nibName: "TransactionHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
     }
 
 }
@@ -38,4 +42,26 @@ extension HomeViewController{
             .imageView?
             .tintColor=UIColor.blue
     }
+}
+
+//MARK: - TableViewDataSource
+extension HomeViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        2
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = transactionTableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as? TransactionHistoryTableViewCell{
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    
+}
+
+//MARK: - TableViewDelegate
+extension HomeViewController: UITableViewDelegate{
+    
 }
