@@ -63,6 +63,6 @@ extension TransactionHistoryTableViewCell{
         userNameLabel.text = name
         userProfileImageView.image = UIImage(named: picture)
         transactionTypeLabel.text = type
-        transactionAmountLabel.text = amountPlusMin + nominal
+        transactionAmountLabel.text = amountPlusMin + "Rp" + nominal
     }
 }
