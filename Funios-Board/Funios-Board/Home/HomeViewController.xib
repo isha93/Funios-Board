@@ -12,6 +12,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
                 <outlet property="cardView" destination="LgF-hh-mSp" id="bbL-O9-Wu4"/>
+                <outlet property="topupButton" destination="XGo-wr-gV2" id="KEr-QH-FVC"/>
+                <outlet property="transferButton" destination="tlW-On-Cie" id="KKx-0q-p7O"/>
                 <outlet property="userProfileImageView" destination="CEj-He-1MO" id="ulN-my-waz"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -80,11 +82,42 @@
                         <constraint firstAttribute="trailing" secondItem="bWh-L2-ODA" secondAttribute="trailing" constant="16" id="mrd-YO-Ghc"/>
                     </constraints>
                 </view>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tRx-E8-c3D">
+                    <rect key="frame" x="20" y="190" width="364" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tlW-On-Cie">
+                            <rect key="frame" x="0.0" y="0.0" width="172" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" image="arrow.up" catalog="system" title="Transfer" imagePadding="0.0">
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="17"/>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" red="0.91764705882352937" green="0.92941176470588238" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGo-wr-gV2">
+                            <rect key="frame" x="192" y="0.0" width="172" height="60"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="filled" image="plus" catalog="system" title="Top Up">
+                                <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="pointSize" pointSize="18"/>
+                                <fontDescription key="titleFontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="baseForegroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="baseBackgroundColor" red="0.91764705879999997" green="0.92941176469999998" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </buttonConfiguration>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="fTN-zM-5Ey"/>
+                    </constraints>
+                </stackView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tRx-E8-c3D" secondAttribute="trailing" constant="30" id="BSN-6a-5dC"/>
                 <constraint firstItem="LgF-hh-mSp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Qw5-pF-MFX"/>
+                <constraint firstItem="tRx-E8-c3D" firstAttribute="top" secondItem="LgF-hh-mSp" secondAttribute="bottom" constant="30" id="UDa-LR-aL5"/>
+                <constraint firstItem="tRx-E8-c3D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="nqN-qb-oav"/>
                 <constraint firstItem="LgF-hh-mSp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="sAc-qN-5jS"/>
                 <constraint firstItem="LgF-hh-mSp" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wr2-lj-br7"/>
             </constraints>
@@ -92,7 +125,9 @@
         </view>
     </objects>
     <resources>
+        <image name="arrow.up" catalog="system" width="120" height="128"/>
         <image name="bell" catalog="system" width="128" height="124"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <image name="zoro" width="700" height="465"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

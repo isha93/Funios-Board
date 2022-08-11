@@ -11,6 +11,8 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var userProfileImageView: UIImageView!
+    @IBOutlet weak var transferButton: UIButton!
+    @IBOutlet weak var topupButton: UIButton!
     
 
     override func viewDidLoad() {
