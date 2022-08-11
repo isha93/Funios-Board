@@ -29,5 +29,13 @@ extension HomeViewController{
     func setupLayout(){
         cardView.layer.cornerRadius = 25
         userProfileImageView.layer.cornerRadius = 15
+        
+        topupButton
+            .imageView?
+            .tintColor=UIColor.blue
+        
+        transferButton
+            .imageView?
+            .tintColor=UIColor.blue
     }
 }
