@@ -32,22 +32,29 @@
                                     </constraints>
                                 </imageView>
                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8vE-aG-Mvf">
-                                    <rect key="frame" x="55" y="0.0" width="327" height="66"/>
+                                    <rect key="frame" x="55" y="0.0" width="127.5" height="66"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dd1-BS-NPl">
-                                            <rect key="frame" x="0.0" y="0.0" width="327" height="37"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="127.5" height="37"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Rp 120.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjk-J9-MBO">
-                                            <rect key="frame" x="0.0" y="37" width="327" height="29"/>
+                                            <rect key="frame" x="0.0" y="37" width="127.5" height="29"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </stackView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DvN-iW-b1w">
+                                    <rect key="frame" x="182.5" y="0.0" width="199.5" height="66"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" image="bell" catalog="system">
+                                        <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </buttonConfiguration>
+                                </button>
                             </subviews>
                         </stackView>
                     </subviews>
@@ -72,6 +79,7 @@
         </view>
     </objects>
     <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
