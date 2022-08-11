@@ -15,6 +15,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topupButton: UIButton!
     @IBOutlet weak var transactionTableView: UITableView!
     
+    var transactionDummy: Array<Transaction> = [
+        Transaction(name: "Monkey D. Luffy", profilePicture: "luffy", type: "Transfer", amount: "50.000"),
+        Transaction(name: "Tony Tony Chopper", profilePicture: "chopper", type: "Subsciption", amount: "100.000"),
+    ]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,11 +56,17 @@ extension HomeViewController:UITableViewDataSource{
         return 120
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        2
+        return transactionDummy.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = transactionTableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as? TransactionHistoryTableViewCell{
+            let name = transactionDummy[indexPath.row].name
+            let picture = transactionDummy[indexPath.row].profilePicture
+            let type = transactionDummy[indexPath.row].type
+            let amount = transactionDummy[indexPath.row].amount
+            
+            cell.SetupData(name: name, picture: picture, type: type, nominal: amount)
             return cell
         }
         

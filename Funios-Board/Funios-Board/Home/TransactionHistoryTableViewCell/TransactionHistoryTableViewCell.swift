@@ -55,9 +55,14 @@ extension TransactionHistoryTableViewCell{
 //MARK: - Setup Data
 extension TransactionHistoryTableViewCell{
     func SetupData(name: String, picture: String, type: String, nominal: String){
+        
+        let amountPlusMin: String = (type == "Transfer") ? "+": "-"
+        let amountColor: UIColor = (type == "Transfer") ? UIColor.green: UIColor.red
+        
+        transactionAmountLabel.textColor = amountColor
         userNameLabel.text = name
         userProfileImageView.image = UIImage(named: picture)
         transactionTypeLabel.text = type
-        transactionAmountLabel.text = nominal
+        transactionAmountLabel.text = amountPlusMin + nominal
     }
 }
