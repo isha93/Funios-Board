@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ACAED9028A3F0230053143E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAED8E28A3F0230053143E /* LoginViewController.swift */; };
+		8ACAED9128A3F0230053143E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAED8F28A3F0230053143E /* LoginViewController.xib */; };
 		BDB55762288AC385006898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55761288AC385006898EC /* AppDelegate.swift */; };
 		BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55763288AC385006898EC /* SceneDelegate.swift */; };
-		BDB55766288AC385006898EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55765288AC385006898EC /* ViewController.swift */; };
 		BDB55769288AC385006898EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB55767288AC385006898EC /* Main.storyboard */; };
 		BDB5576B288AC387006898EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB5576A288AC387006898EC /* Assets.xcassets */; };
 		BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB5576C288AC387006898EC /* LaunchScreen.storyboard */; };
@@ -36,10 +37,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8ACAED8E28A3F0230053143E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		8ACAED8F28A3F0230053143E /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55761288AC385006898EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB55763288AC385006898EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BDB55765288AC385006898EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BDB55768288AC385006898EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDB5576A288AC387006898EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDB5576D288AC387006898EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -76,6 +78,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8ACAED8B28A3EFC70053143E /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				8ACAED8C28A3EFD20053143E /* Login */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		8ACAED8C28A3EFD20053143E /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				8ACAED8E28A3F0230053143E /* LoginViewController.swift */,
+				8ACAED8F28A3F0230053143E /* LoginViewController.xib */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		BDB55755288AC385006898EC = {
 			isa = PBXGroup;
 			children = (
@@ -99,9 +118,9 @@
 		BDB55760288AC385006898EC /* Funios-Board */ = {
 			isa = PBXGroup;
 			children = (
+				8ACAED8B28A3EFC70053143E /* UI */,
 				BDB55761288AC385006898EC /* AppDelegate.swift */,
 				BDB55763288AC385006898EC /* SceneDelegate.swift */,
-				BDB55765288AC385006898EC /* ViewController.swift */,
 				BDB55767288AC385006898EC /* Main.storyboard */,
 				BDB5576A288AC387006898EC /* Assets.xcassets */,
 				BDB5576C288AC387006898EC /* LaunchScreen.storyboard */,
@@ -231,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8ACAED9128A3F0230053143E /* LoginViewController.xib in Resources */,
 				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
 				BDB55769288AC385006898EC /* Main.storyboard in Resources */,
@@ -258,7 +278,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
+				8ACAED9028A3F0230053143E /* LoginViewController.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
 			);
@@ -441,7 +461,6 @@
 				INFOPLIST_FILE = "Funios-Board/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -468,7 +487,6 @@
 				INFOPLIST_FILE = "Funios-Board/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
