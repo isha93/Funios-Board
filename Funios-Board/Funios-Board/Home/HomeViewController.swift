@@ -15,7 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var topupButton: UIButton!
     @IBOutlet weak var transactionTableView: UITableView!
     
-    var transactionDummy: Array<Transaction> = [
+    var transactionDummy: Array<Transaction>? = [
         Transaction(name: "Monkey D. Luffy", profilePicture: "luffy", type: "Transfer", amount: "500.000"),
         Transaction(name: "Tony Tony Chopper", profilePicture: "chopper", type: "Subsciption", amount: "100.000"),
         Transaction(name: "Jinbei", profilePicture: "jinbei", type: "Transfer", amount: "280.000"),
@@ -28,15 +28,24 @@ class HomeViewController: UIViewController {
     ]
     
 
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setupLayout()
+        setupDelegate()
+    }
+
+}
+
+//MARK: - Setup Delegate
+extension HomeViewController{
+    private func setupDelegate() {
         self.transactionTableView.dataSource = self
         self.transactionTableView.delegate = self
         self.transactionTableView.register(UINib(nibName: "TransactionHistoryTableViewCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
     }
-
 }
 
 
@@ -45,6 +54,7 @@ extension HomeViewController{
     func setupLayout(){
         cardView.layer.cornerRadius = 25
         userProfileImageView.layer.cornerRadius = 15
+        transactionTableView.backgroundColor = .white
         
         topupButton
             .imageView?
@@ -63,15 +73,18 @@ extension HomeViewController:UITableViewDataSource{
         return 120
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return transactionDummy.count
+        return  transactionDummy?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = transactionTableView.dequeueReusableCell(withIdentifier: "TransactionCell", for: indexPath) as? TransactionHistoryTableViewCell{
-            let name = transactionDummy[indexPath.row].name
-            let picture = transactionDummy[indexPath.row].profilePicture
-            let type = transactionDummy[indexPath.row].type
-            let amount = transactionDummy[indexPath.row].amount
+            
+            guard let data = transactionDummy?[indexPath.row] else { return UITableViewCell() }
+            
+            let name = data.name
+            let picture = data.profilePicture
+            let type = data.type
+            let amount = data.amount
             
             cell.SetupData(name: name, picture: picture, type: type, nominal: amount)
             return cell
