@@ -35,6 +35,10 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         )
     }
     
+    @IBAction func doLogout(_ sender: UIButton) {
+        
+    }
+    
     func editCardViewContent() {
         CardView.layer.cornerRadius = 20
         ProfileImageView.layer.cornerRadius = 20

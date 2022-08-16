@@ -48,12 +48,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9N-KH-OZs">
-                            <rect key="frame" x="344.5" y="87" width="44.5" height="31"/>
+                            <rect key="frame" x="344" y="87" width="45" height="31"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain">
-                                <imageReference key="image" image="bell" catalog="system" symbolScale="large"/>
+                                <imageReference key="image" image="power" catalog="system" symbolScale="large"/>
                                 <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="doLogout:" destination="-1" eventType="touchUpInside" id="Mzt-Ku-Ubw"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" name="AppColor"/>
@@ -165,8 +168,8 @@
     <resources>
         <image name="Profile" width="215" height="225"/>
         <image name="arrow.up" catalog="system" width="120" height="128"/>
-        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="power" catalog="system" width="128" height="124"/>
         <namedColor name="AppColor">
             <color red="0.40784313725490196" green="0.47450980392156861" blue="0.92156862745098034" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
