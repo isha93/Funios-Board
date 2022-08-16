@@ -74,6 +74,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField){
+        AlertLabel.textColor = UIColor.clear
         if textField == EmailTextField {
             EmailIcon.tintColor = .systemGray3
             EmailTextfieldSeparator.backgroundColor = .systemGray3

@@ -35,8 +35,11 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         )
     }
     
+    //MARK: Logout action
     @IBAction func doLogout(_ sender: UIButton) {
-        
+        let viewController = UINavigationController(rootViewController: LoginViewController())
+        viewController.modalPresentationStyle = .fullScreen
+        present(viewController, animated: true, completion: nil)
     }
     
     func editCardViewContent() {
