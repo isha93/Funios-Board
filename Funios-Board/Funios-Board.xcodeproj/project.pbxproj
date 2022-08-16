@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		8A1E7CD128A5E008007CC410 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1E7CD028A5E008007CC410 /* LoginViewModel.swift */; };
+		8A45A0E528A7937900B5E7E0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45A0E328A7937900B5E7E0 /* HomeViewController.swift */; };
+		8A45A0E628A7937900B5E7E0 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A45A0E428A7937900B5E7E0 /* HomeViewController.xib */; };
+		8A45A0EA28A8F10900B5E7E0 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A45A0E828A8F10900B5E7E0 /* HomeTableViewCell.swift */; };
+		8A45A0EB28A8F10900B5E7E0 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A45A0E928A8F10900B5E7E0 /* HomeTableViewCell.xib */; };
 		8ACAED9028A3F0230053143E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAED8E28A3F0230053143E /* LoginViewController.swift */; };
 		8ACAED9128A3F0230053143E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAED8F28A3F0230053143E /* LoginViewController.xib */; };
 		BDB55762288AC385006898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55761288AC385006898EC /* AppDelegate.swift */; };
@@ -39,6 +43,10 @@
 
 /* Begin PBXFileReference section */
 		8A1E7CD028A5E008007CC410 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		8A45A0E328A7937900B5E7E0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8A45A0E428A7937900B5E7E0 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		8A45A0E828A8F10900B5E7E0 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		8A45A0E928A8F10900B5E7E0 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		8ACAED8E28A3F0230053143E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8ACAED8F28A3F0230053143E /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,9 +88,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A45A0E228A7936800B5E7E0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8A45A0E728A8F0E300B5E7E0 /* TableViewCell */,
+				8A45A0E328A7937900B5E7E0 /* HomeViewController.swift */,
+				8A45A0E428A7937900B5E7E0 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8A45A0E728A8F0E300B5E7E0 /* TableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				8A45A0E828A8F10900B5E7E0 /* HomeTableViewCell.swift */,
+				8A45A0E928A8F10900B5E7E0 /* HomeTableViewCell.xib */,
+			);
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
 		8ACAED8B28A3EFC70053143E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				8A45A0E228A7936800B5E7E0 /* Home */,
 				8ACAED8C28A3EFD20053143E /* Login */,
 			);
 			path = UI;
@@ -255,7 +283,9 @@
 			files = (
 				8ACAED9128A3F0230053143E /* LoginViewController.xib in Resources */,
 				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
+				8A45A0E628A7937900B5E7E0 /* HomeViewController.xib in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
+				8A45A0EB28A8F10900B5E7E0 /* HomeTableViewCell.xib in Resources */,
 				BDB55769288AC385006898EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -281,6 +311,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A45A0EA28A8F10900B5E7E0 /* HomeTableViewCell.swift in Sources */,
+				8A45A0E528A7937900B5E7E0 /* HomeViewController.swift in Sources */,
 				8A1E7CD128A5E008007CC410 /* LoginViewModel.swift in Sources */,
 				8ACAED9028A3F0230053143E /* LoginViewController.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
