@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
+                <outlet property="AlertLabel" destination="tKd-vf-mjK" id="Y0m-Q6-3os"/>
                 <outlet property="CardView" destination="p2B-7b-3Ce" id="M54-PH-Yqe"/>
                 <outlet property="EmailIcon" destination="FSr-Uo-gcL" id="328-fV-OpF"/>
                 <outlet property="EmailTextField" destination="IBf-0W-I0K" id="qhK-Rq-Dj6"/>
@@ -134,7 +135,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOm-Bn-l9g">
-                            <rect key="frame" x="225.5" y="329" width="168.5" height="35"/>
+                            <rect key="frame" x="225.5" y="339" width="168.5" height="35"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="plain">
                                 <attributedString key="attributedTitle">
@@ -148,7 +149,7 @@
                             </buttonConfiguration>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4GD-Lt-R6O">
-                            <rect key="frame" x="20" y="384" width="374" height="60"/>
+                            <rect key="frame" x="20" y="394" width="374" height="60"/>
                             <color key="backgroundColor" systemColor="systemGray4Color"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="60" id="EWm-7T-qRv"/>
@@ -172,7 +173,7 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qda-cv-O6h">
-                            <rect key="frame" x="38.5" y="454" width="337.5" height="35"/>
+                            <rect key="frame" x="38.5" y="464" width="337.5" height="35"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Let's " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohq-eE-GH4">
                                     <rect key="frame" x="0.0" y="0.0" width="249" height="35"/>
@@ -200,17 +201,25 @@
                                 <constraint firstItem="L0g-Yn-KOb" firstAttribute="leading" secondItem="Ohq-eE-GH4" secondAttribute="trailing" id="eYa-nd-8tZ"/>
                             </constraints>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*Email or password entered is wrong" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tKd-vf-mjK">
+                            <rect key="frame" x="20" y="314" width="250" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                     </subviews>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     <constraints>
                         <constraint firstAttribute="trailing" secondItem="bgI-b8-t4P" secondAttribute="trailing" constant="20" id="207-nu-YyX"/>
+                        <constraint firstItem="tKd-vf-mjK" firstAttribute="top" secondItem="bgI-b8-t4P" secondAttribute="bottom" constant="5" id="6Aa-km-7yd"/>
                         <constraint firstItem="4GD-Lt-R6O" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="20" id="6da-Pb-WzX"/>
                         <constraint firstAttribute="trailing" secondItem="BwO-xu-goL" secondAttribute="trailing" constant="30" id="6nU-o6-bm5"/>
-                        <constraint firstItem="gOm-Bn-l9g" firstAttribute="top" secondItem="bgI-b8-t4P" secondAttribute="bottom" constant="20" id="G3h-w7-brC"/>
+                        <constraint firstItem="gOm-Bn-l9g" firstAttribute="top" secondItem="bgI-b8-t4P" secondAttribute="bottom" constant="30" id="G3h-w7-brC"/>
                         <constraint firstItem="tK6-53-DU1" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="20" id="Ici-sf-HYO"/>
                         <constraint firstItem="BwO-xu-goL" firstAttribute="top" secondItem="bCm-cK-S96" secondAttribute="bottom" constant="20" id="JZC-bC-jRb"/>
                         <constraint firstItem="Qda-cv-O6h" firstAttribute="top" secondItem="4GD-Lt-R6O" secondAttribute="bottom" constant="10" id="Jgn-ce-adi"/>
                         <constraint firstAttribute="trailing" secondItem="gOm-Bn-l9g" secondAttribute="trailing" constant="20" id="LmR-wv-lan"/>
+                        <constraint firstItem="tKd-vf-mjK" firstAttribute="leading" secondItem="p2B-7b-3Ce" secondAttribute="leading" constant="20" id="NEu-CE-sx2"/>
                         <constraint firstItem="bgI-b8-t4P" firstAttribute="top" secondItem="tK6-53-DU1" secondAttribute="bottom" constant="30" id="Pd8-ss-n6n"/>
                         <constraint firstAttribute="trailing" secondItem="tK6-53-DU1" secondAttribute="trailing" constant="20" id="QYv-0t-qby"/>
                         <constraint firstItem="Qda-cv-O6h" firstAttribute="centerX" secondItem="p2B-7b-3Ce" secondAttribute="centerX" id="TyV-zg-rzE"/>

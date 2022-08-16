@@ -20,6 +20,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var PasswordTextfieldSeparator: UIView!
     @IBOutlet weak var PasswordVisibilityButton: UIButton!
     
+    @IBOutlet weak var AlertLabel: UILabel!
     @IBOutlet weak var CardView: UIView!
     @IBOutlet weak var LoginButton: UIButton!
     
@@ -57,7 +58,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             EmailTextfieldSeparator.backgroundColor = UIColor(named: "RedColor")!
             
             PasswordIcon.tintColor = UIColor(named: "RedColor")!
-            PasswordTextfieldSeparator.tintColor = UIColor(named: "RedColor")!
+            PasswordTextfieldSeparator.backgroundColor = UIColor(named: "RedColor")!
+            AlertLabel.textColor = UIColor(named: "RedColor")!
         }
     }
     
