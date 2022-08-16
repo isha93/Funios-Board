@@ -62,6 +62,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         } else if textField == PasswordTextField {
             PasswordIcon.tintColor = UIColor(named: "AppColor")!
             PasswordTextfieldSeparator.backgroundColor = UIColor(named: "AppColor")!
+        } else {
+            EmailIcon.tintColor = UIColor(named: "RedColor")!
+            EmailTextfieldSeparator.backgroundColor = UIColor(named: "RedColor")!
+            
+            PasswordIcon.tintColor = UIColor(named: "RedColor")!
+            PasswordTextfieldSeparator.tintColor = UIColor(named: "RedColor")!
         }
     }
     
