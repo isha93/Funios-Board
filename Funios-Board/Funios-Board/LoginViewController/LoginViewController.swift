@@ -52,6 +52,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             let viewController = UINavigationController(rootViewController: HomeViewController())
             viewController.modalPresentationStyle = .fullScreen
             present(viewController, animated: true, completion: nil)
+        } else {
+            EmailIcon.tintColor = UIColor(named: "RedColor")!
+            EmailTextfieldSeparator.backgroundColor = UIColor(named: "RedColor")!
+            
+            PasswordIcon.tintColor = UIColor(named: "RedColor")!
+            PasswordTextfieldSeparator.tintColor = UIColor(named: "RedColor")!
         }
     }
     
@@ -62,12 +68,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         } else if textField == PasswordTextField {
             PasswordIcon.tintColor = UIColor(named: "AppColor")!
             PasswordTextfieldSeparator.backgroundColor = UIColor(named: "AppColor")!
-        } else {
-            EmailIcon.tintColor = UIColor(named: "RedColor")!
-            EmailTextfieldSeparator.backgroundColor = UIColor(named: "RedColor")!
-            
-            PasswordIcon.tintColor = UIColor(named: "RedColor")!
-            PasswordTextfieldSeparator.tintColor = UIColor(named: "RedColor")!
         }
     }
     
