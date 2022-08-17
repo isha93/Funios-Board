@@ -14,6 +14,7 @@
 		8A45A0EB28A8F10900B5E7E0 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A45A0E928A8F10900B5E7E0 /* HomeTableViewCell.xib */; };
 		8ACAED9028A3F0230053143E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAED8E28A3F0230053143E /* LoginViewController.swift */; };
 		8ACAED9128A3F0230053143E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAED8F28A3F0230053143E /* LoginViewController.xib */; };
+		A12B128828ACBA270031A97E /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A12B128728ACBA270031A97E /* Transaction.swift */; };
 		BDB55762288AC385006898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55761288AC385006898EC /* AppDelegate.swift */; };
 		BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55763288AC385006898EC /* SceneDelegate.swift */; };
 		BDB55769288AC385006898EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB55767288AC385006898EC /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		8A45A0E928A8F10900B5E7E0 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		8ACAED8E28A3F0230053143E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8ACAED8F28A3F0230053143E /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A12B128728ACBA270031A97E /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55761288AC385006898EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB55763288AC385006898EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,14 @@
 			path = Login;
 			sourceTree = "<group>";
 		};
+		A12B128628ACBA160031A97E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A12B128728ACBA270031A97E /* Transaction.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		BDB55755288AC385006898EC = {
 			isa = PBXGroup;
 			children = (
@@ -149,6 +159,7 @@
 		BDB55760288AC385006898EC /* Funios-Board */ = {
 			isa = PBXGroup;
 			children = (
+				A12B128628ACBA160031A97E /* Model */,
 				8ACAED8B28A3EFC70053143E /* UI */,
 				BDB55761288AC385006898EC /* AppDelegate.swift */,
 				BDB55763288AC385006898EC /* SceneDelegate.swift */,
@@ -311,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A12B128828ACBA270031A97E /* Transaction.swift in Sources */,
 				8A45A0EA28A8F10900B5E7E0 /* HomeTableViewCell.swift in Sources */,
 				8A45A0E528A7937900B5E7E0 /* HomeViewController.swift in Sources */,
 				8A1E7CD128A5E008007CC410 /* LoginViewModel.swift in Sources */,
