@@ -12,6 +12,7 @@
             <connections>
                 <outlet property="forgotPasswordLabel" destination="XI9-al-IZQ" id="O6S-o8-Bjm"/>
                 <outlet property="loginButton" destination="Ftg-kI-TG9" id="yZD-vT-loV"/>
+                <outlet property="loginContentView" destination="iTG-9e-q1M" id="eVX-ht-kPN"/>
                 <outlet property="showHidePasswordImage" destination="sk1-8H-yzY" id="j7D-2u-kht"/>
                 <outlet property="signUpLabel" destination="LAq-5S-vVq" id="4A1-LJ-48f"/>
                 <outlet property="userEmailTextField" destination="DqC-pK-6un" id="wMY-KG-1fx"/>
@@ -131,7 +132,7 @@
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftg-kI-TG9">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ftg-kI-TG9">
                             <rect key="frame" x="16" y="271" width="288" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="wZL-7R-vaI"/>

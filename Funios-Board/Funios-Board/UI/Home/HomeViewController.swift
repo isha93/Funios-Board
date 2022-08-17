@@ -10,6 +10,7 @@ import UIKit
 class HomeViewController: UIViewController {
     @IBOutlet weak var userProfileImage: UIImageView!
     @IBOutlet weak var userProfileBalance: UILabel!
+    @IBOutlet weak var logoutImage: UIImageView!
     @IBOutlet weak var transferButton: UIButton!
     @IBOutlet weak var topUpButton: UIButton!
     @IBOutlet weak var transactionTableView: UITableView!
@@ -22,6 +23,7 @@ class HomeViewController: UIViewController {
         configureNavBar()
         configureButton()
         configureUserProfile()
+        configureLogoutImage()
         configureTransactionTable()
     }
     
@@ -41,6 +43,17 @@ class HomeViewController: UIViewController {
         topUpButton.layer.cornerRadius = 8
         transferButton.clipsToBounds = true
         topUpButton.clipsToBounds = true
+    }
+    
+    private func configureLogoutImage() {
+        logoutImage.isUserInteractionEnabled = true
+        let onLogoutImageTapped = UITapGestureRecognizer(target: self, action: #selector(self.onLogoutImageTapped(_:)))
+        
+        logoutImage.addGestureRecognizer(onLogoutImageTapped)
+    }
+    
+    @objc private func onLogoutImageTapped(_ sender: UITapGestureRecognizer? = nil) {
+        navigationController?.popViewController(animated: true)
     }
     
     private func configureTransactionTable() {

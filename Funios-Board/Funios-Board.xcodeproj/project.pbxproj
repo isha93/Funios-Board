@@ -121,11 +121,19 @@
 		8ACAED8C28A3EFD20053143E /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				A126452228ACF69900547F56 /* ViewModel */,
 				8ACAED8E28A3F0230053143E /* LoginViewController.swift */,
 				8ACAED8F28A3F0230053143E /* LoginViewController.xib */,
-				8A1E7CD028A5E008007CC410 /* LoginViewModel.swift */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		A126452228ACF69900547F56 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8A1E7CD028A5E008007CC410 /* LoginViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A12B128628ACBA160031A97E /* Model */ = {

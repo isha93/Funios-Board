@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
+                <outlet property="logoutImage" destination="Ilb-2p-lXh" id="r3L-6j-hs7"/>
                 <outlet property="seeAllLabel" destination="6WI-X5-DkV" id="BXm-M6-egn"/>
                 <outlet property="topUpButton" destination="mXP-iL-AY8" id="bPo-Uh-wPf"/>
                 <outlet property="transactionTableView" destination="y2e-kZ-NlR" id="wDc-0n-nry"/>
@@ -47,8 +48,8 @@
                             <color key="textColor" systemColor="systemBackgroundColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ilb-2p-lXh">
-                            <rect key="frame" x="276" y="41" width="28" height="27.5"/>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.portrait.and.arrow.right" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Ilb-2p-lXh">
+                            <rect key="frame" x="276" y="41" width="28" height="28"/>
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="28" id="sbJ-Xq-CVL"/>
@@ -137,8 +138,8 @@
     </objects>
     <resources>
         <image name="arrow-up" width="18.5" height="18.5"/>
-        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="plus" width="18.5" height="18.5"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
