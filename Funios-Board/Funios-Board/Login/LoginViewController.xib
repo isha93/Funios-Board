@@ -11,7 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
                 <outlet property="cardView" destination="2If-sW-2XX" id="Oza-en-Qqg"/>
+                <outlet property="emailDivider" destination="hA4-HK-UH1" id="Hf7-1g-kau"/>
                 <outlet property="emailTextField" destination="YzA-M1-Q8m" id="V3n-GM-iWm"/>
+                <outlet property="passwordDivider" destination="DFc-ov-hAH" id="Doj-0w-bna"/>
                 <outlet property="passwordHideButton" destination="g9b-0x-LHr" id="CKf-ef-AIE"/>
                 <outlet property="passwordTextField" destination="ngG-H0-hLV" id="1Pz-Ph-pRl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -152,6 +154,9 @@
                             <buttonConfiguration key="configuration" style="gray" title="Login">
                                 <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                             </buttonConfiguration>
+                            <connections>
+                                <action selector="loginAction:" destination="-1" eventType="touchUpInside" id="wYc-mW-84e"/>
+                            </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6QU-6F-eEH">
                             <rect key="frame" x="50" y="477.5" width="314" height="31"/>

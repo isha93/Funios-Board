@@ -14,21 +14,21 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         if let windowScene = scene as? UIWindowScene {
-//            let window = UIWindow (windowScene : windowScene)
-//            navigationController = UINavigationController(
-//                rootViewController: LoginViewController()
-//            )
-//            window.rootViewController = navigationController
-//            self.window = windowScene
-//            window.makeKeyAndVisible()
+            let window = UIWindow (windowScene : windowScene)
+            navigationController = UINavigationController(
+                rootViewController: LoginViewController()
+            )
+            window.rootViewController = navigationController
+            self.window = window
+            window.makeKeyAndVisible()
         }
         
         
-        guard let windowScene = (scene as? UIWindowScene) else { return }
-        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyBoard.instantiateViewController(withIdentifier: "ListTransactionViewController")
-        window?.rootViewController = vc
-        window?.makeKeyAndVisible()
+//        guard let windowScene = (scene as? UIWindowScene) else { return }
+//        let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+//        let vc = storyBoard.instantiateViewController(withIdentifier: "ListTransactionViewController")
+//        window?.rootViewController = vc
+//        window?.makeKeyAndVisible()
         
     }
     
