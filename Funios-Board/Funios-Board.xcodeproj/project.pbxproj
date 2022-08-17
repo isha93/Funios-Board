@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		862661EE28A549BD000013E4 /* TransactionCellTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862661EC28A549BD000013E4 /* TransactionCellTableViewCell.swift */; };
+		862661EF28A549BD000013E4 /* TransactionCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 862661ED28A549BD000013E4 /* TransactionCellTableViewCell.xib */; };
+		862661F128A54C04000013E4 /* ListTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 862661F028A54C04000013E4 /* ListTransactionViewController.swift */; };
 		867EEC64289C01A5004917CE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 867EEC62289C01A5004917CE /* LoginViewController.swift */; };
 		867EEC65289C01A5004917CE /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 867EEC63289C01A5004917CE /* LoginViewController.xib */; };
 		BDB55762288AC385006898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55761288AC385006898EC /* AppDelegate.swift */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		862661EC28A549BD000013E4 /* TransactionCellTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionCellTableViewCell.swift; sourceTree = "<group>"; };
+		862661ED28A549BD000013E4 /* TransactionCellTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionCellTableViewCell.xib; sourceTree = "<group>"; };
+		862661F028A54C04000013E4 /* ListTransactionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTransactionViewController.swift; sourceTree = "<group>"; };
 		867EEC62289C01A5004917CE /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		867EEC63289C01A5004917CE /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,11 +86,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		862661EB28A5494A000013E4 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				862661EC28A549BD000013E4 /* TransactionCellTableViewCell.swift */,
+				862661ED28A549BD000013E4 /* TransactionCellTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		867EEC60289C017F004917CE /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				862661EB28A5494A000013E4 /* Cell */,
 				867EEC62289C01A5004917CE /* LoginViewController.swift */,
 				867EEC63289C01A5004917CE /* LoginViewController.xib */,
+				862661F028A54C04000013E4 /* ListTransactionViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -249,6 +266,7 @@
 				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
 				BDB55769288AC385006898EC /* Main.storyboard in Resources */,
+				862661EF28A549BD000013E4 /* TransactionCellTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				862661EE28A549BD000013E4 /* TransactionCellTableViewCell.swift in Sources */,
 				867EEC64289C01A5004917CE /* LoginViewController.swift in Sources */,
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
+				862661F128A54C04000013E4 /* ListTransactionViewController.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
 			);
@@ -457,6 +477,8 @@
 				INFOPLIST_FILE = "Funios-Board/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -483,6 +505,8 @@
 				INFOPLIST_FILE = "Funios-Board/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -211,11 +211,119 @@
             </constraints>
             <point key="canvasLocation" x="11.594202898550726" y="-212.27678571428569"/>
         </view>
+        <viewController id="ywA-eW-DBL">
+            <view key="view" contentMode="scaleToFill" id="SSC-74-fFz">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fHc-4D-IBM">
+                        <rect key="frame" x="0.0" y="44" width="414" height="175"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon hacker" translatesAutoresizingMaskIntoConstraints="NO" id="3Lf-dU-lNK">
+                                <rect key="frame" x="16" y="16" width="75" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="zgj-ms-V4T"/>
+                                    <constraint firstAttribute="width" constant="75" id="zhj-vd-Pk9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zvj-rK-40k">
+                                <rect key="frame" x="99" y="16" width="86.5" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rp120.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5D7-Vs-3xW">
+                                <rect key="frame" x="99" y="54" width="146.5" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bell" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="5dp-TS-WAE">
+                                <rect key="frame" x="348" y="30" width="50" height="49.5"/>
+                                <color key="tintColor" red="0.98039215690000003" green="0.98823529409999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="CR6-Jr-lIg"/>
+                                    <constraint firstAttribute="width" constant="50" id="EBI-MU-cCA"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="5dp-TS-WAE" secondAttribute="trailing" constant="16" id="967-J6-X23"/>
+                            <constraint firstItem="5dp-TS-WAE" firstAttribute="top" secondItem="fHc-4D-IBM" secondAttribute="top" constant="30" id="I9Y-4K-bvF"/>
+                            <constraint firstItem="3Lf-dU-lNK" firstAttribute="top" secondItem="fHc-4D-IBM" secondAttribute="top" constant="16" id="Nju-9M-m6q"/>
+                            <constraint firstItem="Zvj-rK-40k" firstAttribute="top" secondItem="fHc-4D-IBM" secondAttribute="top" constant="16" id="Tx6-98-Y53"/>
+                            <constraint firstItem="3Lf-dU-lNK" firstAttribute="leading" secondItem="fHc-4D-IBM" secondAttribute="leading" constant="16" id="Yv2-fd-VFO"/>
+                            <constraint firstItem="5D7-Vs-3xW" firstAttribute="top" secondItem="Zvj-rK-40k" secondAttribute="bottom" constant="8" id="cYN-Si-82K"/>
+                            <constraint firstItem="Zvj-rK-40k" firstAttribute="leading" secondItem="3Lf-dU-lNK" secondAttribute="trailing" constant="8" id="em9-5z-xHw"/>
+                            <constraint firstAttribute="height" constant="175" id="h1G-4S-MDP"/>
+                            <constraint firstItem="5D7-Vs-3xW" firstAttribute="leading" secondItem="3Lf-dU-lNK" secondAttribute="trailing" constant="8" id="qHf-ct-L5b"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UN0-t4-7gN">
+                        <rect key="frame" x="16" y="235" width="94" height="45"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Transfer"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqN-bk-m3p">
+                        <rect key="frame" x="315" y="235" width="83" height="45"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="Top Up"/>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M52-mL-jTS">
+                        <rect key="frame" x="16" y="325" width="148" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nG6-RD-I6r">
+                        <rect key="frame" x="315" y="315" width="67" height="31"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                        <state key="normal" title="See All">
+                            <color key="titleColor" systemColor="opaqueSeparatorColor"/>
+                        </state>
+                    </button>
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Qjp-w6-yhD">
+                        <rect key="frame" x="0.0" y="362" width="414" height="534"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </tableView>
+                </subviews>
+                <viewLayoutGuide key="safeArea" id="eZe-Od-lkv"/>
+                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                <constraints>
+                    <constraint firstItem="M52-mL-jTS" firstAttribute="top" secondItem="UN0-t4-7gN" secondAttribute="bottom" constant="45" id="0EJ-pb-MmT"/>
+                    <constraint firstItem="eZe-Od-lkv" firstAttribute="trailing" secondItem="kqN-bk-m3p" secondAttribute="trailing" constant="16" id="0Xe-Km-oYw"/>
+                    <constraint firstItem="fHc-4D-IBM" firstAttribute="top" secondItem="eZe-Od-lkv" secondAttribute="top" id="77g-wX-o24"/>
+                    <constraint firstItem="fHc-4D-IBM" firstAttribute="leading" secondItem="eZe-Od-lkv" secondAttribute="leading" id="9Uw-rt-q5u"/>
+                    <constraint firstItem="UN0-t4-7gN" firstAttribute="leading" secondItem="eZe-Od-lkv" secondAttribute="leading" constant="16" id="9qT-pZ-eVE"/>
+                    <constraint firstItem="UN0-t4-7gN" firstAttribute="top" secondItem="fHc-4D-IBM" secondAttribute="bottom" constant="16" id="GIC-y4-GCw"/>
+                    <constraint firstAttribute="trailing" secondItem="Qjp-w6-yhD" secondAttribute="trailing" id="InT-Lr-fSO"/>
+                    <constraint firstItem="M52-mL-jTS" firstAttribute="leading" secondItem="eZe-Od-lkv" secondAttribute="leading" constant="16" id="KHH-yw-oMb"/>
+                    <constraint firstItem="fHc-4D-IBM" firstAttribute="trailing" secondItem="eZe-Od-lkv" secondAttribute="trailing" id="Nhk-8O-TxW"/>
+                    <constraint firstAttribute="bottom" secondItem="Qjp-w6-yhD" secondAttribute="bottom" id="Npj-iO-plI"/>
+                    <constraint firstItem="kqN-bk-m3p" firstAttribute="top" secondItem="fHc-4D-IBM" secondAttribute="bottom" constant="16" id="QGF-Fq-nuh"/>
+                    <constraint firstItem="Qjp-w6-yhD" firstAttribute="top" secondItem="M52-mL-jTS" secondAttribute="bottom" constant="16" id="cyF-3j-D2X"/>
+                    <constraint firstItem="Qjp-w6-yhD" firstAttribute="leading" secondItem="eZe-Od-lkv" secondAttribute="leading" id="eLR-gB-mRj"/>
+                </constraints>
+            </view>
+            <point key="canvasLocation" x="-888.40579710144937" y="-151.33928571428569"/>
+        </viewController>
     </objects>
     <resources>
+        <image name="bell" catalog="system" width="128" height="124"/>
         <image name="envelope" catalog="system" width="128" height="93"/>
         <image name="eye.slash" catalog="system" width="128" height="86"/>
+        <image name="icon hacker" width="700" height="481"/>
         <image name="lock" catalog="system" width="128" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
