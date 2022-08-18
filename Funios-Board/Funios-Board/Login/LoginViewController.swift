@@ -45,21 +45,31 @@ extension LoginViewController{
 
 //MARK: - Validation
 extension LoginViewController{
-    func userValidation(){
+    func userValidation()->Bool{
+        var validation: Bool = false
         if let email = emailTextField.text{
             if email != validEmail{
                 emailPasswordErrLabel.isHidden = false
                 emailIconImageView.tintColor = .red
                 emailBottomLineView.backgroundColor = .red
+                validation = false
+            }else{
+                validation = true
             }
         }
+        
         if let password = passwordTextField.text{
             if password != validPassword{
                 emailPasswordErrLabel.isHidden = false
                 passwordIconImageView.tintColor = .red
                 passwordBottomLineView.backgroundColor = .red
+                validation = false
+            }else{
+                validation = true
             }
         }
+        
+        return validation
     }
 }
 
@@ -69,10 +79,13 @@ extension LoginViewController{
         print("ini SignUp")
     }
     @IBAction func loginButton(_ sender: Any) {
-        userValidation()
         emailTextField.endEditing(true)
         passwordTextField.endEditing(true)
-        print("do login")
+        if userValidation(){
+            let homeVC = UINavigationController(rootViewController: HomeViewController())
+            homeVC.modalPresentationStyle = .fullScreen
+            present(homeVC, animated: false, completion: nil)
+        }
     }
     @IBAction func forgotPasswordButton(_ sender: Any) {
         print("ini lupa password")
@@ -111,12 +124,10 @@ extension LoginViewController: UITextFieldDelegate{
         case emailTextField:
             emailIconImageView.tintColor = .systemGray3
             emailBottomLineView.backgroundColor = .systemGray3
-            userValidation()
             break
         case passwordTextField:
             passwordIconImageView.tintColor = .systemGray3
             passwordBottomLineView.backgroundColor = .systemGray3
-            userValidation()
             break
         default:
             break
