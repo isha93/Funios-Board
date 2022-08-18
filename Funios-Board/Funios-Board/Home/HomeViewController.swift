@@ -37,6 +37,7 @@ class HomeViewController: UIViewController {
         setupDelegate()
     }
 
+   
 }
 
 //MARK: - Setup Delegate
@@ -63,6 +64,15 @@ extension HomeViewController{
         transferButton
             .imageView?
             .tintColor=UIColor.blue
+    }
+}
+
+//MARK: - IBAction Event
+extension HomeViewController{
+    @IBAction func logoutPressed(_ sender: Any) {
+        let loginVC = UINavigationController(rootViewController: LoginViewController())
+        loginVC.modalPresentationStyle = .fullScreen
+        present(loginVC, animated: false, completion: nil)
     }
 }
 
