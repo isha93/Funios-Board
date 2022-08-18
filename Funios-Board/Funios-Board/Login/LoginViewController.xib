@@ -13,6 +13,7 @@
                 <outlet property="cardView" destination="KZ6-b9-JPi" id="36z-7h-fm5"/>
                 <outlet property="emailBottomLineView" destination="fcO-J3-uDv" id="Lby-aF-SmM"/>
                 <outlet property="emailIconImageView" destination="66H-oW-sn1" id="jLl-4s-R5G"/>
+                <outlet property="emailPasswordErrLabel" destination="PbC-Su-jdE" id="lYC-sQ-CEX"/>
                 <outlet property="emailTextField" destination="nvb-mo-I1U" id="PwY-E7-3A1"/>
                 <outlet property="hideShowPasswordButton" destination="eBA-Ea-Snw" id="Wpo-Am-BwC"/>
                 <outlet property="passwordBottomLineView" destination="YtR-z4-NUy" id="vla-Ix-Tq1"/>

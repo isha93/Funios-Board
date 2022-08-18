@@ -16,13 +16,17 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var hideShowPasswordButton: UIButton!
     @IBOutlet weak var emailBottomLineView: UIView!
     @IBOutlet weak var passwordBottomLineView: UIView!
+    @IBOutlet weak var emailPasswordErrLabel: UILabel!
     
     private var showPassword: Bool = false
+    private let validEmail: String = "adedwip1808@gmail.com"
+    private let validPassword: String = "password123"
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupLayout()
     }
+    
 }
 
 //MARK: - Setup Layout
@@ -33,6 +37,29 @@ extension LoginViewController{
         
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        //Email or password err label
+        emailPasswordErrLabel.isHidden = true
+    }
+}
+
+//MARK: - Validation
+extension LoginViewController{
+    func userValidation(){
+        if let email = emailTextField.text{
+            if email != validEmail{
+                emailPasswordErrLabel.isHidden = false
+                emailIconImageView.tintColor = .red
+                emailBottomLineView.backgroundColor = .red
+            }
+        }
+        if let password = passwordTextField.text{
+            if password != validPassword{
+                emailPasswordErrLabel.isHidden = false
+                passwordIconImageView.tintColor = .red
+                passwordBottomLineView.backgroundColor = .red
+            }
+        }
     }
 }
 
@@ -42,6 +69,9 @@ extension LoginViewController{
         print("ini SignUp")
     }
     @IBAction func loginButton(_ sender: Any) {
+        userValidation()
+        emailTextField.endEditing(true)
+        passwordTextField.endEditing(true)
         print("do login")
     }
     @IBAction func forgotPasswordButton(_ sender: Any) {
@@ -81,10 +111,12 @@ extension LoginViewController: UITextFieldDelegate{
         case emailTextField:
             emailIconImageView.tintColor = .systemGray3
             emailBottomLineView.backgroundColor = .systemGray3
+            userValidation()
             break
         case passwordTextField:
             passwordIconImageView.tintColor = .systemGray3
             passwordBottomLineView.backgroundColor = .systemGray3
+            userValidation()
             break
         default:
             break
