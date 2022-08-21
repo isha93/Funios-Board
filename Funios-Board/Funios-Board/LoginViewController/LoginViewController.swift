@@ -49,7 +49,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func doLogin(_ sender: UIButton) {
-        if EmailTextField.text == "cc@gmail.com" || PasswordTextField.text == "123456" {
+        if EmailTextField.text == "cc@gmail.com" && PasswordTextField.text == "123456" {
             let viewController = UINavigationController(rootViewController: HomeViewController())
             viewController.modalPresentationStyle = .fullScreen
             present(viewController, animated: true, completion: nil)
