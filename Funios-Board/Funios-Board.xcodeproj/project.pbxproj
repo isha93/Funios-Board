@@ -14,12 +14,16 @@
 		01F8022B28A5359C00976A9C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F8022928A5359C00976A9C /* HomeViewController.xib */; };
 		01F8023028A547FB00976A9C /* TransactionHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8022E28A547FB00976A9C /* TransactionHistoryTableViewCell.swift */; };
 		01F8023128A547FB00976A9C /* TransactionHistoryTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F8022F28A547FB00976A9C /* TransactionHistoryTableViewCell.xib */; };
+		BD4004A128D6F6D600CC2204 /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4004A028D6F6D600CC2204 /* Networker.swift */; };
+		BD4004A328D6F71300CC2204 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4004A228D6F71300CC2204 /* NetworkError.swift */; };
+		BD4004A628D6F74100CC2204 /* NetworkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4004A528D6F74100CC2204 /* NetworkFactory.swift */; };
+		BD4004A928D6F78F00CC2204 /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4004A828D6F78F00CC2204 /* HomeServices.swift */; };
+		BD4004AC28D6F7D600CC2204 /* FeedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4004AB28D6F7D600CC2204 /* FeedModel.swift */; };
+		BD4004AE28D6F81900CC2204 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4004AD28D6F81900CC2204 /* UserModel.swift */; };
 		BDB55762288AC385006898EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55761288AC385006898EC /* AppDelegate.swift */; };
 		BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55763288AC385006898EC /* SceneDelegate.swift */; };
 		BDB55766288AC385006898EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55765288AC385006898EC /* ViewController.swift */; };
-		BDB55769288AC385006898EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB55767288AC385006898EC /* Main.storyboard */; };
 		BDB5576B288AC387006898EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDB5576A288AC387006898EC /* Assets.xcassets */; };
-		BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDB5576C288AC387006898EC /* LaunchScreen.storyboard */; };
 		BDB55779288AC387006898EC /* Funios_BoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55778288AC387006898EC /* Funios_BoardTests.swift */; };
 		BDB55783288AC387006898EC /* Funios_BoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55782288AC387006898EC /* Funios_BoardUITests.swift */; };
 		BDB55785288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB55784288AC387006898EC /* Funios_BoardUITestsLaunchTests.swift */; };
@@ -50,13 +54,17 @@
 		01F8022928A5359C00976A9C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		01F8022E28A547FB00976A9C /* TransactionHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryTableViewCell.swift; sourceTree = "<group>"; };
 		01F8022F28A547FB00976A9C /* TransactionHistoryTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransactionHistoryTableViewCell.xib; sourceTree = "<group>"; };
+		BD4004A028D6F6D600CC2204 /* Networker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
+		BD4004A228D6F71300CC2204 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		BD4004A528D6F74100CC2204 /* NetworkFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkFactory.swift; sourceTree = "<group>"; };
+		BD4004A828D6F78F00CC2204 /* HomeServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
+		BD4004AB28D6F7D600CC2204 /* FeedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedModel.swift; sourceTree = "<group>"; };
+		BD4004AD28D6F81900CC2204 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		BDB5575E288AC385006898EC /* Funios-Board.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funios-Board.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55761288AC385006898EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB55763288AC385006898EC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		BDB55765288AC385006898EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		BDB55768288AC385006898EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BDB5576A288AC387006898EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		BDB5576D288AC387006898EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDB5576F288AC387006898EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDB55774288AC387006898EC /* Funios-BoardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Funios-BoardTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB55778288AC387006898EC /* Funios_BoardTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funios_BoardTests.swift; sourceTree = "<group>"; };
@@ -102,7 +110,8 @@
 		0178129A28A56D7100E1EB27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0178129B28A56DA300E1EB27 /* Transaction.swift */,
+				BD4004B128D6F99F00CC2204 /* Transaction */,
+				BD4004AA28D6F7BE00CC2204 /* Home */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +133,60 @@
 				01F8022F28A547FB00976A9C /* TransactionHistoryTableViewCell.xib */,
 			);
 			path = TransactionHistoryTableViewCell;
+			sourceTree = "<group>";
+		};
+		BD40049F28D6F6C800CC2204 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				BD4004A028D6F6D600CC2204 /* Networker.swift */,
+				BD4004A228D6F71300CC2204 /* NetworkError.swift */,
+				BD4004A528D6F74100CC2204 /* NetworkFactory.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		BD4004A728D6F76900CC2204 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				BD4004A828D6F78F00CC2204 /* HomeServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BD4004AA28D6F7BE00CC2204 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BD4004AB28D6F7D600CC2204 /* FeedModel.swift */,
+				BD4004AD28D6F81900CC2204 /* UserModel.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		BD4004AF28D6F96C00CC2204 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				015EC4452892C8660072D520 /* Login */,
+				01F8022728A5358B00976A9C /* Home */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		BD4004B028D6F98300CC2204 /* Domainless */ = {
+			isa = PBXGroup;
+			children = (
+				BD4004A728D6F76900CC2204 /* Services */,
+				BD40049F28D6F6C800CC2204 /* Networking */,
+				0178129A28A56D7100E1EB27 /* Model */,
+			);
+			path = Domainless;
+			sourceTree = "<group>";
+		};
+		BD4004B128D6F99F00CC2204 /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				0178129B28A56DA300E1EB27 /* Transaction.swift */,
+			);
+			path = Transaction;
 			sourceTree = "<group>";
 		};
 		BDB55755288AC385006898EC = {
@@ -149,15 +212,12 @@
 		BDB55760288AC385006898EC /* Funios-Board */ = {
 			isa = PBXGroup;
 			children = (
-				0178129A28A56D7100E1EB27 /* Model */,
-				01F8022728A5358B00976A9C /* Home */,
-				015EC4452892C8660072D520 /* Login */,
+				BD4004B028D6F98300CC2204 /* Domainless */,
+				BD4004AF28D6F96C00CC2204 /* Presentation */,
 				BDB55761288AC385006898EC /* AppDelegate.swift */,
 				BDB55763288AC385006898EC /* SceneDelegate.swift */,
 				BDB55765288AC385006898EC /* ViewController.swift */,
-				BDB55767288AC385006898EC /* Main.storyboard */,
 				BDB5576A288AC387006898EC /* Assets.xcassets */,
-				BDB5576C288AC387006898EC /* LaunchScreen.storyboard */,
 				BDB5576F288AC387006898EC /* Info.plist */,
 			);
 			path = "Funios-Board";
@@ -285,11 +345,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				015EC4492892C8810072D520 /* LoginViewController.xib in Resources */,
-				BDB5576E288AC387006898EC /* LaunchScreen.storyboard in Resources */,
 				01F8022B28A5359C00976A9C /* HomeViewController.xib in Resources */,
 				01F8023128A547FB00976A9C /* TransactionHistoryTableViewCell.xib in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
-				BDB55769288AC385006898EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -315,10 +373,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				0178129C28A56DA300E1EB27 /* Transaction.swift in Sources */,
+				BD4004A928D6F78F00CC2204 /* HomeServices.swift in Sources */,
 				01F8022A28A5359C00976A9C /* HomeViewController.swift in Sources */,
 				015EC4482892C8810072D520 /* LoginViewController.swift in Sources */,
+				BD4004A628D6F74100CC2204 /* NetworkFactory.swift in Sources */,
+				BD4004AE28D6F81900CC2204 /* UserModel.swift in Sources */,
+				BD4004A128D6F6D600CC2204 /* Networker.swift in Sources */,
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
+				BD4004AC28D6F7D600CC2204 /* FeedModel.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
+				BD4004A328D6F71300CC2204 /* NetworkError.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
 				01F8023028A547FB00976A9C /* TransactionHistoryTableViewCell.swift in Sources */,
 			);
@@ -355,25 +419,6 @@
 			targetProxy = BDB5577F288AC387006898EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		BDB55767288AC385006898EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDB55768288AC385006898EC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		BDB5576C288AC387006898EC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				BDB5576D288AC387006898EC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		BDB55786288AC387006898EC /* Debug */ = {
