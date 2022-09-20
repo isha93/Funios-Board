@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0141B35728DA0CAF00EC8DFB /* DotaServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0141B35628DA0CAF00EC8DFB /* DotaServices.swift */; };
+		0141B35A28DA0D9E00EC8DFB /* DotaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0141B35928DA0D9E00EC8DFB /* DotaModel.swift */; };
 		015EC4482892C8810072D520 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015EC4462892C8810072D520 /* LoginViewController.swift */; };
 		015EC4492892C8810072D520 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015EC4472892C8810072D520 /* LoginViewController.xib */; };
 		0178129C28A56DA300E1EB27 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0178129B28A56DA300E1EB27 /* Transaction.swift */; };
@@ -49,6 +50,7 @@
 
 /* Begin PBXFileReference section */
 		0141B35628DA0CAF00EC8DFB /* DotaServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaServices.swift; sourceTree = "<group>"; };
+		0141B35928DA0D9E00EC8DFB /* DotaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaModel.swift; sourceTree = "<group>"; };
 		015EC4462892C8810072D520 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		015EC4472892C8810072D520 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		0178129B28A56DA300E1EB27 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -100,6 +102,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0141B35828DA0D9200EC8DFB /* Dota */ = {
+			isa = PBXGroup;
+			children = (
+				0141B35928DA0D9E00EC8DFB /* DotaModel.swift */,
+			);
+			path = Dota;
+			sourceTree = "<group>";
+		};
 		015EC4452892C8660072D520 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -112,6 +122,7 @@
 		0178129A28A56D7100E1EB27 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0141B35828DA0D9200EC8DFB /* Dota */,
 				BD4004B128D6F99F00CC2204 /* Transaction */,
 				BD4004AA28D6F7BE00CC2204 /* Home */,
 			);
@@ -383,6 +394,7 @@
 				BD4004AE28D6F81900CC2204 /* UserModel.swift in Sources */,
 				BD4004A128D6F6D600CC2204 /* Networker.swift in Sources */,
 				BDB55766288AC385006898EC /* ViewController.swift in Sources */,
+				0141B35A28DA0D9E00EC8DFB /* DotaModel.swift in Sources */,
 				BD4004AC28D6F7D600CC2204 /* FeedModel.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BD4004A328D6F71300CC2204 /* NetworkError.swift in Sources */,
