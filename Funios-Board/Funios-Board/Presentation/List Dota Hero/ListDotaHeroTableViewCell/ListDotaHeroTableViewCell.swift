@@ -8,7 +8,9 @@
 import UIKit
 
 class ListDotaHeroTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var heroName: UILabel!
+    @IBOutlet weak var heroPrimaryAttr: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -18,6 +20,11 @@ class ListDotaHeroTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setupData(heroName: String, heroPrimaryAttr: String){
+        self.heroName.text = heroName
+        self.heroPrimaryAttr.text = heroPrimaryAttr
     }
     
 }

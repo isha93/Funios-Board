@@ -34,6 +34,7 @@ extension ListDotaHeroViewController{
     func setupDelegate(){
         self.listDotaHeroTableView.dataSource = self
         self.listDotaHeroTableView.delegate = self
+        self.listDotaHeroTableView.register(UINib(nibName: "ListDotaHeroTableViewCell", bundle: nil), forCellReuseIdentifier: "DotaHeroesCell")
     }
 }
 
@@ -44,7 +45,11 @@ extension ListDotaHeroViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let cell = listDotaHeroTableView.dequeueReusableCell(withIdentifier: "DotaHeroesCell") as? ListDotaHeroTableViewCell
+        else{return UITableViewCell()}
+        let hero = dotaHeroes[indexPath.row]
+        cell.setupData(heroName: hero.localizedName, heroPrimaryAttr: hero.primaryAttr.rawValue)
+        return cell
     }
 }
 
