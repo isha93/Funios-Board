@@ -14,6 +14,8 @@
 		0178129C28A56DA300E1EB27 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0178129B28A56DA300E1EB27 /* Transaction.swift */; };
 		01A1591C28DB691500B45DE2 /* ListDotaHeroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1591A28DB691500B45DE2 /* ListDotaHeroViewController.swift */; };
 		01A1591D28DB691600B45DE2 /* ListDotaHeroViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A1591B28DB691500B45DE2 /* ListDotaHeroViewController.xib */; };
+		01A1592128DB79BB00B45DE2 /* ListDotaHeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01A1591F28DB79BB00B45DE2 /* ListDotaHeroTableViewCell.swift */; };
+		01A1592228DB79BB00B45DE2 /* ListDotaHeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01A1592028DB79BB00B45DE2 /* ListDotaHeroTableViewCell.xib */; };
 		01F8022A28A5359C00976A9C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8022828A5359C00976A9C /* HomeViewController.swift */; };
 		01F8022B28A5359C00976A9C /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 01F8022928A5359C00976A9C /* HomeViewController.xib */; };
 		01F8023028A547FB00976A9C /* TransactionHistoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01F8022E28A547FB00976A9C /* TransactionHistoryTableViewCell.swift */; };
@@ -58,6 +60,8 @@
 		0178129B28A56DA300E1EB27 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
 		01A1591A28DB691500B45DE2 /* ListDotaHeroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDotaHeroViewController.swift; sourceTree = "<group>"; };
 		01A1591B28DB691500B45DE2 /* ListDotaHeroViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDotaHeroViewController.xib; sourceTree = "<group>"; };
+		01A1591F28DB79BB00B45DE2 /* ListDotaHeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDotaHeroTableViewCell.swift; sourceTree = "<group>"; };
+		01A1592028DB79BB00B45DE2 /* ListDotaHeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListDotaHeroTableViewCell.xib; sourceTree = "<group>"; };
 		01F8022828A5359C00976A9C /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		01F8022928A5359C00976A9C /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		01F8022E28A547FB00976A9C /* TransactionHistoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransactionHistoryTableViewCell.swift; sourceTree = "<group>"; };
@@ -136,10 +140,20 @@
 		01A1591928DB683B00B45DE2 /* List Dota Hero */ = {
 			isa = PBXGroup;
 			children = (
+				01A1591E28DB798000B45DE2 /* ListDotaHeroTableViewCell */,
 				01A1591A28DB691500B45DE2 /* ListDotaHeroViewController.swift */,
 				01A1591B28DB691500B45DE2 /* ListDotaHeroViewController.xib */,
 			);
 			path = "List Dota Hero";
+			sourceTree = "<group>";
+		};
+		01A1591E28DB798000B45DE2 /* ListDotaHeroTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				01A1591F28DB79BB00B45DE2 /* ListDotaHeroTableViewCell.swift */,
+				01A1592028DB79BB00B45DE2 /* ListDotaHeroTableViewCell.xib */,
+			);
+			path = ListDotaHeroTableViewCell;
 			sourceTree = "<group>";
 		};
 		01F8022728A5358B00976A9C /* Home */ = {
@@ -375,6 +389,7 @@
 				015EC4492892C8810072D520 /* LoginViewController.xib in Resources */,
 				01F8022B28A5359C00976A9C /* HomeViewController.xib in Resources */,
 				01F8023128A547FB00976A9C /* TransactionHistoryTableViewCell.xib in Resources */,
+				01A1592228DB79BB00B45DE2 /* ListDotaHeroTableViewCell.xib in Resources */,
 				01A1591D28DB691600B45DE2 /* ListDotaHeroViewController.xib in Resources */,
 				BDB5576B288AC387006898EC /* Assets.xcassets in Resources */,
 			);
@@ -414,6 +429,7 @@
 				BD4004AC28D6F7D600CC2204 /* FeedModel.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BD4004A328D6F71300CC2204 /* NetworkError.swift in Sources */,
+				01A1592128DB79BB00B45DE2 /* ListDotaHeroTableViewCell.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
 				01F8023028A547FB00976A9C /* TransactionHistoryTableViewCell.swift in Sources */,
 				0141B35728DA0CAF00EC8DFB /* DotaServices.swift in Sources */,
