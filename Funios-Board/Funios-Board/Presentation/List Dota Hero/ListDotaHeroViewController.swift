@@ -11,11 +11,19 @@ class ListDotaHeroViewController: UIViewController {
     
     @IBOutlet weak var listDotaHeroTableView: UITableView!
     
-    var dotaHeroes: DotaModel = []
+    private var dotaHeroes: DotaModel = []
+    private var dotaServices: DotaServices = DotaServices()
+    private var prefs: UserDefaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        Task{
+            await getDotaHeroes()
+        }
+        
+        dotaHeroes = getDotaHeroesData()
+        
         setupDelegate()
     }
 
@@ -44,5 +52,35 @@ extension ListDotaHeroViewController: UITableViewDataSource{
 extension ListDotaHeroViewController: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+    }
+}
+
+//MARK: Networking
+extension ListDotaHeroViewController{
+    func getDotaHeroes() async{
+        do{
+            let dotaHeroesData = try await dotaServices.getHeroes(endPoint: .getHeroes)
+            setDotaHeroesDataOffline(with: dotaHeroesData)
+        }catch{
+            print(error)
+        }
+        
+    }
+}
+
+//MARK: UserDefault -> Menyimpan data
+extension ListDotaHeroViewController{
+    func setDotaHeroesDataOffline(with data: DotaModel){
+        if let encoded = try? JSONEncoder().encode(data) {
+            UserDefaults.standard.set(encoded, forKey: "dotaHeroes")
+        }
+    }
+    
+    func getDotaHeroesData() -> DotaModel{
+        if let data = UserDefaults.standard.object(forKey: "dotaHeroes") as? Data,
+           let decodedData = try? JSONDecoder().decode(DotaModel.self, from: data) {
+             return decodedData
+        }
+        return DotaModel()
     }
 }
