@@ -11,6 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListDotaHeroViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
+                <outlet property="listDotaHeroTableView" destination="EHw-9d-cDc" id="1bM-SB-yaN"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

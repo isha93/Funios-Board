@@ -8,22 +8,41 @@
 import UIKit
 
 class ListDotaHeroViewController: UIViewController {
-
+    
+    @IBOutlet weak var listDotaHeroTableView: UITableView!
+    
+    var dotaHeroes: DotaModel = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupDelegate()
     }
 
+}
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+//MARK: Delegate
+extension ListDotaHeroViewController{
+    func setupDelegate(){
+        self.listDotaHeroTableView.dataSource = self
+        self.listDotaHeroTableView.delegate = self
     }
-    */
+}
 
+//MARK: TableViewDataSource
+extension ListDotaHeroViewController: UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dotaHeroes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+}
+
+//MARK: TableViewDelegate
+extension ListDotaHeroViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+    }
 }
