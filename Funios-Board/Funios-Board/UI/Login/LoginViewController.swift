@@ -9,13 +9,20 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
-    @IBOutlet weak var userEmailTextField: UITextField!
-    @IBOutlet weak var userPasswordTextField: UITextField!
-    @IBOutlet weak var forgotPasswordLabel: UILabel!
-    @IBOutlet weak var showHidePasswordImage: UIImageView!
-    @IBOutlet weak var signUpLabel: UILabel!
-    @IBOutlet weak var loginButton: UIButton!
-    @IBOutlet weak var loginContentView: UIView!
+    @IBOutlet private weak var userEmailTextField: UITextField!
+    @IBOutlet private weak var userPasswordTextField: UITextField!
+    
+    @IBOutlet private weak var showHidePasswordImage: UIImageView!
+    
+    @IBOutlet private weak var loginButton: UIButton!
+    
+    @IBOutlet private weak var firstHorizontalView: UIView!
+    @IBOutlet private weak var secondHorizontalView: UIView!
+    @IBOutlet private weak var loginContentView: UIView!
+    
+    @IBOutlet private weak var forgotPasswordLabel: UILabel!
+    @IBOutlet private weak var signUpLabel: UILabel!
+    @IBOutlet private weak var errorLabel: UILabel!
     
     private let viewModel = LoginViewModel()
     
@@ -36,14 +43,12 @@ class LoginViewController: UIViewController {
         loginContentView.layer.cornerRadius = 16
         loginContentView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         loginContentView.clipsToBounds = true
-        
         userPasswordTextField.isSecureTextEntry = true
     }
     
     private func configureShowHidePasswordImage() {
         showHidePasswordImage.isUserInteractionEnabled = true
         let onShowHidePasswordImageTapped = UITapGestureRecognizer(target: self, action: #selector(self.onShowHidePasswordImageTapped(_:)))
-        
         showHidePasswordImage.addGestureRecognizer(onShowHidePasswordImageTapped)
     }
     
@@ -73,10 +78,23 @@ class LoginViewController: UIViewController {
             email: userEmailTextField.text,
             password: userPasswordTextField.text
         ) {
+            showError(false)
             let homeViewController = HomeViewController()
             navigationController?.pushViewController(homeViewController, animated: true)
         } else {
-            print("Username salah")
+            showError(true)
+        }
+    }
+    
+    private func showError(_ isError: Bool) {
+        if isError {
+            firstHorizontalView.backgroundColor = UIColor.systemRed
+            secondHorizontalView.backgroundColor = UIColor.systemRed
+            errorLabel.isHidden = false
+        } else {
+            firstHorizontalView.backgroundColor = UIColor(red: 169/255, green: 169/255, blue: 169/255, alpha: 0.6)
+            secondHorizontalView.backgroundColor = UIColor(red: 169/255, green: 169/255, blue: 169/255, alpha: 0.6)
+            errorLabel.isHidden = true
         }
     }
 }

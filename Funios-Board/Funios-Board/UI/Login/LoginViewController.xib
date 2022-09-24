@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,9 +10,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
+                <outlet property="errorLabel" destination="Jjy-wp-wgR" id="ZOL-h4-Taa"/>
+                <outlet property="firstHorizontalView" destination="X47-m6-NDd" id="9Vg-yN-m2t"/>
                 <outlet property="forgotPasswordLabel" destination="XI9-al-IZQ" id="O6S-o8-Bjm"/>
                 <outlet property="loginButton" destination="Ftg-kI-TG9" id="yZD-vT-loV"/>
                 <outlet property="loginContentView" destination="iTG-9e-q1M" id="eVX-ht-kPN"/>
+                <outlet property="secondHorizontalView" destination="P7h-Sd-SsK" id="LAX-yY-wXD"/>
                 <outlet property="showHidePasswordImage" destination="sk1-8H-yzY" id="j7D-2u-kht"/>
                 <outlet property="signUpLabel" destination="LAq-5S-vVq" id="4A1-LJ-48f"/>
                 <outlet property="userEmailTextField" destination="DqC-pK-6un" id="wMY-KG-1fx"/>
@@ -126,6 +129,12 @@
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email or Password Invalid" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jjy-wp-wgR">
+                            <rect key="frame" x="16" y="254.5" width="288" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" systemColor="systemRedColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account? Let's Sign Up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAq-5S-vVq">
                             <rect key="frame" x="16" y="337" width="288" height="18"/>
                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -137,10 +146,10 @@
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="wZL-7R-vaI"/>
                             </constraints>
-                            <color key="tintColor" red="0.53333333333333333" green="0.53333333333333333" blue="0.5607843137254902" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="tintColor" systemColor="systemBackgroundColor"/>
                             <state key="normal" title="Button"/>
                             <buttonConfiguration key="configuration" style="gray" title="Login">
-                                <color key="baseBackgroundColor" red="0.85490196078431369" green="0.85490196078431369" blue="0.85490196078431369" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="baseBackgroundColor" name="zwallet-primary"/>
                             </buttonConfiguration>
                             <connections>
                                 <action selector="onLoginButtonTapped:" destination="-1" eventType="touchUpInside" id="MXl-hV-Cne"/>
@@ -159,6 +168,7 @@
                         <constraint firstAttribute="trailing" secondItem="zFL-dw-AZT" secondAttribute="trailing" constant="32" id="Uaf-c4-qnO"/>
                         <constraint firstAttribute="trailing" secondItem="P7h-Sd-SsK" secondAttribute="trailing" constant="12" id="Yg5-lj-e6X"/>
                         <constraint firstItem="LAq-5S-vVq" firstAttribute="leading" secondItem="iTG-9e-q1M" secondAttribute="leading" constant="16" id="Z0E-mx-hjW"/>
+                        <constraint firstItem="Jjy-wp-wgR" firstAttribute="leading" secondItem="iTG-9e-q1M" secondAttribute="leading" constant="16" id="cFR-WV-jZC"/>
                         <constraint firstItem="zFL-dw-AZT" firstAttribute="leading" secondItem="iTG-9e-q1M" secondAttribute="leading" constant="32" id="dfW-BZ-qzb"/>
                         <constraint firstAttribute="trailing" secondItem="tdI-5H-lti" secondAttribute="trailing" constant="16" id="e9F-Mg-eE7"/>
                         <constraint firstItem="ofz-E8-l0i" firstAttribute="top" secondItem="X47-m6-NDd" secondAttribute="bottom" constant="24" id="epT-VG-rjc"/>
@@ -177,6 +187,8 @@
                         <constraint firstItem="P7h-Sd-SsK" firstAttribute="top" secondItem="ofz-E8-l0i" secondAttribute="bottom" constant="4" id="rlR-WR-Jlw"/>
                         <constraint firstAttribute="bottom" secondItem="LAq-5S-vVq" secondAttribute="bottom" constant="24" id="s67-xW-cKy"/>
                         <constraint firstItem="fWY-N6-KH8" firstAttribute="top" secondItem="zFL-dw-AZT" secondAttribute="bottom" constant="24" id="sGY-3U-4IV"/>
+                        <constraint firstItem="Jjy-wp-wgR" firstAttribute="top" secondItem="XI9-al-IZQ" secondAttribute="bottom" constant="12" id="vSC-9c-tI5"/>
+                        <constraint firstAttribute="trailing" secondItem="Jjy-wp-wgR" secondAttribute="trailing" constant="16" id="wp3-ZT-qlZ"/>
                     </constraints>
                 </view>
             </subviews>
@@ -199,8 +211,14 @@
         <image name="eye.slash" catalog="system" width="128" height="86"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <image name="mail" catalog="system" width="128" height="93"/>
+        <namedColor name="zwallet-primary">
+            <color red="0.3880000114440918" green="0.47499999403953552" blue="0.9570000171661377" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
