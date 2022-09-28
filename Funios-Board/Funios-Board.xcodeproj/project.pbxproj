@@ -14,8 +14,12 @@
 		8A45A0EB28A8F10900B5E7E0 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8A45A0E928A8F10900B5E7E0 /* HomeTableViewCell.xib */; };
 		8ACAED9028A3F0230053143E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ACAED8E28A3F0230053143E /* LoginViewController.swift */; };
 		8ACAED9128A3F0230053143E /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8ACAED8F28A3F0230053143E /* LoginViewController.xib */; };
+		A16E682128E3E2040009DAC0 /* DotaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16E682028E3E2040009DAC0 /* DotaModel.swift */; };
+		A16E682528E3E3510009DAC0 /* HomeServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16E682428E3E3510009DAC0 /* HomeServices.swift */; };
+		A16E682728E3E36A0009DAC0 /* DotaServicesNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A16E682628E3E36A0009DAC0 /* DotaServicesNetworkModel.swift */; };
 		A176D19528DEC5140042C202 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A176D19428DEC5140042C202 /* Launch Screen.storyboard */; };
 		A176D19728DEC5390042C202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A176D19628DEC5380042C202 /* Main.storyboard */; };
+		A19E62BC28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E62BB28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift */; };
 		A1AC0CC728DEBE10005A3E4F /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC0CB928DEBE10005A3E4F /* Networker.swift */; };
 		A1AC0CC828DEBE10005A3E4F /* NetworkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC0CBA28DEBE10005A3E4F /* NetworkFactory.swift */; };
 		A1AC0CC928DEBE10005A3E4F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC0CBB28DEBE10005A3E4F /* NetworkError.swift */; };
@@ -56,8 +60,12 @@
 		8A45A0E928A8F10900B5E7E0 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		8ACAED8E28A3F0230053143E /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8ACAED8F28A3F0230053143E /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		A16E682028E3E2040009DAC0 /* DotaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaModel.swift; sourceTree = "<group>"; };
+		A16E682428E3E3510009DAC0 /* HomeServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeServices.swift; sourceTree = "<group>"; };
+		A16E682628E3E36A0009DAC0 /* DotaServicesNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaServicesNetworkModel.swift; sourceTree = "<group>"; };
 		A176D19428DEC5140042C202 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A176D19628DEC5380042C202 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		A19E62BB28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaServicesDefaultNetworkModel.swift; sourceTree = "<group>"; };
 		A1AC0CB928DEBE10005A3E4F /* Networker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		A1AC0CBA28DEBE10005A3E4F /* NetworkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkFactory.swift; sourceTree = "<group>"; };
 		A1AC0CBB28DEBE10005A3E4F /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -148,9 +156,36 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		A16E681F28E3E1E70009DAC0 /* Dota */ = {
+			isa = PBXGroup;
+			children = (
+				A16E682028E3E2040009DAC0 /* DotaModel.swift */,
+			);
+			path = Dota;
+			sourceTree = "<group>";
+		};
+		A16E682328E3E3510009DAC0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A19E62BA28E3E3F80082C941 /* Protocols */,
+				A16E682428E3E3510009DAC0 /* HomeServices.swift */,
+				A19E62BB28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A19E62BA28E3E3F80082C941 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				A16E682628E3E36A0009DAC0 /* DotaServicesNetworkModel.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		A1AC0CB728DEBE10005A3E4F /* Domainless */ = {
 			isa = PBXGroup;
 			children = (
+				A16E682328E3E3510009DAC0 /* Services */,
 				A1AC0CB828DEBE10005A3E4F /* Networking */,
 				A1AC0CBC28DEBE10005A3E4F /* Model */,
 				A1AC0CC228DEBE10005A3E4F /* Services */,
@@ -171,6 +206,7 @@
 		A1AC0CBC28DEBE10005A3E4F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				A16E681F28E3E1E70009DAC0 /* Dota */,
 				A1AC0CBD28DEBE10005A3E4F /* Transaction */,
 				A1AC0CBF28DEBE10005A3E4F /* Home */,
 			);
@@ -391,16 +427,20 @@
 				8A45A0EA28A8F10900B5E7E0 /* HomeTableViewCell.swift in Sources */,
 				8A45A0E528A7937900B5E7E0 /* HomeViewController.swift in Sources */,
 				8A1E7CD128A5E008007CC410 /* LoginViewModel.swift in Sources */,
+				A19E62BC28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift in Sources */,
+				A16E682528E3E3510009DAC0 /* HomeServices.swift in Sources */,
 				A1AC0CCA28DEBE10005A3E4F /* Transaction.swift in Sources */,
 				A1AC0CC728DEBE10005A3E4F /* Networker.swift in Sources */,
 				A1AC0CCC28DEBE10005A3E4F /* FeedModel.swift in Sources */,
 				8ACAED9028A3F0230053143E /* LoginViewController.swift in Sources */,
 				A1AC0CCB28DEBE10005A3E4F /* UserModel.swift in Sources */,
+				A16E682728E3E36A0009DAC0 /* DotaServicesNetworkModel.swift in Sources */,
 				A1AC0CCD28DEBE10005A3E4F /* HomeServices.swift in Sources */,
 				A1AC0CC828DEBE10005A3E4F /* NetworkFactory.swift in Sources */,
 				A1AC0CC928DEBE10005A3E4F /* NetworkError.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
+				A16E682128E3E2040009DAC0 /* DotaModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
