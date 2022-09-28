@@ -16,7 +16,8 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var transactionTableView: UITableView!
     @IBOutlet private weak var seeAllLabel: UILabel!
     @IBOutlet private weak var userProfileSectionView: UIView!
-    private var viewModel = HomeViewModel()
+    private var viewModel: HomeViewModel = HomeViewModel(dotaServiceProtocol: DotaServicesDefaultNetworkModel())
+    private var heroes: [DotaModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,22 @@ class HomeViewController: UIViewController {
         configureUserProfile()
         configureLogoutImage()
         configureTable()
+        getHeroes()
+    }
+    
+    private func getHeroes() {
+        Task {
+            let result = await viewModel.retrieveDotaHeroes()
+            switch result {
+            case .success(let heroes):
+                self.heroes = heroes
+                DispatchQueue.main.async {
+                    self.transactionTableView.reloadData()
+                }
+            case .failure(let error):
+                print("Terjadi error dengan pesan \(error)")
+            }
+        }
     }
     
     private func configureNavBar() {
@@ -62,6 +79,7 @@ class HomeViewController: UIViewController {
             UINib(nibName: "HomeTableViewCell", bundle: nil),
             forCellReuseIdentifier: "TransactionCell"
         )
+        transactionTableView.rowHeight = UITableView.automaticDimension
         transactionTableView.dataSource = self
         transactionTableView.separatorStyle = .none
         transactionTableView.showsHorizontalScrollIndicator = false
@@ -70,22 +88,38 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return dummyTransaction.count
+        viewModel.getDataLength()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(
-            withIdentifier: "TransactionCell",
-            for: indexPath
-        ) as? HomeTableViewCell {
-            let transaction = dummyTransaction[indexPath.row]
+        switch viewModel.item[indexPath.row] {
+        case .dotaHeroes:
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "TransactionCell",
+                for: indexPath
+            ) as? HomeTableViewCell else { return UITableViewCell() }
+//                let _ = dummyTransaction[indexPath.row]
+                
+//                cell.bind(transaction)
+                
+                return cell
             
-            cell.bind(transaction)
+        case .dummyTransaction:
+            guard let cell = tableView.dequeueReusableCell(
+                withIdentifier: "TransactionCell",
+                for: indexPath
+            ) as? HomeTableViewCell else { return UITableViewCell() }
+                let transaction = dummyTransaction[indexPath.row]
+                
+                cell.bind(transaction)
+                
+                return cell
             
-            return cell
-        } else {
-            return UITableViewCell()
         }
     }
 }

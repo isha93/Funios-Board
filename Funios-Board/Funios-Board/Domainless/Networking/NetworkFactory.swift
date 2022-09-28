@@ -24,7 +24,7 @@ extension NetworkFactory {
         case .getUser:
             return "/users"
         case .getDotaHeroes:
-            return "/heroes"
+            return "/api/heroes"
         }
     }
     
@@ -40,7 +40,7 @@ extension NetworkFactory {
     var baseApi: String? {
         switch self {
         case .getDotaHeroes:
-            return "https://api.opendota.com/api/"
+            return "api.opendota.com"
         default:
             return "3fc7b134-bc49-4118-a5bc-82472c90a981.mock.pstmn.io"
         }

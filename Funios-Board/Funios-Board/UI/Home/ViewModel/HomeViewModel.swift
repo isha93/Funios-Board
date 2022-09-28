@@ -8,14 +8,42 @@
 import Foundation
 
 class HomeViewModel {
-    private var dotaServicesDefaultNetworkMdoel = DotaServicesDefaultNetworkModel()
+    enum Item {
+        case dotaHeroes
+        case dummyTransaction
+    }
     
-    func getDotaHeroes() async -> Result<[DotaModel], Error> {
+    private let dotaServiceProtocol: DotaServicesNetworkModel
+    var item : [Item] = [Item]()
+    
+    init(dotaServiceProtocol: DotaServicesNetworkModel) {
+        self.dotaServiceProtocol = dotaServiceProtocol
+    }
+    
+    func retrieveDotaHeroes() async -> Result<[DotaModel], Error> {
         do {
-            let heroes = try await dotaServicesDefaultNetworkMdoel.getDotaHeroes(endPoint: .getDotaHeroes)
+            let heroes = try await dotaServiceProtocol.getDotaHeroes(endPoint: .getDotaHeroes)
+            
+            if !heroes.isEmpty {
+                heroes.enumerated().forEach { index, _ in
+                    item.append(.dotaHeroes)
+                }
+            } else {
+                dummyTransaction.enumerated().forEach { index, _ in
+                    item.append(.dummyTransaction)
+                }
+            }
+            
             return .success(heroes)
         } catch {
+            dummyTransaction.enumerated().forEach { index, _ in
+                item.append(.dummyTransaction)
+            }
             return .failure(error)
         }
+    }
+    
+    func getDataLength() -> Int {
+        return item.count
     }
 }

@@ -9,13 +9,16 @@ import UIKit
 
 class HomeTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var transactionImage: UIImageView!
-    @IBOutlet weak var transactionTitleLabel: UILabel!
-    @IBOutlet weak var transactionCategoryLabel: UILabel!
-    @IBOutlet weak var transactionValueLabel: UILabel!
+    @IBOutlet private weak var transactionImage: UIImageView!
+    @IBOutlet private weak var transactionTitleLabel: UILabel!
+    @IBOutlet private weak var transactionCategoryLabel: UILabel!
+    @IBOutlet private weak var transactionValueLabel: UILabel!
+    @IBOutlet private weak var containerView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.containerView.layer.cornerRadius = 16
+        self.containerView.clipsToBounds = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -23,7 +26,7 @@ class HomeTableViewCell: UITableViewCell {
     }
     
     override func layoutSubviews() {
-        contentView.frame = contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: 10, right: 0))
+        
         
     }
     
