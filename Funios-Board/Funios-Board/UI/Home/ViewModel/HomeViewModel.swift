@@ -8,13 +8,14 @@
 import Foundation
 
 class HomeViewModel {
+    private var dotaServicesDefaultNetworkMdoel = DotaServicesDefaultNetworkModel()
     
-    let transactions: [Transaction]?
-        
-    func getDummyData() -> [Transaction] {
-        
-        if let
-        
-        return dummyTransaction
+    func getDotaHeroes() async -> Result<[DotaModel], Error> {
+        do {
+            let heroes = try await dotaServicesDefaultNetworkMdoel.getDotaHeroes(endPoint: .getDotaHeroes)
+            return .success(heroes)
+        } catch {
+            return .failure(error)
+        }
     }
 }

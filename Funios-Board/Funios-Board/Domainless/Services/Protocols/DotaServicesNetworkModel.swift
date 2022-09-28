@@ -7,7 +7,7 @@
 
 import Foundation
 
-protocol DotaServicesProtocol {
+protocol DotaServicesNetworkModel {
     var networker: NetworkerProtocol { get }
     func getDotaHeroes(endPoint : NetworkFactory) async throws -> [DotaModel]
 }

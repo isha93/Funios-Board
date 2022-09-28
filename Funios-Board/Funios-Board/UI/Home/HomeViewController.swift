@@ -8,14 +8,15 @@
 import UIKit
 
 class HomeViewController: UIViewController {
-    @IBOutlet weak var userProfileImage: UIImageView!
-    @IBOutlet weak var userProfileBalance: UILabel!
-    @IBOutlet weak var logoutImage: UIImageView!
-    @IBOutlet weak var transferButton: UIButton!
-    @IBOutlet weak var topUpButton: UIButton!
-    @IBOutlet weak var transactionTableView: UITableView!
-    @IBOutlet weak var seeAllLabel: UILabel!
-    @IBOutlet weak var userProfileSectionView: UIView!
+    @IBOutlet private weak var userProfileImage: UIImageView!
+    @IBOutlet private weak var userProfileBalance: UILabel!
+    @IBOutlet private weak var logoutImage: UIImageView!
+    @IBOutlet private weak var transferButton: UIButton!
+    @IBOutlet private weak var topUpButton: UIButton!
+    @IBOutlet private weak var transactionTableView: UITableView!
+    @IBOutlet private weak var seeAllLabel: UILabel!
+    @IBOutlet private weak var userProfileSectionView: UIView!
+    private var viewModel = HomeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class HomeViewController: UIViewController {
         configureButton()
         configureUserProfile()
         configureLogoutImage()
-        configureTransactionTable()
+        configureTable()
     }
     
     private func configureNavBar() {
@@ -56,7 +57,7 @@ class HomeViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
-    private func configureTransactionTable() {
+    private func configureTable() {
         transactionTableView.register(
             UINib(nibName: "HomeTableViewCell", bundle: nil),
             forCellReuseIdentifier: "TransactionCell"

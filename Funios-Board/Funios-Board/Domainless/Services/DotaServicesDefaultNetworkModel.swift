@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class DotaServicesDefaultNetworkModel : DotaServicesProtocol {
+final class DotaServicesDefaultNetworkModel : DotaServicesNetworkModel {
     var networker: NetworkerProtocol
     
     init(networker: NetworkerProtocol = Networker()) {

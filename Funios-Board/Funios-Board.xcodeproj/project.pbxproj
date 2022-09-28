@@ -20,6 +20,7 @@
 		A176D19528DEC5140042C202 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A176D19428DEC5140042C202 /* Launch Screen.storyboard */; };
 		A176D19728DEC5390042C202 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A176D19628DEC5380042C202 /* Main.storyboard */; };
 		A19E62BC28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E62BB28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift */; };
+		A19E62C028E3E76C0082C941 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A19E62BF28E3E76C0082C941 /* HomeViewModel.swift */; };
 		A1AC0CC728DEBE10005A3E4F /* Networker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC0CB928DEBE10005A3E4F /* Networker.swift */; };
 		A1AC0CC828DEBE10005A3E4F /* NetworkFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC0CBA28DEBE10005A3E4F /* NetworkFactory.swift */; };
 		A1AC0CC928DEBE10005A3E4F /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AC0CBB28DEBE10005A3E4F /* NetworkError.swift */; };
@@ -66,6 +67,7 @@
 		A176D19428DEC5140042C202 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		A176D19628DEC5380042C202 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		A19E62BB28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaServicesDefaultNetworkModel.swift; sourceTree = "<group>"; };
+		A19E62BF28E3E76C0082C941 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		A1AC0CB928DEBE10005A3E4F /* Networker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Networker.swift; sourceTree = "<group>"; };
 		A1AC0CBA28DEBE10005A3E4F /* NetworkFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkFactory.swift; sourceTree = "<group>"; };
 		A1AC0CBB28DEBE10005A3E4F /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
@@ -113,6 +115,7 @@
 		8A45A0E228A7936800B5E7E0 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				A19E62BE28E3E76C0082C941 /* ViewModel */,
 				8A45A0E728A8F0E300B5E7E0 /* TableViewCell */,
 				8A45A0E328A7937900B5E7E0 /* HomeViewController.swift */,
 				8A45A0E428A7937900B5E7E0 /* HomeViewController.xib */,
@@ -180,6 +183,14 @@
 				A16E682628E3E36A0009DAC0 /* DotaServicesNetworkModel.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A19E62BE28E3E76C0082C941 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A19E62BF28E3E76C0082C941 /* HomeViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		A1AC0CB728DEBE10005A3E4F /* Domainless */ = {
@@ -425,6 +436,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A45A0EA28A8F10900B5E7E0 /* HomeTableViewCell.swift in Sources */,
+				A19E62C028E3E76C0082C941 /* HomeViewModel.swift in Sources */,
 				8A45A0E528A7937900B5E7E0 /* HomeViewController.swift in Sources */,
 				8A1E7CD128A5E008007CC410 /* LoginViewModel.swift in Sources */,
 				A19E62BC28E3E4480082C941 /* DotaServicesDefaultNetworkModel.swift in Sources */,
