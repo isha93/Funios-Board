@@ -11,26 +11,27 @@ class ListDotaHeroViewController: UIViewController {
     
     @IBOutlet weak var listDotaHeroTableView: UITableView!
     
-    private var dotaHeroes: DotaModel = []
+    private var dotaHeroes: [String: [DotaModelElement]] = [:]
     private var dotaServices: DotaServices = DotaServices()
-    private var prefs: UserDefaults = UserDefaults.standard
+    private var prefs: UserDefaults = UserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("---")
+        
         Task{
             await getDotaHeroes()
         }
-        
-        dotaHeroes = getDotaHeroesData()
+        dotaHeroes = classifyDotaHeroesData(data: getDotaHeroesData())
         
         setupDelegate()
     }
-
+    
 }
 
 //MARK: Delegate
-extension ListDotaHeroViewController{
+extension ListDotaHeroViewController {
     func setupDelegate(){
         self.listDotaHeroTableView.dataSource = self
         self.listDotaHeroTableView.delegate = self
@@ -40,28 +41,40 @@ extension ListDotaHeroViewController{
 
 //MARK: TableViewDataSource
 extension ListDotaHeroViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dotaHeroes.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let header = "Primary Att: \(dotaHeroes[section].key.capitalized)"
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dotaHeroes[section].value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = listDotaHeroTableView.dequeueReusableCell(withIdentifier: "DotaHeroesCell") as? ListDotaHeroTableViewCell
         else{return UITableViewCell()}
-        let hero = dotaHeroes[indexPath.row]
-        cell.setupData(heroName: hero.localizedName, heroPrimaryAttr: hero.primaryAttr.rawValue)
+        let hero = dotaHeroes[indexPath.section].value[indexPath.row]
+        
+        cell.setupData(heroName: hero.localizedName, heroPrimaryAttr: hero.primaryAttr)
+        
         return cell
     }
 }
 
 //MARK: TableViewDelegate
-extension ListDotaHeroViewController: UITableViewDelegate{
+extension ListDotaHeroViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 }
 
 //MARK: Networking
-extension ListDotaHeroViewController{
+extension ListDotaHeroViewController {
     func getDotaHeroes() async{
         do{
             let dotaHeroesData = try await dotaServices.getHeroes(endPoint: .getHeroes)
@@ -73,19 +86,25 @@ extension ListDotaHeroViewController{
     }
 }
 
-//MARK: UserDefault -> Menyimpan data
-extension ListDotaHeroViewController{
+//MARK: Local(UserDefaults)
+extension ListDotaHeroViewController {
     func setDotaHeroesDataOffline(with data: DotaModel){
-        if let encoded = try? JSONEncoder().encode(data) {
-            UserDefaults.standard.set(encoded, forKey: "dotaHeroes")
-        }
+        prefs.setDataToLocal(data, with: UserDefaults.Key.dotaHeroes)
     }
     
-    func getDotaHeroesData() -> DotaModel{
-        if let data = UserDefaults.standard.object(forKey: "dotaHeroes") as? Data,
-           let decodedData = try? JSONDecoder().decode(DotaModel.self, from: data) {
-             return decodedData
+    func getDotaHeroesData() -> DotaModel {
+        prefs.getDataFromLocal(DotaModel.self, with: UserDefaults.Key.dotaHeroes) ?? DotaModel()
+    }
+}
+
+//MARK: Classify dota hero data
+extension ListDotaHeroViewController {
+    func classifyDotaHeroesData(data: DotaModel) -> [String : [DotaModelElement]] {
+        var res = [String : [DotaModelElement]]()
+        data.forEach {
+            if res[$0.primaryAttr] == nil {res[$0.primaryAttr] = []}
+            res[$0.primaryAttr]?.append($0)
         }
-        return DotaModel()
+        return res
     }
 }

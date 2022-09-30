@@ -10,9 +10,9 @@ import Foundation
 struct DotaModelElement: Codable {
     let id: Int
     let name, localizedName: String
-    let primaryAttr: PrimaryAttr
-    let attackType: AttackType
-    let roles: [Role]
+    let primaryAttr: String
+    let attackType: String
+    let roles: [String]
     let legs: Int
 
     enum CodingKeys: String, CodingKey {
@@ -23,28 +23,28 @@ struct DotaModelElement: Codable {
         case roles, legs
     }
 }
-
-enum AttackType: String, Codable {
-    case melee = "Melee"
-    case ranged = "Ranged"
-}
-
-enum PrimaryAttr: String, Codable {
-    case agi = "agi"
-    case int = "int"
-    case str = "str"
-}
-
-enum Role: String, Codable {
-    case carry = "Carry"
-    case disabler = "Disabler"
-    case durable = "Durable"
-    case escape = "Escape"
-    case initiator = "Initiator"
-    case jungler = "Jungler"
-    case nuker = "Nuker"
-    case pusher = "Pusher"
-    case support = "Support"
-}
+//
+//enum AttackType: String, Codable {
+//    case melee = "Melee"
+//    case ranged = "Ranged"
+//}
+//
+//enum PrimaryAttr: String, Codable {
+//    case agi = "agi"
+//    case int = "int"
+//    case str = "str"
+//}
+//
+//enum Role: String, Codable {
+//    case carry = "Carry"
+//    case disabler = "Disabler"
+//    case durable = "Durable"
+//    case escape = "Escape"
+//    case initiator = "Initiator"
+//    case jungler = "Jungler"
+//    case nuker = "Nuker"
+//    case pusher = "Pusher"
+//    case support = "Support"
+//}
 
 typealias DotaModel = [DotaModelElement]
