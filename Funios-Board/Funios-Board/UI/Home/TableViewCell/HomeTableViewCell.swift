@@ -25,11 +25,6 @@ class HomeTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    override func layoutSubviews() {
-        
-        
-    }
-    
     func bind(_ transaction: Transaction) {
         transactionImage.image = transaction.image
         transactionTitleLabel.text = transaction.name

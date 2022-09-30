@@ -76,10 +76,8 @@ class HomeViewController: UIViewController {
     }
     
     private func configureTable() {
-        transactionTableView.register(
-            UINib(nibName: "HomeTableViewCell", bundle: nil),
-            forCellReuseIdentifier: "TransactionCell"
-        )
+        transactionTableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
+        transactionTableView.register(UINib(nibName: "DotaHeroesTableViewCell", bundle: nil), forCellReuseIdentifier: "DotaHeroesCell")
         transactionTableView.rowHeight = UITableView.automaticDimension
         transactionTableView.dataSource = self
         transactionTableView.separatorStyle = .none
@@ -89,9 +87,6 @@ class HomeViewController: UIViewController {
 }
 
 extension HomeViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.getDataLength()
@@ -99,14 +94,13 @@ extension HomeViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         switch viewModel.getItems()[indexPath.row] {
-        case .dotaHeroes:
+        case .dotaHeroes(let heroes):
             guard let cell = tableView.dequeueReusableCell(
-                withIdentifier: "TransactionCell",
+                withIdentifier: "DotaHeroesCell",
                 for: indexPath
-            ) as? HomeTableViewCell else { return UITableViewCell() }
-//                let _ = dummyTransaction[indexPath.row]
-                
-//                cell.bind(transaction)
+            ) as? DotaHeroesTableViewCell else { return UITableViewCell() }
+                let hero = heroes[indexPath.row]
+                cell.bind(hero)
                 
                 return cell
             
@@ -116,10 +110,10 @@ extension HomeViewController: UITableViewDataSource {
                 for: indexPath
             ) as? HomeTableViewCell else { return UITableViewCell() }
                 let transaction = dummyTransaction[indexPath.row]
-                
                 cell.bind(transaction)
                 
                 return cell
         }
     }
+    
 }

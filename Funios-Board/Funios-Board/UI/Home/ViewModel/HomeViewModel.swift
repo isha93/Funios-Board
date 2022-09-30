@@ -24,13 +24,13 @@ class HomeViewModel {
     func retrieveDotaHeroes() async -> Result<[DotaModel], Error> {
         let localHeroes = isLocalDotaHeroesExist()
         if !localHeroes.isEmpty {
-            addItemHeroes(.dotaHeroes, localHeroes)
+            addItemHeroes(.dotaHeroes(localHeroes), localHeroes)
             return .success(localHeroes)
         }
     
         do {
             let heroes = try await dotaServiceProtocol.getDotaHeroes(endPoint: .getDotaHeroes)
-            heroes.isEmpty ? addItemDummy(.dummyTransaction, dummyTransaction) : addItemHeroes(heroes.isEmpty ? .dummyTransaction : .dotaHeroes, heroes)
+            heroes.isEmpty ? addItemDummy(.dummyTransaction, dummyTransaction) : addItemHeroes(heroes.isEmpty ? .dummyTransaction : .dotaHeroes(heroes), heroes)
             saveHeroesToLocalDataSource(heroes)
             
             return .success(heroes)
@@ -52,6 +52,7 @@ class HomeViewModel {
         do {
             let localHeroes = try JSONEncoder().encode(datas)
             userDefault.set(localHeroes, forKey: "heroes")
+            print(localHeroes)
         } catch {
             print("saveHeroesToLocalDataSource \(error)")
         }
@@ -83,13 +84,11 @@ class HomeViewModel {
         
         return []
     }
-    
-    
 }
 
 extension HomeViewModel {
     enum Item {
-        case dotaHeroes
+        case dotaHeroes([DotaModel])
         case dummyTransaction
     }
 }
