@@ -11,7 +11,7 @@ class ListDotaHeroViewController: UIViewController {
     
     @IBOutlet weak var listDotaHeroTableView: UITableView!
     
-    private var dotaHeroes: DotaModel = []
+    private var dotaHeroes: [String: [DotaModelElement]] = [:]
     private var dotaServices: DotaServices = DotaServices()
     private var prefs: UserDefaults = UserDefaults.standard
     
@@ -40,15 +40,27 @@ extension ListDotaHeroViewController{
 
 //MARK: TableViewDataSource
 extension ListDotaHeroViewController: UITableViewDataSource{
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
         return dotaHeroes.count
+    }
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        let header = "Primary Att: \(dotaHeroes[section].key.capitalized)"
+        return header
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return dotaHeroes[section].value.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = listDotaHeroTableView.dequeueReusableCell(withIdentifier: "DotaHeroesCell") as? ListDotaHeroTableViewCell
         else{return UITableViewCell()}
-        let hero = dotaHeroes[indexPath.row]
+        let hero = dotaHeroes[indexPath.section].value[indexPath.row]
+        
         cell.setupData(heroName: hero.localizedName, heroPrimaryAttr: hero.primaryAttr)
+        
         return cell
     }
 }
@@ -81,11 +93,16 @@ extension ListDotaHeroViewController{
         }
     }
     
-    func getDotaHeroesData() -> DotaModel{
+    func getDotaHeroesData() -> [String: [DotaModelElement]]{
         if let data = UserDefaults.standard.object(forKey: "dotaHeroes") as? Data,
            let decodedData = try? JSONDecoder().decode(DotaModel.self, from: data) {
-             return decodedData
+            var res = [String : [DotaModelElement]]()
+            decodedData.forEach {
+                if res[$0.primaryAttr] == nil {res[$0.primaryAttr] = []}
+                res[$0.primaryAttr]?.append($0)
+            }
+             return res
         }
-        return DotaModel()
+        return [:]
     }
 }
