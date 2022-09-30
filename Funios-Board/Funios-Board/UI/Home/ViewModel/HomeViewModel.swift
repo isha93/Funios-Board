@@ -14,6 +14,7 @@ class HomeViewModel {
     private let userDefault: UserDefaults
     private let dotaServiceProtocol: DotaServicesNetworkModel
     private var item : [Item] = []
+    private var heroes: [DotaModel] = []
     
     init(dotaServiceProtocol: DotaServicesNetworkModel, userDefault: UserDefaults) {
         self.dotaServiceProtocol = dotaServiceProtocol
@@ -25,11 +26,13 @@ class HomeViewModel {
         let localHeroes = isLocalDotaHeroesExist()
         if !localHeroes.isEmpty {
             addItemHeroes(.dotaHeroes(localHeroes), localHeroes)
+            self.heroes = localHeroes
             return .success(localHeroes)
         }
-    
+        
         do {
             let heroes = try await dotaServiceProtocol.getDotaHeroes(endPoint: .getDotaHeroes)
+            self.heroes = heroes
             heroes.isEmpty ? addItemDummy(.dummyTransaction, dummyTransaction) : addItemHeroes(heroes.isEmpty ? .dummyTransaction : .dotaHeroes(heroes), heroes)
             saveHeroesToLocalDataSource(heroes)
             
@@ -48,18 +51,24 @@ class HomeViewModel {
         return self.item
     }
     
-    func saveHeroesToLocalDataSource(_ datas : [DotaModel]) {
-        do {
-            let localHeroes = try JSONEncoder().encode(datas)
-            userDefault.set(localHeroes, forKey: "heroes")
-            print(localHeroes)
-        } catch {
-            print("saveHeroesToLocalDataSource \(error)")
+    func getHeroes() -> [DotaModel] {
+        return self.heroes
+    }
+    
+    func randomHeroesFilter() {
+        let primaryAttribute : [PrimaryAttribute] = [.int, .agi, .str]
+        let randomAttribute = primaryAttribute.randomElement()
+        
+        let dummy = heroes.filter { hero in
+            return hero.attribute ==  randomAttribute
         }
+        
+        addItemHeroes(.dotaHeroes(dummy), dummy)
     }
     
     //MARK: - Private Functions
     private func addItemHeroes(_ item: Item, _ datas : [DotaModel]) {
+        self.item = []
         datas.forEach { _ in
             self.item.append(item)
         }
@@ -83,6 +92,16 @@ class HomeViewModel {
         }
         
         return []
+    }
+    
+    private func saveHeroesToLocalDataSource(_ datas : [DotaModel]) {
+        do {
+            let localHeroes = try JSONEncoder().encode(datas)
+            userDefault.set(localHeroes, forKey: "heroes")
+            print(localHeroes)
+        } catch {
+            print("saveHeroesToLocalDataSource \(error)")
+        }
     }
 }
 

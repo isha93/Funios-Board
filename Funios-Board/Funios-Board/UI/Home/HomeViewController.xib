@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina3_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,9 +10,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Funios_Board" customModuleProvider="target">
             <connections>
+                <outlet property="filterButton" destination="dhE-3f-DBG" id="jKg-SO-bcb"/>
                 <outlet property="logoutImage" destination="Ilb-2p-lXh" id="r3L-6j-hs7"/>
                 <outlet property="seeAllLabel" destination="6WI-X5-DkV" id="BXm-M6-egn"/>
                 <outlet property="topUpButton" destination="mXP-iL-AY8" id="bPo-Uh-wPf"/>
+                <outlet property="transactionHistoryLabel" destination="Fbh-rC-VA2" id="HCM-id-MR7"/>
                 <outlet property="transactionTableView" destination="y2e-kZ-NlR" id="wDc-0n-nry"/>
                 <outlet property="transferButton" destination="vnt-O8-YCt" id="kR6-al-K0F"/>
                 <outlet property="userProfileBalance" destination="XwB-er-e0s" id="g99-Sx-Z7T"/>
@@ -70,23 +72,6 @@
                         <constraint firstItem="XwB-er-e0s" firstAttribute="top" secondItem="QKm-ZG-MbC" secondAttribute="bottom" constant="8" id="zAv-QB-3dB"/>
                     </constraints>
                 </view>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbh-rC-VA2">
-                    <rect key="frame" x="16" y="200" width="152.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
-                    <color key="textColor" red="0.31764705882352939" green="0.30980392156862746" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WI-X5-DkV">
-                    <rect key="frame" x="257.5" y="200" width="46.5" height="20.5"/>
-                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
-                    <color key="textColor" red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2e-kZ-NlR">
-                    <rect key="frame" x="0.0" y="232.5" width="320" height="247.5"/>
-                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    <color key="sectionIndexBackgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                </tableView>
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Aie-39-ma2">
                     <rect key="frame" x="16" y="134" width="288" height="50"/>
                     <subviews>
@@ -113,11 +98,37 @@
                         <constraint firstAttribute="height" constant="50" id="cge-De-vP5"/>
                     </constraints>
                 </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Transaction History" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fbh-rC-VA2">
+                    <rect key="frame" x="16" y="200" width="152.5" height="31"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <color key="textColor" red="0.31764705882352939" green="0.30980392156862746" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See all" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6WI-X5-DkV">
+                    <rect key="frame" x="257.5" y="200" width="46.5" height="31"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                    <color key="textColor" red="0.38823529411764707" green="0.47450980392156861" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhE-3f-DBG">
+                    <rect key="frame" x="247.5" y="200" width="56.5" height="31"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Filter"/>
+                    <connections>
+                        <action selector="onFilterButtonTapped:" destination="-1" eventType="touchUpInside" id="Od8-eO-41p"/>
+                    </connections>
+                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="y2e-kZ-NlR">
+                    <rect key="frame" x="0.0" y="243" width="320" height="237"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="sectionIndexBackgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="0.98039215686274506" green="0.9882352941176471" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="y2e-kZ-NlR" firstAttribute="top" secondItem="Fbh-rC-VA2" secondAttribute="bottom" constant="12" id="2BA-Qp-Gvk"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="dhE-3f-DBG" secondAttribute="trailing" constant="16" id="BJk-oj-2Ll"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="6WI-X5-DkV" secondAttribute="trailing" constant="16" id="CU6-Wt-oPn"/>
                 <constraint firstItem="y2e-kZ-NlR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Dc1-A4-uLx"/>
                 <constraint firstItem="Fws-u0-MNo" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Gdu-dE-kog"/>
@@ -127,10 +138,12 @@
                 <constraint firstItem="Aie-39-ma2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="YmC-Cj-6gr"/>
                 <constraint firstItem="6WI-X5-DkV" firstAttribute="top" secondItem="Aie-39-ma2" secondAttribute="bottom" constant="16" id="ZVG-dW-HZD"/>
                 <constraint firstItem="Fbh-rC-VA2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="Zb0-DY-axa"/>
+                <constraint firstItem="dhE-3f-DBG" firstAttribute="top" secondItem="Aie-39-ma2" secondAttribute="bottom" constant="16" id="hxS-F2-9vS"/>
                 <constraint firstItem="6WI-X5-DkV" firstAttribute="centerY" secondItem="Fbh-rC-VA2" secondAttribute="centerY" id="jih-Sd-9hQ"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="y2e-kZ-NlR" secondAttribute="trailing" id="khr-A3-CdE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Aie-39-ma2" secondAttribute="trailing" constant="16" id="knj-sj-uXE"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="y2e-kZ-NlR" secondAttribute="bottom" id="rEO-hE-Mzg"/>
+                <constraint firstItem="dhE-3f-DBG" firstAttribute="centerY" secondItem="Fbh-rC-VA2" secondAttribute="centerY" id="tro-7b-dk4"/>
                 <constraint firstItem="Fbh-rC-VA2" firstAttribute="top" secondItem="Aie-39-ma2" secondAttribute="bottom" constant="16" id="zOv-iK-bbI"/>
             </constraints>
             <point key="canvasLocation" x="138.75" y="80"/>

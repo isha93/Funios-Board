@@ -14,8 +14,10 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var transferButton: UIButton!
     @IBOutlet private weak var topUpButton: UIButton!
     @IBOutlet private weak var transactionTableView: UITableView!
+    @IBOutlet private weak var transactionHistoryLabel: UILabel!
     @IBOutlet private weak var seeAllLabel: UILabel!
     @IBOutlet private weak var userProfileSectionView: UIView!
+    @IBOutlet private weak var filterButton: UIButton!
     private var viewModel: HomeViewModel = HomeViewModel(
         dotaServiceProtocol: DotaServicesDefaultNetworkModel(),
         userDefault: UserDefaults.standard
@@ -29,6 +31,7 @@ class HomeViewController: UIViewController {
         configureUserProfile()
         configureLogoutImage()
         configureTable()
+        configureLabel()
         retrieveHeroes()
     }
     
@@ -39,6 +42,9 @@ class HomeViewController: UIViewController {
             case .success( _):
                 DispatchQueue.main.async {
                     self.transactionTableView.reloadData()
+                    self.transactionHistoryLabel.text = "Dota Heroes"
+                    self.seeAllLabel.isHidden = true
+                    self.filterButton.isHidden = false
                 }
             case .failure(let error):
                 print("Terjadi error dengan pesan \(error)")
@@ -64,6 +70,12 @@ class HomeViewController: UIViewController {
         topUpButton.clipsToBounds = true
     }
     
+    private func configureLabel() {
+        transactionHistoryLabel.text = "Transaction History"
+        seeAllLabel.isHidden = false
+        filterButton.isHidden = true
+    }
+    
     private func configureLogoutImage() {
         logoutImage.isUserInteractionEnabled = true
         let onLogoutImageTapped = UITapGestureRecognizer(target: self, action: #selector(self.onLogoutImageTapped(_:)))
@@ -78,11 +90,17 @@ class HomeViewController: UIViewController {
     private func configureTable() {
         transactionTableView.register(UINib(nibName: "HomeTableViewCell", bundle: nil), forCellReuseIdentifier: "TransactionCell")
         transactionTableView.register(UINib(nibName: "DotaHeroesTableViewCell", bundle: nil), forCellReuseIdentifier: "DotaHeroesCell")
+        transactionTableView.register(UINib(nibName: "FilterHeroesTableViewCell", bundle: nil), forCellReuseIdentifier: "FilterHeroesCell")
         transactionTableView.rowHeight = UITableView.automaticDimension
         transactionTableView.dataSource = self
         transactionTableView.separatorStyle = .none
         transactionTableView.showsHorizontalScrollIndicator = false
         transactionTableView.showsVerticalScrollIndicator = false
+    }
+    
+    @IBAction func onFilterButtonTapped(_ sender: UIButton) {
+        viewModel.randomHeroesFilter()
+        transactionTableView.reloadData()
     }
 }
 
@@ -99,20 +117,19 @@ extension HomeViewController: UITableViewDataSource {
                 withIdentifier: "DotaHeroesCell",
                 for: indexPath
             ) as? DotaHeroesTableViewCell else { return UITableViewCell() }
-                let hero = heroes[indexPath.row]
-                cell.bind(hero)
-                
-                return cell
+            let hero = heroes[indexPath.row]
+            cell.bind(hero)
             
+            return cell
         case .dummyTransaction:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "TransactionCell",
                 for: indexPath
             ) as? HomeTableViewCell else { return UITableViewCell() }
-                let transaction = dummyTransaction[indexPath.row]
-                cell.bind(transaction)
-                
-                return cell
+            let transaction = dummyTransaction[indexPath.row]
+            cell.bind(transaction)
+            
+            return cell
         }
     }
     
