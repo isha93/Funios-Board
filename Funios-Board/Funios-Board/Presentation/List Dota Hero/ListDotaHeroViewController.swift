@@ -13,24 +13,25 @@ class ListDotaHeroViewController: UIViewController {
     
     private var dotaHeroes: [String: [DotaModelElement]] = [:]
     private var dotaServices: DotaServices = DotaServices()
-    private var prefs: UserDefaults = UserDefaults.standard
+    private var prefs: UserDefaults = UserDefaults()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print("---")
+        
         Task{
             await getDotaHeroes()
         }
-        
-        dotaHeroes = getDotaHeroesData()
+        dotaHeroes = classifyDotaHeroesData(data: getDotaHeroesData())
         
         setupDelegate()
     }
-
+    
 }
 
 //MARK: Delegate
-extension ListDotaHeroViewController{
+extension ListDotaHeroViewController {
     func setupDelegate(){
         self.listDotaHeroTableView.dataSource = self
         self.listDotaHeroTableView.delegate = self
@@ -66,14 +67,14 @@ extension ListDotaHeroViewController: UITableViewDataSource{
 }
 
 //MARK: TableViewDelegate
-extension ListDotaHeroViewController: UITableViewDelegate{
+extension ListDotaHeroViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
     }
 }
 
 //MARK: Networking
-extension ListDotaHeroViewController{
+extension ListDotaHeroViewController {
     func getDotaHeroes() async{
         do{
             let dotaHeroesData = try await dotaServices.getHeroes(endPoint: .getHeroes)
@@ -85,24 +86,25 @@ extension ListDotaHeroViewController{
     }
 }
 
-//MARK: UserDefault -> Menyimpan data
-extension ListDotaHeroViewController{
+//MARK: Local(UserDefaults)
+extension ListDotaHeroViewController {
     func setDotaHeroesDataOffline(with data: DotaModel){
-        if let encoded = try? JSONEncoder().encode(data) {
-            UserDefaults.standard.set(encoded, forKey: "dotaHeroes")
-        }
+        prefs.setDataToLocal(data, with: UserDefaults.Key.dotaHeroes)
     }
     
-    func getDotaHeroesData() -> [String: [DotaModelElement]]{
-        if let data = UserDefaults.standard.object(forKey: "dotaHeroes") as? Data,
-           let decodedData = try? JSONDecoder().decode(DotaModel.self, from: data) {
-            var res = [String : [DotaModelElement]]()
-            decodedData.forEach {
-                if res[$0.primaryAttr] == nil {res[$0.primaryAttr] = []}
-                res[$0.primaryAttr]?.append($0)
-            }
-             return res
+    func getDotaHeroesData() -> DotaModel {
+        prefs.getDataFromLocal(DotaModel.self, with: UserDefaults.Key.dotaHeroes) ?? DotaModel()
+    }
+}
+
+//MARK: Classify dota hero data
+extension ListDotaHeroViewController {
+    func classifyDotaHeroesData(data: DotaModel) -> [String : [DotaModelElement]] {
+        var res = [String : [DotaModelElement]]()
+        data.forEach {
+            if res[$0.primaryAttr] == nil {res[$0.primaryAttr] = []}
+            res[$0.primaryAttr]?.append($0)
         }
-        return [:]
+        return res
     }
 }

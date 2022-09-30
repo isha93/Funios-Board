@@ -10,6 +10,7 @@
 		0141B35728DA0CAF00EC8DFB /* DotaServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0141B35628DA0CAF00EC8DFB /* DotaServices.swift */; };
 		0141B35A28DA0D9E00EC8DFB /* DotaModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0141B35928DA0D9E00EC8DFB /* DotaModel.swift */; };
 		014E148C28E71E3600786655 /* Dictionary+index.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014E148B28E71E3600786655 /* Dictionary+index.swift */; };
+		014E148E28E748B900786655 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014E148D28E748B900786655 /* UserDefaults.swift */; };
 		015EC4482892C8810072D520 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 015EC4462892C8810072D520 /* LoginViewController.swift */; };
 		015EC4492892C8810072D520 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 015EC4472892C8810072D520 /* LoginViewController.xib */; };
 		0178129C28A56DA300E1EB27 /* Transaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0178129B28A56DA300E1EB27 /* Transaction.swift */; };
@@ -57,6 +58,7 @@
 		0141B35628DA0CAF00EC8DFB /* DotaServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaServices.swift; sourceTree = "<group>"; };
 		0141B35928DA0D9E00EC8DFB /* DotaModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DotaModel.swift; sourceTree = "<group>"; };
 		014E148B28E71E3600786655 /* Dictionary+index.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+index.swift"; sourceTree = "<group>"; };
+		014E148D28E748B900786655 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		015EC4462892C8810072D520 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		015EC4472892C8810072D520 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		0178129B28A56DA300E1EB27 /* Transaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transaction.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				014E148B28E71E3600786655 /* Dictionary+index.swift */,
+				014E148D28E748B900786655 /* UserDefaults.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				0141B35A28DA0D9E00EC8DFB /* DotaModel.swift in Sources */,
 				BD4004AC28D6F7D600CC2204 /* FeedModel.swift in Sources */,
 				BDB55762288AC385006898EC /* AppDelegate.swift in Sources */,
+				014E148E28E748B900786655 /* UserDefaults.swift in Sources */,
 				BD4004A328D6F71300CC2204 /* NetworkError.swift in Sources */,
 				01A1592128DB79BB00B45DE2 /* ListDotaHeroTableViewCell.swift in Sources */,
 				BDB55764288AC385006898EC /* SceneDelegate.swift in Sources */,
