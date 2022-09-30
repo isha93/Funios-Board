@@ -23,8 +23,8 @@ class ListDotaHeroTableViewCell: UITableViewCell {
     }
     
     func setupData(heroName: String, heroPrimaryAttr: String){
-        self.heroName.text = heroName
-        self.heroPrimaryAttr.text = heroPrimaryAttr.capitalized
+        self.heroName.text = "Nama: " + heroName
+        self.heroPrimaryAttr.text = "Primary Attr: " + heroPrimaryAttr.capitalized
     }
     
 }

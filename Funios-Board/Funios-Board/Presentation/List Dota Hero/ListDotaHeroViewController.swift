@@ -48,7 +48,7 @@ extension ListDotaHeroViewController: UITableViewDataSource{
         guard let cell = listDotaHeroTableView.dequeueReusableCell(withIdentifier: "DotaHeroesCell") as? ListDotaHeroTableViewCell
         else{return UITableViewCell()}
         let hero = dotaHeroes[indexPath.row]
-        cell.setupData(heroName: hero.localizedName, heroPrimaryAttr: hero.primaryAttr.rawValue)
+        cell.setupData(heroName: hero.localizedName, heroPrimaryAttr: hero.primaryAttr)
         return cell
     }
 }
