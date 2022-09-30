@@ -8,42 +8,88 @@
 import Foundation
 
 class HomeViewModel {
-    enum Item {
-        case dotaHeroes
-        case dummyTransaction
-    }
+    //MARK: - Public Properties
     
+    //MARK: - Private Properties
+    private let userDefault: UserDefaults
     private let dotaServiceProtocol: DotaServicesNetworkModel
-    var item : [Item] = [Item]()
+    private var item : [Item] = []
     
-    init(dotaServiceProtocol: DotaServicesNetworkModel) {
+    init(dotaServiceProtocol: DotaServicesNetworkModel, userDefault: UserDefaults) {
         self.dotaServiceProtocol = dotaServiceProtocol
+        self.userDefault = userDefault
     }
     
+    //MARK: - Public Functions
     func retrieveDotaHeroes() async -> Result<[DotaModel], Error> {
+        let localHeroes = isLocalDotaHeroesExist()
+        if !localHeroes.isEmpty {
+            addItemHeroes(.dotaHeroes, localHeroes)
+            return .success(localHeroes)
+        }
+    
         do {
             let heroes = try await dotaServiceProtocol.getDotaHeroes(endPoint: .getDotaHeroes)
-            
-            if !heroes.isEmpty {
-                heroes.enumerated().forEach { index, _ in
-                    item.append(.dotaHeroes)
-                }
-            } else {
-                dummyTransaction.enumerated().forEach { index, _ in
-                    item.append(.dummyTransaction)
-                }
-            }
+            heroes.isEmpty ? addItemDummy(.dummyTransaction, dummyTransaction) : addItemHeroes(heroes.isEmpty ? .dummyTransaction : .dotaHeroes, heroes)
+            saveHeroesToLocalDataSource(heroes)
             
             return .success(heroes)
         } catch {
-            dummyTransaction.enumerated().forEach { index, _ in
-                item.append(.dummyTransaction)
-            }
+            addItemDummy(.dummyTransaction, dummyTransaction)
             return .failure(error)
         }
     }
     
     func getDataLength() -> Int {
         return item.count
+    }
+    
+    func getItems() -> [Item] {
+        return self.item
+    }
+    
+    func saveHeroesToLocalDataSource(_ datas : [DotaModel]) {
+        do {
+            let localHeroes = try JSONEncoder().encode(datas)
+            userDefault.set(localHeroes, forKey: "heroes")
+        } catch {
+            print("saveHeroesToLocalDataSource \(error)")
+        }
+    }
+    
+    //MARK: - Private Functions
+    private func addItemHeroes(_ item: Item, _ datas : [DotaModel]) {
+        datas.forEach { _ in
+            self.item.append(item)
+        }
+    }
+    
+    private func addItemDummy(_ item: Item, _ datas : [Transaction]) {
+        datas.forEach { _ in
+            self.item.append(item)
+        }
+    }
+    
+    private func isLocalDotaHeroesExist() -> [DotaModel] {
+        if let data = userDefault.data(forKey: "heroes") {
+            do {
+                let decoder = JSONDecoder()
+                let localHeroes = try decoder.decode([DotaModel].self, from: data)
+                return localHeroes
+            } catch {
+                print("Unable to decode \(error)")
+            }
+        }
+        
+        return []
+    }
+    
+    
+}
+
+extension HomeViewModel {
+    enum Item {
+        case dotaHeroes
+        case dummyTransaction
     }
 }

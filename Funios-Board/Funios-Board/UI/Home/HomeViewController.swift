@@ -16,8 +16,10 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var transactionTableView: UITableView!
     @IBOutlet private weak var seeAllLabel: UILabel!
     @IBOutlet private weak var userProfileSectionView: UIView!
-    private var viewModel: HomeViewModel = HomeViewModel(dotaServiceProtocol: DotaServicesDefaultNetworkModel())
-    private var heroes: [DotaModel] = []
+    private var viewModel: HomeViewModel = HomeViewModel(
+        dotaServiceProtocol: DotaServicesDefaultNetworkModel(),
+        userDefault: UserDefaults.standard
+    )
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,15 +29,14 @@ class HomeViewController: UIViewController {
         configureUserProfile()
         configureLogoutImage()
         configureTable()
-        getHeroes()
+        retrieveHeroes()
     }
     
-    private func getHeroes() {
+    private func retrieveHeroes() {
         Task {
             let result = await viewModel.retrieveDotaHeroes()
             switch result {
-            case .success(let heroes):
-                self.heroes = heroes
+            case .success( _):
                 DispatchQueue.main.async {
                     self.transactionTableView.reloadData()
                 }
@@ -97,7 +98,7 @@ extension HomeViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch viewModel.item[indexPath.row] {
+        switch viewModel.getItems()[indexPath.row] {
         case .dotaHeroes:
             guard let cell = tableView.dequeueReusableCell(
                 withIdentifier: "TransactionCell",
@@ -119,7 +120,6 @@ extension HomeViewController: UITableViewDataSource {
                 cell.bind(transaction)
                 
                 return cell
-            
         }
     }
 }
